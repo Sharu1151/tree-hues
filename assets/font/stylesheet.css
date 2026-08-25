@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'Gotham Book';
+    src: url('GothamBook-Italic.woff2') format('woff2'),
+        url('GothamBook-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Gotham Narrow Book';
+    src: url('GothamNarrow-Book.woff2') format('woff2'),
+        url('GothamNarrow-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Chronicle Display';
+    src: url('ChronicleDisplay-Black.woff2') format('woff2'),
+        url('ChronicleDisplay-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham Narrow';
+    src: url('GothamNarrow-Medium.woff2') format('woff2'),
+        url('GothamNarrow-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
