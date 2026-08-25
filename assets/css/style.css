@@ -1002,6 +1002,8 @@ header.mextreo-header-area.mha-inner .quote-btn:hover {
     margin: 12px 15px;
     display: inline-block;
   }
+}
+
 /*================== Active Navigation Tab Highlighting ==================*/
 header.mextreo-header-area nav ul.sm-mint > li > a {
   position: relative;
@@ -1088,15 +1090,15 @@ header.mextreo-header-area.nav-fixed {
   max-width: 420px;
   height: 100vh;
   background-color: #fff;
-  z-index: 999;
-  overflow-y: scroll;
+  z-index: 99999;
+  overflow-y: auto;
   overflow-x: hidden;
-  transition: .75s ease;
-  box-shadow: -10px 2px 8px -12px black;
-  /* width */
-  /* Track */
-  /* Handle */
-  /* Handle on hover */ }
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 0.4s ease, visibility 0.4s ease;
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.15);
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+}
   .side-panel::-webkit-scrollbar {
     width: 5px; }
   .side-panel::-webkit-scrollbar-track {
@@ -1107,7 +1109,12 @@ header.mextreo-header-area.nav-fixed {
     background: #555; }
 
 .side-panel.hide {
-  right: -440px; }
+  display: none !important;
+  transform: translateX(110%);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
 
 .sp-box {
   position: relative;
