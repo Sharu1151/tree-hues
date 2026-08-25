@@ -139,27 +139,73 @@ header.mextreo-header-area.nav-fixed nav ul.sm-mint > li > a .sub-arrow{
     border-top: 0;
     background: transparent;
   }
-  .sm-mint a, .sm-mint a:hover, .sm-mint a:focus, .sm-mint a:active, .sm-mint a.highlighted {
+  .sm-mint a {
+    position: relative;
     padding: 14px 20px;
     color: #ffffff;
+    transition: all 0.3s ease;
+  }
 
+  .sm-mint a:hover, .sm-mint a:focus {
+    color: #dcbc95;
+  }
+
+  .sm-mint > li.active > a,
+  .sm-mint > li > a.active,
+  .sm-mint > li > a.current {
+    color: #dcbc95 !important;
+    font-weight: 700 !important;
+  }
+
+  .sm-mint > li.active > a::after,
+  .sm-mint > li > a.active::after,
+  .sm-mint > li > a.current::after {
+    content: '';
+    position: absolute;
+    bottom: 8px;
+    left: 20px;
+    right: 20px;
+    height: 2.5px;
+    background: linear-gradient(90deg, #dcbc95, #c49d6d);
+    border-radius: 2px;
+    box-shadow: 0 0 8px rgba(220, 188, 149, 0.6);
   }
 
   header.mextreo-header-area.mha-inner .sm-mint a {
     transition: .5s ease !important;
     color: #000000;
-}
+  }
+
+  header.mextreo-header-area.nav-fixed nav ul.sm-mint > li.active > a,
+  header.mextreo-header-area.nav-fixed nav ul.sm-mint > li > a.active,
+  header.mextreo-header-area.nav-fixed nav ul.sm-mint > li > a.current,
+  header.mextreo-header-area.mha-inner .sm-mint > li.active > a,
+  header.mextreo-header-area.mha-inner .sm-mint > li > a.active,
+  header.mextreo-header-area.mha-inner .sm-mint > li > a.current {
+    color: #b88b50 !important;
+    font-weight: 700 !important;
+  }
+
+  header.mextreo-header-area.nav-fixed nav ul.sm-mint > li.active > a::after,
+  header.mextreo-header-area.nav-fixed nav ul.sm-mint > li > a.active::after,
+  header.mextreo-header-area.nav-fixed nav ul.sm-mint > li > a.current::after,
+  header.mextreo-header-area.mha-inner .sm-mint > li.active > a::after,
+  header.mextreo-header-area.mha-inner .sm-mint > li > a.active::after,
+  header.mextreo-header-area.mha-inner .sm-mint > li > a.current::after {
+    background: #b88b50;
+    box-shadow: 0 0 8px rgba(184, 139, 80, 0.4);
+  }
  
-  .sm-mint a:hover, .sm-mint a:focus, .sm-mint a:active {
-    color:#ffffff;
+  .sm-mint a:hover, .sm-mint a:focus {
+    color: #dcbc95 !important;
   }
   .sm-mint a.highlighted {
-     background: transparent; 
-    color: #fffefe;
+    background: transparent; 
+    color: #dcbc95;
   }
   .sm-mint a.disabled {
     background: transparent;
-    color: #ffffff;
+    color: #888888;
     box-shadow: none;
   }
 .sm-mint a .sub-arrow {

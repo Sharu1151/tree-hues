@@ -38,10 +38,38 @@ AOS.init({
 
 //**================== Preloder========================*//
 $(window).on('load', function() {
-  $('#preloader').fadeOut('slow', function() { $(this).remove(); });
+  setTimeout(function() {
+    $('#preloader').addClass('loaded');
+    setTimeout(function() {
+      $('#preloader').fadeOut(500, function() { $(this).remove(); });
+    }, 400);
+  }, 1100); // Allow full letter animation to display smoothly without getting cut
 });
-//**================= End of Preloder =====================**//
 
+// Fallback in case window load takes long
+setTimeout(function() {
+  if ($('#preloader').length) {
+    $('#preloader').addClass('loaded');
+    setTimeout(function() {
+      $('#preloader').fadeOut(500, function() { $(this).remove(); });
+    }, 400);
+  }
+}, 3500);
+//**================== Auto-Highlight Active Navigation Tab ====================*//
+(function highlightActiveNav() {
+  var path = window.location.pathname.split("/").pop() || "index.html";
+  if (path === "") path = "index.html";
+  $('#main-menu > li').removeClass('active');
+  $('#main-menu > li > a').removeClass('active current');
+  $('#main-menu > li > a').each(function() {
+    var href = $(this).attr('href');
+    if (href === path || (path === "index.html" && href === "index.html")) {
+      $(this).parent().addClass('active');
+      $(this).addClass('active');
+    }
+  });
+})();
+//**================== End Active Navigation ====================*//
 
 //**================= Sticky =====================**//
 
@@ -217,13 +245,7 @@ if ($('.project').length > 0) {
 
   //**=================End Timer=====================**//
   
-    // RTL Switcher
 
-    $('.psg-icon').on('click', function(){
-
-      $(this).parent().toggleClass('active');
-
-  });
 
 
 }(jQuery));

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 /*-----------------------------------------------------------------------------------
 
     Template Name: Maxtreo
@@ -64,65 +66,178 @@
   margin-right: -1px;
   margin-bottom: -1px; }
 
+/*================== Tree Hues Luxury Preloader ==================*/
 div#preloader {
-  background: #121212 url("../img/loading.gif") no-repeat scroll center center;
-  height: 100%;
-  left: 0;
-  overflow: visible;
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
-  z-index: 999; }
+  height: 100%;
+  background: #0f0e0e;
+  background: radial-gradient(circle at center, #1c1a18 0%, #0c0b0b 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999999;
+  overflow: visible;
+  transition: opacity 0.6s cubic-bezier(0.65, 0, 0.35, 1), visibility 0.6s cubic-bezier(0.65, 0, 0.35, 1);
+}
 
-.page-settings {
-  position: fixed;
-  left: -177px;
-  top: 300px;
-  z-index: 9;
-  background-color: #dcbc95;
-  padding: 20px 25px;
-  transition: .5s ease; }
+div#preloader.loaded {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
 
-.psg-icon {
-  position: absolute;
-  top: calc(50% - 14px);
-  right: -35px;
-  background-color: #dcbc95;
-  color: #fff;
-  font-size: 18px;
-  padding: 6px 0px;
-  width: 35px;
-  height: 32px;
-  line-height: 22px;
+.tree-hues-loader-wrapper {
   text-align: center;
-  cursor: pointer; }
-  .psg-icon i {
-    -webkit-animation-name: spin;
-    animation-name: spin;
-    -webkit-animation: spin 4s both alternate infinite;
-    animation: spin 4s both alternate infinite;
-    animation-duration: 5000ms;
-    animation-delay: 2s;
-    animation-timing-function: ease-in; }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 20px;
+  overflow: visible;
+  width: 100%;
+  max-width: 600px;
+}
 
-.page-settings.active {
-  left: 0; }
+.loader-logo-badge {
+  margin-bottom: 20px;
+  animation: loaderLogoPop 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  opacity: 0;
+}
 
-.pgs-box {
-  position: relative; }
-  .pgs-box a {
-    font-size: 12px;
-    line-height: 18px;
-    letter-spacing: 0px;
-    color: black;
-    background-color: #ffffff;
-    display: inline-block;
-    padding: 16px 16px;
-    border-radius: 5px;
-    transition: .3s ease; }
-    .pgs-box a:hover {
-      background-color: #000000;
-      color: #fff; }
+.loader-orb-img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  box-shadow: 0 0 25px rgba(220, 188, 149, 0.45), 0 0 50px rgba(244, 218, 218, 0.2);
+  display: inline-block;
+}
+
+.loader-text-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  overflow: visible;
+  padding: 5px 10px;
+  width: 100%;
+}
+
+.loader-letter {
+  font-family: 'Philosopher', serif, sans-serif !important;
+  font-size: clamp(32px, 6vw, 60px);
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 3px;
+  display: inline-block;
+  opacity: 0;
+  transform: translateX(-35px);
+  animation: letterSlideIn 0.55s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: calc(var(--i) * 0.06s + 0.1s);
+  line-height: 1.2;
+  overflow: visible;
+  text-shadow: 0 2px 15px rgba(220, 188, 149, 0.35);
+}
+
+.loader-letter:nth-child(n+6) {
+  color: #dcbc95;
+  text-shadow: 0 2px 18px rgba(220, 188, 149, 0.55);
+}
+
+.loader-letter.loader-space {
+  width: clamp(10px, 1.8vw, 20px);
+}
+
+.loader-line-track {
+  width: clamp(180px, 32vw, 300px);
+  height: 3px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 14px;
+}
+
+.loader-line-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #f4dada 0%, #dcbc95 50%, #d8e9f3 100%);
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(220, 188, 149, 0.8);
+  animation: lineProgress 1.8s ease-in-out infinite;
+}
+
+.loader-tagline {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(9px, 1.2vw, 11px);
+  font-weight: 600;
+  letter-spacing: 3.5px;
+  color: rgba(220, 188, 149, 0.85);
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(12px);
+  animation: taglineFadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards 0.8s;
+  padding: 0 10px;
+}
+
+@keyframes letterSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-35px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes loaderLogoPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.65) translateY(-15px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes lineProgress {
+  0% {
+    left: 0;
+    width: 0%;
+  }
+  50% {
+    left: 0;
+    width: 100%;
+  }
+  100% {
+    left: 100%;
+    width: 0%;
+  }
+}
+
+@keyframes taglineFadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/*================== End Preloader ==================*/
+
+.page-settings,
+.psg-icon {
+  display: none !important;
+}
 
 .custom-padding {
   padding-bottom: 350px !important; }
@@ -187,15 +302,277 @@ html {
   -webkit-font-smoothing: antialiased; }
 
 body {
-  background: #fff;
+  background: #f1efe7;
   font-weight: normal;
   font-size: 15px;
   letter-spacing: 1.5px;
-  color: #888;
+  color: #333333;
   line-height: 30px;
   -webkit-font-smoothing: antialiased;
   /* Fix for webkit rendering */
   -webkit-text-size-adjust: 100%; }
+
+/* Tree Hues Custom Brand Elements */
+.tree-hues-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+.tree-hues-logo-img {
+  height: 46px;
+  width: 46px;
+  border-radius: 50%;
+  object-fit: contain;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  flex-shrink: 0;
+}
+.tree-hues-orb {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #f4dada 0%, #fdf5cc 35%, #e5eedb 65%, #d8e9f3 100%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  flex-shrink: 0;
+}
+.tree-hues-brand-text {
+  font-family: 'Philosopher', serif, sans-serif !important;
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff; /* Clean, elegant white on dark transparent header */
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  transition: color 0.3s ease;
+}
+
+header.mextreo-header-area.mha-inner .tree-hues-brand-text,
+header.mextreo-header-area.nav-fixed .tree-hues-brand-text,
+.side-panel .tree-hues-brand-text,
+footer .tree-hues-brand-text,
+.contact-details .tree-hues-brand-text {
+  color: #000000 !important;
+}
+
+.success-img img,
+.m-about-img img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.tree-hues-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #f4dada 0%, #fdf5cc 35%, #e5eedb 65%, #d8e9f3 100%);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  text-decoration: none;
+  text-align: center;
+  padding: 6px;
+  margin: 0 auto;
+}
+.tree-hues-badge .badge-text {
+  font-family: 'Philosopher', serif, sans-serif !important;
+  font-size: 14px;
+  font-weight: 700;
+  color: #000000 !important;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  display: block;
+}
+
+.tree-hues-value-card {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 35px 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
+  border-left: 4px solid #dcbc95;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+.tree-hues-value-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+.tree-hues-value-card h3 {
+  font-family: 'Chronicle Display', serif;
+  font-size: 22px;
+  margin-bottom: 12px;
+  color: #000000;
+}
+.tree-hues-value-card p {
+  color: #333333;
+  font-size: 15px;
+  line-height: 26px;
+}
+
+/*================== Tree Hues Luxury Team Section ==================*/
+.tree-hues-team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 35px;
+}
+
+@media (max-width: 1200px) {
+  .tree-hues-team-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .tree-hues-team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tree-hues-team-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.tree-hues-team-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 32px 20px 26px;
+  text-align: center;
+  border: 1px solid rgba(220, 188, 149, 0.35);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.03);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.tree-hues-team-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #dcbc95, transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.tree-hues-team-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(220, 188, 149, 0.75);
+  box-shadow: 0 16px 36px rgba(220, 188, 149, 0.2), 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.tree-hues-team-card:hover::before {
+  opacity: 1;
+}
+
+.team-avatar-badge {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #fdfbf7 0%, #f1efe7 100%);
+  border: 1.5px solid #dcbc95;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 14px rgba(220, 188, 149, 0.25);
+  transition: transform 0.4s ease, background 0.4s ease;
+}
+
+.tree-hues-team-card:hover .team-avatar-badge {
+  transform: scale(1.08);
+  background: linear-gradient(135deg, #dcbc95 0%, #c49d6d 100%);
+}
+
+.team-avatar-badge span {
+  font-family: 'Philosopher', serif, sans-serif;
+  font-weight: 700;
+  font-size: 19px;
+  color: #111111;
+  letter-spacing: 1px;
+  transition: color 0.4s ease;
+}
+
+.tree-hues-team-card:hover .team-avatar-badge span {
+  color: #ffffff;
+}
+
+.team-info {
+  width: 100%;
+}
+
+.tree-hues-team-card .team-name {
+  font-family: 'Philosopher', serif, sans-serif !important;
+  font-size: 20px;
+  font-weight: 700;
+  color: #111111;
+  margin: 0 0 6px;
+  line-height: 1.25;
+  transition: color 0.3s ease;
+}
+
+.tree-hues-team-card .team-role {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  color: #8c7659;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  display: inline-block;
+  background: rgba(220, 188, 149, 0.14);
+  padding: 4px 12px;
+  border-radius: 20px;
+  border: 1px solid rgba(220, 188, 149, 0.3);
+  margin-top: 4px;
+}
+
+.tree-hues-team-card.featured {
+  background: linear-gradient(145deg, #ffffff 0%, #fdfbf7 100%);
+  border: 1.5px solid rgba(220, 188, 149, 0.6);
+  box-shadow: 0 8px 24px rgba(220, 188, 149, 0.12);
+}
+
+.tree-hues-team-card.featured .team-avatar-badge {
+  background: linear-gradient(135deg, #dcbc95 0%, #c49d6d 100%);
+  border-color: #c49d6d;
+}
+
+.tree-hues-team-card.featured .team-avatar-badge span {
+  color: #ffffff;
+}
+
+.tree-hues-team-card.featured .team-role {
+  background: rgba(220, 188, 149, 0.25);
+  color: #5c472d;
+  border-color: rgba(220, 188, 149, 0.5);
+  font-weight: 700;
+}
+
+.tree-hues-cat-tag {
+  display: inline-block;
+  background: rgba(220, 188, 149, 0.25);
+  color: #000000;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+}
 
 .dark-bg {
   background-color: #dcbc95; }
@@ -542,11 +919,143 @@ header.mextreo-header-area.mha-inner .mextreo-menu .side-ber {
       font-size: 20px;
       color: #000000; }
 
-li.tel {
+/* Navigation Get Quote CTA Button */
+li.nav-quote-cta {
   position: absolute;
-  right: 20%; }
+  right: 14%;
+  top: 50%;
+  transform: translateY(-50%);
+}
 
-/*==============End Header Style==============*/
+.quote-btn {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 20px !important;
+  background: linear-gradient(135deg, #dcbc95 0%, #c49d6d 100%) !important;
+  color: #111111 !important;
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  border-radius: 30px !important;
+  box-shadow: 0 4px 15px rgba(220, 188, 149, 0.4);
+  transition: all 0.35s ease !important;
+  line-height: 1 !important;
+  text-decoration: none !important;
+}
+
+.quote-btn svg {
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.quote-btn:hover {
+  background: linear-gradient(135deg, #ffffff 0%, #f4f4f4 100%) !important;
+  color: #111111 !important;
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.45) !important;
+  transform: translateY(-2px);
+}
+
+.quote-btn:hover svg {
+  transform: scale(1.18);
+}
+
+/* On sticky nav / inner light nav */
+header.mextreo-header-area.nav-fixed .quote-btn,
+header.mextreo-header-area.mha-inner .quote-btn {
+  background: linear-gradient(135deg, #1f1f1f 0%, #000000 100%) !important;
+  color: #dcbc95 !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+header.mextreo-header-area.nav-fixed .quote-btn:hover,
+header.mextreo-header-area.mha-inner .quote-btn:hover {
+  background: linear-gradient(135deg, #dcbc95 0%, #c49d6d 100%) !important;
+  color: #111111 !important;
+  box-shadow: 0 6px 20px rgba(220, 188, 149, 0.45) !important;
+}
+
+@media (max-width: 1499px) {
+  li.nav-quote-cta {
+    right: 12%;
+  }
+}
+
+@media (max-width: 1199px) {
+  li.nav-quote-cta {
+    right: 10%;
+  }
+  .quote-btn {
+    padding: 7px 14px !important;
+    font-size: 12px !important;
+  }
+}
+
+@media (max-width: 991px) {
+  li.nav-quote-cta {
+    position: relative;
+    right: auto;
+    top: auto;
+    transform: none;
+    margin: 12px 15px;
+    display: inline-block;
+  }
+/*================== Active Navigation Tab Highlighting ==================*/
+header.mextreo-header-area nav ul.sm-mint > li > a {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* Default / Hero Header Active & Hover */
+header.mextreo-header-area nav ul.sm-mint > li.active > a,
+header.mextreo-header-area nav ul.sm-mint > li > a.active,
+header.mextreo-header-area nav ul.sm-mint > li > a.current {
+  color: #dcbc95 !important;
+  font-weight: 700 !important;
+}
+
+header.mextreo-header-area nav ul.sm-mint > li.active > a::after,
+header.mextreo-header-area nav ul.sm-mint > li > a.active::after,
+header.mextreo-header-area nav ul.sm-mint > li > a.current::after {
+  content: '';
+  position: absolute;
+  bottom: 0px;
+  left: 12px;
+  right: 12px;
+  height: 2.5px;
+  background: linear-gradient(90deg, #dcbc95, #c49d6d);
+  border-radius: 3px;
+  box-shadow: 0 0 10px rgba(220, 188, 149, 0.7);
+}
+
+/* Sticky Navbar Active State */
+header.mextreo-header-area.nav-fixed nav ul.sm-mint > li.active > a,
+header.mextreo-header-area.nav-fixed nav ul.sm-mint > li > a.active,
+header.mextreo-header-area.nav-fixed nav ul.sm-mint > li > a.current,
+header.mextreo-header-area.mha-inner nav ul.sm-mint > li.active > a,
+header.mextreo-header-area.mha-inner nav ul.sm-mint > li > a.active,
+header.mextreo-header-area.mha-inner nav ul.sm-mint > li > a.current {
+  color: #b88b50 !important;
+  font-weight: 700 !important;
+}
+
+header.mextreo-header-area.nav-fixed nav ul.sm-mint > li.active > a::after,
+header.mextreo-header-area.nav-fixed nav ul.sm-mint > li > a.active::after,
+header.mextreo-header-area.nav-fixed nav ul.sm-mint > li > a.current::after,
+header.mextreo-header-area.mha-inner nav ul.sm-mint > li.active > a::after,
+header.mextreo-header-area.mha-inner nav ul.sm-mint > li > a.active::after,
+header.mextreo-header-area.mha-inner nav ul.sm-mint > li > a.current::after {
+  background: #b88b50;
+  box-shadow: 0 0 8px rgba(184, 139, 80, 0.4);
+}
+
+/* Hover state indicator */
+header.mextreo-header-area nav ul.sm-mint > li:not(.nav-quote-cta):hover > a {
+  color: #dcbc95 !important;
+}
+/*================== End Active Navigation Tab ==================*/
 /*==============Sticky Header Style==============*/
 header.mextreo-header-area.nav-fixed {
   animation-duration: 0.8s;
@@ -810,35 +1319,65 @@ section.mextreo-hero.inner {
 /*=====================About Section Style========================*/
 section.mextreo-about {
   position: relative;
-  padding-top: 250px;
+  padding: 100px 0 90px 0;
   overflow: hidden;
   z-index: 0; }
   section.mextreo-about .about-bg {
-    width: 120%;
+    width: 110%;
     position: absolute;
-    left: -60%;
-    top: -20%;
-    z-index: -1; }
+    left: -30%;
+    top: -15%;
+    z-index: -1;
+    opacity: 0.85; }
+  section.mextreo-about .m-about-img {
+    position: relative;
+    z-index: 1; }
+    section.mextreo-about .m-about-img img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08); }
   section.mextreo-about .m-about-content {
-    position: relative; }
+    position: relative;
+    padding-left: 15px; }
     section.mextreo-about .m-about-content h2.ab-tittle {
       position: absolute;
-      font-family: 'Montserrat';
+      font-family: 'Montserrat', sans-serif;
       font-weight: 800;
-      font-size: 193px;
-      top: -16%;
-      left: -38%;
-      color: #f8f8f8;
+      font-size: 88px;
+      white-space: nowrap;
+      top: -35px;
+      left: 0;
+      color: rgba(255, 255, 255, 0.75);
+      letter-spacing: 2px;
+      line-height: 1;
+      pointer-events: none;
       z-index: -1; }
+    section.mextreo-about .m-about-content h6.ht-tittle {
+      margin-bottom: 8px;
+      color: #dcbc95;
+      font-weight: 600; }
     section.mextreo-about .m-about-content h2 {
-      padding-right: 10%; }
+      font-family: 'Philosopher', serif, sans-serif !important;
+      font-size: 38px;
+      font-weight: 700;
+      color: #111111;
+      margin-bottom: 18px;
+      line-height: 1.25;
+      padding-right: 5%; }
     section.mextreo-about .m-about-content p {
-      padding: 30px 0px; }
-      section.mextreo-about .m-about-content p:last-child {
-        padding: 0; }
+      padding: 0;
+      margin-bottom: 12px;
+      font-size: 14.5px;
+      line-height: 1.7;
+      color: #444444; }
+      section.mextreo-about .m-about-content p:last-of-type {
+        margin-bottom: 22px; }
+    section.mextreo-about .m-about-content .btn-1 {
+      margin-top: 5px; }
 
 section.product {
-  padding: 150px 0px; }
+  padding: 100px 0px; }
   section.product .ab-img-2 {
     top: 0; }
   section.product .mb-pro {
@@ -943,7 +1482,7 @@ section.work-success.dark .ws-content {
 
 section.testimonial {
   position: relative;
-  padding-top: 200px;
+  padding: 60px 0 80px 0;
   overflow: hidden; }
   section.testimonial .owl-dots {
     counter-reset: dots;
@@ -1074,20 +1613,23 @@ section.testimonial.dark .testimonial-slid2 .client h5 {
 
 section.recent-project {
   position: relative;
-  padding-top: 150px;
+  padding-top: 80px;
+  padding-bottom: 20px;
   text-align: center; }
   section.recent-project .recent-pro-top {
     position: relative;
     z-index: 1; }
     section.recent-project .recent-pro-top h2.rp-tittle {
       position: absolute;
-      font-family: 'Montserrat';
+      font-family: 'Montserrat', sans-serif;
       font-weight: 800;
       font-size: 193px;
       text-transform: uppercase;
+      white-space: nowrap;
+      pointer-events: none;
       top: -25%;
       left: 11%;
-      color: #f8f8f8;
+      color: rgba(255, 255, 255, 0.75);
       z-index: -1; }
     section.recent-project .recent-pro-top .ht-tittle::after {
       position: absolute;
@@ -1145,19 +1687,19 @@ section.recent-project {
         background-color: #171616;
         opacity: 0;
         top: 0;
+        left: 0;
         height: 100%;
         width: 100%;
-        left: 0;
-        transition: all .6s ease;
+        transition: .5s ease;
         z-index: 1; }
       section.recent-project .project .single-project .sp-img img {
         transform: scale(1);
-        transition-duration: 3s, 0s; }
+        transition: .5s ease; }
       section.recent-project .project .single-project .sp-text {
         position: absolute;
-        bottom: -15%;
+        bottom: -35%;
+        left: 8%;
         text-align: left;
-        left: 10%;
         transition: .6s ease;
         z-index: 1; }
         section.recent-project .project .single-project .sp-text h3 {
@@ -1180,7 +1722,7 @@ section.recent-project.dark .recent-pro-top h2.rp-tittle {
 
 section.mextreo-blog {
   position: relative;
-  padding-top: 150px; }
+  padding-top: 80px; }
   section.mextreo-blog .mex-blog-top {
     position: relative;
     text-align: center;
@@ -1188,13 +1730,17 @@ section.mextreo-blog {
     z-index: 1; }
     section.mextreo-blog .mex-blog-top h2.mb-tittle {
       position: absolute;
-      font-family: 'Montserrat';
+      font-family: 'Montserrat', sans-serif;
       font-weight: 800;
-      font-size: 193px;
+      font-size: 110px;
       text-transform: uppercase;
-      top: -25%;
-      left: 22%;
-      color: #f8f8f8;
+      white-space: nowrap;
+      pointer-events: none;
+      top: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: rgba(255, 255, 255, 0.7);
+      letter-spacing: 4px;
       z-index: -1; }
     section.mextreo-blog .mex-blog-top .ht-tittle::after {
       position: absolute;
@@ -1479,8 +2025,7 @@ section.blog-details {
 /*=================End Blog Details Style=============*/
 /*--------------- Partner Section Style-------------------*/
 section.partner {
-  position: relative;
-  padding: 130px 0px; }
+  display: none !important; }
   section.partner .single-partner {
     position: relative;
     display: inline-block;
@@ -1554,12 +2099,14 @@ section.mextreo-service {
     section.mextreo-service .m-s-content h2.ms-tittle {
       text-transform: uppercase;
       position: absolute;
-      font-family: 'Montserrat';
+      font-family: 'Montserrat', sans-serif;
       font-weight: 800;
       font-size: 193px;
+      white-space: nowrap;
+      pointer-events: none;
       top: -7%;
       left: -60%;
-      color: #f8f8f8;
+      color: rgba(255, 255, 255, 0.75);
       z-index: -1; }
     section.mextreo-service .m-s-content p {
       padding: 30px 0px; }
@@ -1580,6 +2127,12 @@ section.mextreo-service {
       color: #dcbc95;
       padding-top: 38px;
       display: inline-block; }
+    section.mextreo-service .single-service svg.service-svg-icon {
+      width: 90px;
+      height: 90px;
+      padding-top: 25px;
+      display: inline-block;
+      stroke: #dcbc95; }
     section.mextreo-service .single-service h3 {
       padding-top: 20px; }
   section.mextreo-service .si-1 {
@@ -1821,94 +2374,186 @@ section.g-map {
       width: 100%; }
 
 /*====================/Contact Page===================*/
-/*=============Footer Details Style==================*/
-section.footer-details {
+/*================== Tree Hues Top-Class Luxury Footer ==================*/
+.tree-hues-footer {
+  background: #11100f;
+  background: radial-gradient(circle at 80% 20%, #1e1c1a 0%, #100f0e 100%);
+  color: #c7c2b8;
+  padding: 80px 0 30px;
   position: relative;
-  background: #f8f8f8;
-  text-align: center; }
-  section.footer-details .subscribe {
-    position: relative;
-    max-width: 700px;
-    margin: auto;
-    z-index: 1;
-    padding-top: 100px;
-    padding-bottom: 80px; }
-    section.footer-details .subscribe form {
-      position: relative;
-      display: flex; }
-      section.footer-details .subscribe form .form-control {
-        width: 70%;
-        padding: 30px 25px;
-        font-size: 14px;
-        border-color: #c8c8c8;
-        border-radius: 0;
-        margin: auto;
-        font-family: "Gotham Narrow"; }
-      section.footer-details .subscribe form .sub-btn {
-        padding: 15px 10px;
-        width: 25%;
-        font-size: 16px;
-        background: #212020;
-        font-family: sans-serif;
-        border: 0;
-        border-radius: 0;
-        transition: .5s ease; }
-        section.footer-details .subscribe form .sub-btn:hover {
-          background: #dcbc95; }
-  section.footer-details .footer-information {
-    position: relative;
-    display: flex;
-    max-width: 800px;
-    margin: auto;
-    padding-bottom: 80px; }
-    section.footer-details .footer-information .single-info {
-      position: relative;
-      max-width: 230px;
-      margin-left: 130px; }
-      section.footer-details .footer-information .single-info:first-child {
-        margin-left: 0; }
-      section.footer-details .footer-information .single-info h5 {
-        font-size: 18px;
-        margin-bottom: 15px; }
+  border-top: 1px solid rgba(220, 188, 149, 0.25);
+  font-family: 'Montserrat', sans-serif;
+}
 
-section.footer-details.dark2 {
-  background: #302f2f; }
-  section.footer-details.dark2 .subscribe form .sub-btn {
-    background: #ffffff;
-    color: #000;
-    transition: .5s ease; }
-    section.footer-details.dark2 .subscribe form .sub-btn:hover {
-      background: #dcbc95; }
-  section.footer-details.dark2 .footer-information .single-info h5 {
-    color: #ffffff; }
+.tree-hues-footer .footer-brand {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
 
+.tree-hues-footer .footer-desc {
+  font-size: 13.5px;
+  line-height: 1.8;
+  color: #a39e94;
+  margin-bottom: 22px;
+  padding-right: 15px;
+}
+
+.tree-hues-footer .footer-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #dcbc95 0%, #c49d6d 100%);
+  color: #111111;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 10px 22px;
+  border-radius: 30px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 15px rgba(220, 188, 149, 0.3);
+  transition: all 0.3s ease;
+}
+
+.tree-hues-footer .footer-cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(220, 188, 149, 0.45);
+  color: #000000;
+}
+
+.footer-widget-title {
+  font-family: 'Philosopher', serif, sans-serif !important;
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 22px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.footer-widget-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 32px;
+  height: 2px;
+  background: #dcbc95;
+}
+
+.footer-links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links-list li {
+  margin-bottom: 12px;
+}
+
+.footer-links-list li a {
+  color: #a39e94;
+  font-size: 13.5px;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+.footer-links-list li a:hover {
+  color: #dcbc95;
+  transform: translateX(4px);
+}
+
+.footer-contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-contact-list li {
+  margin-bottom: 14px;
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: #a39e94;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.footer-contact-list li i {
+  color: #dcbc95;
+  font-size: 14px;
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+
+.footer-contact-list li a {
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+.footer-contact-list li a:hover {
+  color: #dcbc95;
+}
+
+.footer-map-wrapper {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(220, 188, 149, 0.3);
+  border-radius: 10px;
+  padding: 6px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.footer-map-wrapper iframe {
+  display: block;
+  width: 100%;
+  height: 135px;
+  border-radius: 6px;
+  border: 0;
+}
+
+.map-direct-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+  font-size: 11.5px;
+  color: #dcbc95;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+
+.map-direct-link:hover {
+  color: #ffffff;
+}
+
+.footer-bottom-bar {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  margin-top: 55px;
+  padding-top: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+  font-size: 12.5px;
+  color: #7d786f;
+}
+
+.footer-bottom-bar a {
+  color: #dcbc95;
+}
+
+.footer-bottom-bar a:hover {
+  color: #ffffff;
+}
+
+.footer-bottom-tagline {
+  color: #8c867b;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
 /*=============End Footer Details Style==================*/
-/*================Foooter Style======================*/
-footer {
-  position: relative;
-  background: #f8f8f8;
-  padding-top: 30px;
-  padding-bottom: 50px;
-  border-top: 1px solid #c8c8c8; }
-  footer .footer-nav {
-    position: relative;
-    text-align: right; }
-    footer .footer-nav ul li {
-      font-family: "Gotham Narrow";
-      font-size: 15px;
-      font-weight: 400;
-      color: #8e8d8e;
-      padding: 0px 4px; }
-      footer .footer-nav ul li a {
-        color: #8e8d8e;
-        transition: all .5s ease-in; }
-        footer .footer-nav ul li a:hover {
-          color: #dcbc95; }
-
-footer.dark2 {
-  background: #302f2f; }
-
-/*================End Foooter Style======================*/
 /* Animation style */
 @-webkit-keyframes spinnerRotateone {
   0% {
@@ -2309,8 +2954,8 @@ Responsive Style
 ==========================*/
 @media only screen and (max-width: 1715px) {
   section.mextreo-about .m-about-content h2.ab-tittle {
-    font-size: 140px;
-    left: -30%; }
+    font-size: 84px;
+    left: 0; }
 
   section.mextreo-service .m-s-content h2.ms-tittle {
     font-size: 140px;
@@ -2342,7 +2987,8 @@ Responsive Style
     left: -30%; }
 
   section.mextreo-about .m-about-content h2.ab-tittle {
-    font-size: 100px; }
+    font-size: 78px;
+    left: 0; }
 
   section.recent-project .recent-pro-top h2.rp-tittle {
     font-size: 100px;
@@ -2380,8 +3026,8 @@ Responsive Style
     left: -20%; }
 
   section.mextreo-about .m-about-content h2.ab-tittle {
-    font-size: 84px;
-    left: -20%; }
+    font-size: 70px;
+    left: 0; }
 
   section.recent-project .recent-pro-top h2.rp-tittle {
     font-size: 84px;
@@ -2904,7 +3550,8 @@ Responsive Style
     display: none; } }
 @media only screen and (max-width: 575px) {
   section.mextreo-about .m-about-content h2.ab-tittle {
-    font-size: 65px; }
+    font-size: 42px;
+    top: -6%; }
 
   .ht-tittle::before {
     left: unset;
@@ -3141,8 +3788,6 @@ Responsive Style
     padding: 10px 10px;
     font-size: 14px; }
 
-  div#preloader {
-    background-size: contain; }
 
   section.footer-details .footer-information {
     padding-bottom: 50px; }
@@ -3232,7 +3877,7 @@ Responsive Style
     padding-top: 20px; }
 
   section.mextreo-about .m-about-content h2.ab-tittle {
-    font-size: 55px;
+    font-size: 38px;
     top: -4%; }
 
   section.mextreo-service .m-s-content h2.ms-tittle {
