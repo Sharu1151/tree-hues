@@ -7893,4 +7893,180 @@ html, body {
   }
 }
 
+/* =========================================================
+   STUNNING EDITORIAL PROJECT SHOWCASE SECTION
+   ========================================================= */
+
+.mextreo-editorial-projects {
+  padding: 100px 0 120px;
+  background-color: #f7f5f0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Header View All Link */
+.tree-hues-view-all-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Gotham Narrow', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #121110;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 0.3s ease, gap 0.3s ease;
+}
+
+.tree-hues-view-all-link:hover {
+  color: #a88350;
+  gap: 14px;
+}
+
+.tree-hues-view-all-link .arrow {
+  font-size: 16px;
+  transition: transform 0.3s ease;
+}
+
+.tree-hues-view-all-link:hover .arrow {
+  transform: translateX(4px);
+}
+
+/* Staggered Grid Offset */
+@media (min-width: 768px) {
+  .editorial-grid .editorial-col-right {
+    margin-top: 70px;
+  }
+}
+
+/* Project Card */
+.editorial-project-card {
+  margin-bottom: 65px;
+  display: block;
+}
+
+/* Image Aspect Ratio & Hover */
+.epc-img-wrapper {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 11;
+  overflow: hidden;
+  border-radius: 2px;
+  background-color: #e5e2db;
+}
+
+.epc-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1), filter 0.7s ease;
+  filter: brightness(0.96);
+}
+
+.editorial-project-card:hover .epc-img-wrapper img {
+  transform: scale(1.04);
+  filter: brightness(1.02);
+}
+
+/* Number Badge Top-Left */
+.epc-num {
+  position: absolute;
+  top: 14px;
+  left: 16px;
+  font-family: 'Gotham Narrow', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 1px;
+  background: rgba(18, 17, 16, 0.45);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  padding: 3px 8px;
+  border-radius: 2px;
+  z-index: 2;
+}
+
+/* Caption Below Image */
+.epc-caption {
+  padding-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.epc-row-top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: nowrap;
+}
+
+.epc-title {
+  margin: 0;
+  font-family: 'Philosopher', serif, sans-serif;
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #121110;
+}
+
+.epc-title a {
+  color: #121110;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.editorial-project-card:hover .epc-title a {
+  color: #a88350;
+}
+
+.epc-cat {
+  font-family: 'Gotham Narrow', sans-serif;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  color: #a88350;
+  text-transform: uppercase;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.epc-row-bottom {
+  display: flex;
+  align-items: center;
+}
+
+.epc-loc {
+  font-family: 'Gotham Narrow', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #888888;
+  text-transform: uppercase;
+}
+
+/* Responsive Scaling */
+@media (max-width: 767px) {
+  .mextreo-editorial-projects {
+    padding: 60px 0 70px;
+  }
+  .editorial-project-card {
+    margin-bottom: 40px;
+  }
+  .epc-title {
+    font-size: 19px;
+  }
+  .epc-cat {
+    font-size: 9.5px;
+  }
+  .epc-row-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
