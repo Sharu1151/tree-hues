@@ -3776,17 +3776,55 @@ section.mextreo-hero.inner {
   border-bottom: 1px solid rgba(220, 188, 149, 0.3);
 }
 
-/* Section 5: Process Workflow (Soft Linen Ecru #faf8f5) */
+/* Section 5: Process Workflow (Soft Linen Ecru #faf8f5) - Ultra Spacious */
 .service-section-process {
-  padding: 85px 0;
+  padding: 130px 0 140px !important;
   background: #faf8f5;
   border-bottom: 1px solid rgba(220, 188, 149, 0.25);
 }
 
-/* Section 6: Commitment & Post-Handover (Warm Alabaster #f4efe6) */
+.service-section-process .text-center.mb-5 {
+  margin-bottom: 60px !important;
+}
+
+.service-section-process .service-badge-pill {
+  margin-bottom: 18px !important;
+  display: inline-block;
+}
+
+.service-section-process .service-main-heading {
+  margin-bottom: 22px !important;
+  font-size: 40px !important;
+}
+
+.service-section-process .service-paragraph {
+  font-size: 15.5px !important;
+  line-height: 1.85 !important;
+  color: #666666 !important;
+  margin-top: 10px !important;
+}
+
+/* Section 6: Commitment & Post-Handover (Warm Alabaster #f4efe6) - Ultra Spacious */
 .service-section-commitment {
-  padding: 80px 0;
+  padding: 140px 0 150px !important;
   background: #f4efe6;
+}
+
+.service-section-commitment .service-badge-pill {
+  margin-bottom: 18px !important;
+  display: inline-block;
+}
+
+.service-section-commitment .service-main-heading {
+  margin-bottom: 22px !important;
+  font-size: 38px !important;
+}
+
+.service-section-commitment .service-paragraph {
+  font-size: 15.5px !important;
+  line-height: 1.85 !important;
+  color: #555555 !important;
+  margin-top: 10px !important;
 }
 
 /* Uncropped Photography Framing */
@@ -3950,13 +3988,14 @@ section.mextreo-hero.inner {
 /* Process Cards - Generous Luxury Breathing Space */
 .process-step-card {
   background: #ffffff;
-  border-radius: 18px;
-  padding: 38px 32px 34px !important;
+  border-radius: 20px;
+  padding: 42px 36px 38px !important;
   border: 1px solid rgba(220, 188, 149, 0.35);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.04);
   height: 100%;
   position: relative;
   transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+  margin-bottom: 28px !important;
 }
 
 .process-step-card:hover {
