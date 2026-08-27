@@ -75,10 +75,10 @@ function setREVStartSize(e){
 								sliderLayout:"fullwidth",
 								duration:"6000ms",
 								visibilityLevels:"1240,1024,778,480",
-								gridwidth:1920,
-								gridheight:800,
+								gridwidth:"1240,1024,778,480",
+								gridheight:"750,700,600,520",
 								spinner:"spinner0",
-								editorheight:"800,768,960,720",
+								editorheight:"750,700,600,520",
 								responsiveLevels:"1240,1024,778,480",
 								disableProgressBar:"on",
 								navigation: {

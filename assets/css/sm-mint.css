@@ -1,86 +1,12 @@
+/* SmartMenus Core - Tree Hues */
 .sm-mint {
-  /* border-top: 2px solid #8db863;
-  border-bottom: 2px solid #8db863; */
-  background: #fff;
+  background: transparent;
 }
-.sm-mint a, .sm-mint a:hover, .sm-mint a:focus, .sm-mint a:active {
-  /* make room for the toggle button (sub indicator) */
-  color: rgb(37, 37, 37);
+.sm-mint a {
   text-decoration: none;
 }
-.sm-mint a.current {
-  font-weight: bold;
-}
-.sm-mint a.disabled {
-  color: #cccccc;
-}
-.sm-mint a .sub-arrow {
-  position: absolute;
-  top: 50%;
-  margin-top: -17px;
-  left: auto;
-  right: 4px;
-  width: 34px;
-  height: 34px;
-  overflow: hidden;
-  font: bold 14px/34px monospace !important;
-  text-align: center;
-  text-shadow: none;
-  color: #fff;
-  background: #dcbc95;
-  border-radius: 4px;
-}
-.sm-mint a .sub-arrow::before {
-  content: '+';
-}
-.sm-mint a.highlighted .sub-arrow::before {
-  content: '-';
-}
 
-/* .sm-mint > li:first-child {
-  border-top: 0;
-} */
-.sm-mint ul {
-  background: #f3d3adb3;
-}
-.sm-mint ul a, .sm-mint ul a:hover, .sm-mint ul a:focus, .sm-mint ul a:active {
-  font-size: 14px;
-  border-left: 8px solid transparent;
-}
-.sm-mint ul ul a,
-.sm-mint ul ul a:hover,
-.sm-mint ul ul a:focus,
-.sm-mint ul ul a:active {
-  border-left: 16px solid transparent;
-}
-.sm-mint ul ul ul a,
-.sm-mint ul ul ul a:hover,
-.sm-mint ul ul ul a:focus,
-.sm-mint ul ul ul a:active {
-  border-left: 24px solid transparent;
-}
-.sm-mint ul ul ul ul a,
-.sm-mint ul ul ul ul a:hover,
-.sm-mint ul ul ul ul a:focus,
-.sm-mint ul ul ul ul a:active {
-  border-left: 32px solid transparent;
-}
-.sm-mint ul ul ul ul ul a,
-.sm-mint ul ul ul ul ul a:hover,
-.sm-mint ul ul ul ul ul a:focus,
-.sm-mint ul ul ul ul ul a:active {
-  border-left: 40px solid transparent;
-}
-
-@media (min-width: 1200px) {
-
-  
-
-}
-
-
-
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   /* Switch to desktop layout
   -----------------------------------------------
      These transform the menu tree from
@@ -141,7 +67,7 @@ header.mextreo-header-area.nav-fixed nav ul.sm-mint > li > a .sub-arrow{
   }
   .sm-mint a {
     position: relative;
-    padding: 14px 20px;
+    padding: 14px 14px;
     color: #ffffff;
     transition: all 0.3s ease;
   }

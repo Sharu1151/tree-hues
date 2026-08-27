@@ -59,9 +59,9 @@ setTimeout(function() {
 (function highlightActiveNav() {
   var path = window.location.pathname.split("/").pop() || "index.html";
   if (path === "") path = "index.html";
-  $('#main-menu > li').removeClass('active');
-  $('#main-menu > li > a').removeClass('active current');
-  $('#main-menu > li > a').each(function() {
+  $('#main-menu > li:not(.mobile-drawer-brand):not(.nav-quote-cta):not(.mobile-drawer-footer)').removeClass('active');
+  $('#main-menu > li:not(.mobile-drawer-brand):not(.nav-quote-cta):not(.mobile-drawer-footer) > a').removeClass('active current');
+  $('#main-menu > li:not(.mobile-drawer-brand):not(.nav-quote-cta):not(.mobile-drawer-footer) > a').each(function() {
     var href = $(this).attr('href');
     if (href === path || (path === "index.html" && href === "index.html")) {
       $(this).parent().addClass('active');
@@ -74,8 +74,8 @@ setTimeout(function() {
 //**================= Sticky =====================**//
 
 $(window).on('scroll', function() {
+  if ($('body').hasClass('mobile-menu-active')) return;
   if ($(window).scrollTop() > 50) {
-      $('.mextreo-header-area').addClass('nav-fixed');
       $('.mextreo-header-area').addClass('nav-fixed');
       $('.scroll-to-target').addClass('open');
   } else {
@@ -110,23 +110,30 @@ $(function() {
   });
 });
 
-// SmartMenus mobile menu toggle button
+// Modern Luxury Mobile Menu Interaction
 $(function() {
   var $mainMenuState = $('#main-menu-state');
   if ($mainMenuState.length) {
-    // animate mobile menu
-    $mainMenuState.change(function(e) {
-      var $menu = $('#main-menu');
+    $mainMenuState.on('change', function() {
       if (this.checked) {
-        $menu.hide().slideDown(250, function() { $menu.css('display', ''); });
+        $('body').addClass('mobile-menu-active');
       } else {
-        $menu.show().slideUp(250, function() { $menu.css('display', ''); });
+        $('body').removeClass('mobile-menu-active');
       }
     });
-    // hide mobile menu beforeunload
-    $(window).bind('beforeunload unload', function() {
-      if ($mainMenuState[0].checked) {
-        $mainMenuState[0].click();
+
+    // Auto-close menu when tapping any link
+    $('#main-menu a').on('click', function() {
+      if ($(window).width() < 992 && $mainMenuState.prop('checked')) {
+        $mainMenuState.prop('checked', false).trigger('change');
+      }
+    });
+
+    // Clean up on page unload
+    $(window).on('beforeunload unload', function() {
+      if ($mainMenuState.length && $mainMenuState[0].checked) {
+        $mainMenuState.prop('checked', false);
+        $('body').removeClass('mobile-menu-active');
       }
     });
   }
@@ -380,4 +387,53 @@ $(document).ready(function() {
   });
  });
 
- 
+  /*================== Tree Hues Home Gallery Carousel Activation ==================*/
+  $(document).ready(function() {
+    var galleryCarousel = $("#treeHuesGalleryCarousel");
+    if (galleryCarousel.length) {
+      galleryCarousel.owlCarousel({
+        loop: true,
+        margin: 24,
+        autoplay: true,
+        autoplayTimeout: 3500,
+        autoplayHoverPause: true,
+        smartSpeed: 800,
+        dots: false,
+        nav: false,
+        responsive: {
+          0: {
+            items: 1,
+            stagePadding: 20
+          },
+          576: {
+            items: 2,
+            stagePadding: 20
+          },
+          992: {
+            items: 3,
+            stagePadding: 30
+          },
+          1200: {
+            items: 4,
+            stagePadding: 40
+          }
+        }
+      });
+
+      $('#galleryPrevBtn').on('click', function() {
+        galleryCarousel.trigger('prev.owl.carousel');
+      });
+      $('#galleryNextBtn').on('click', function() {
+        galleryCarousel.trigger('next.owl.carousel');
+      });
+    }
+
+    if ($.fn.fancybox) {
+      $('[data-fancybox="home-gallery"]').fancybox({
+        buttons: ["zoom", "slideShow", "fullScreen", "thumbs", "close"],
+        animationEffect: "fade",
+        transitionEffect: "slide",
+        loop: true
+      });
+    }
+  });

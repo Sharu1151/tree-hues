@@ -46,7 +46,10 @@
 	<!-- Main StyleSheet CSS -->
 	<link rel="stylesheet" href="assets/css/style.css">
 	<!-- Favicon -->
-	<link rel="icon" type="image/png" sizes="16x16" href="assets/img/logo.png">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	<!--[if lt IE 9]>
@@ -82,16 +85,30 @@
 	</div>
 	<!-- /Preloder-->
 	<!--Scroll Top-->
-	<button class="scroll-top scroll-to-target" data-target="html">
+	<button class="scroll-top scroll-to-target" data-target="html" aria-label="Scroll to Top">
 		<i class="flaticon-up scrollup-icon"></i>
 	</button>
-	<!--Scroll Top-->
+	<!--/Scroll Top-->
+
+	<!-- Floating Luxury WhatsApp Concierge -->
+	<a href="https://wa.me/919686211977?text=Hello%20Tree%20Hues%2C%20I%20would%20like%20to%20inquire%20about%20your%20interior%20and%20architectural%20services." target="_blank" rel="noopener noreferrer" class="tree-hues-floating-whatsapp" aria-label="Chat with Tree Hues on WhatsApp">
+		<div class="whatsapp-pulse-ring"></div>
+		<div class="whatsapp-icon-circle">
+			<svg viewBox="0 0 24 24" fill="currentColor">
+				<path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.05 20.15C10.57 20.15 9.12 19.75 7.85 19L7.55 18.82L4.43 19.64L5.26 16.6L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.68 12.04 3.68C14.25 3.68 16.31 4.54 17.87 6.1C19.42 7.66 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.05 20.15ZM16.57 14.46C16.32 14.33 15.1 13.73 14.88 13.65C14.65 13.56 14.49 13.52 14.32 13.77C14.16 14.02 13.69 14.57 13.55 14.73C13.41 14.89 13.27 14.91 13.02 14.79C12.77 14.66 11.98 14.4 11.04 13.56C10.31 12.91 9.81 12.11 9.67 11.86C9.53 11.61 9.65 11.48 9.78 11.35C9.89 11.24 10.03 11.06 10.15 10.92C10.28 10.78 10.32 10.68 10.4 10.51C10.49 10.35 10.44 10.2 10.38 10.08C10.32 9.96 9.83 8.75 9.62 8.26C9.42 7.78 9.22 7.84 9.07 7.83C8.93 7.83 8.76 7.82 8.6 7.82C8.43 7.82 8.16 7.88 7.93 8.13C7.7 8.38 7.05 8.99 7.05 10.23C7.05 11.47 7.95 12.67 8.08 12.83C8.2 13 9.86 15.55 12.39 16.64C12.99 16.9 13.46 17.06 13.82 17.17C14.43 17.37 14.98 17.34 15.42 17.27C15.91 17.2 16.93 16.65 17.14 16.05C17.35 15.45 17.35 14.94 17.29 14.83C17.23 14.73 17.07 14.67 16.82 14.54L16.57 14.46Z"/>
+			</svg>
+		</div>
+		<span class="whatsapp-tooltip-pill">
+			<span class="online-indicator"></span>
+			Chat with Us
+		</span>
+	</a>
 
 	<!-- Header Area-->
 	<header class="mextreo-header-area mha-inner">
 		<div class="container c-fulid-max">
 			<div class="row align-items-center">
-				<div class="col-4 col-md-4">
+				<div class="col-8 col-md-4">
 					<div class="logo-wrapper">
 						<a href="index.html" class="tree-hues-brand">
 							<img src="TREE HUES_Final.png" alt="Tree Hues" class="tree-hues-logo-img">
@@ -99,7 +116,7 @@
 						</a>
 					</div>
 				</div>
-				<div class="col-8 col-md-8">
+				<div class="col-4 col-md-8">
 					<div class="mextreo-menu">
 						<div class="mxm-wrspper">
 							<nav class="main-nav" role="navigation">
@@ -110,16 +127,30 @@
 								</label>
 								<!-- main menu definition -->
 								<ul id="main-menu" class="sm sm-mint">
+									<li class="mobile-drawer-brand">
+										<a href="index.html" class="tree-hues-brand">
+											<img src="TREE HUES_Final.png" alt="Tree Hues" class="tree-hues-logo-img">
+											<span class="tree-hues-brand-text">Tree Hues</span>
+										</a>
+									</li>
 									<li><a href="index.html">Home</a></li>
 									<li class="active"><a href="about-us.html" class="active">About Tree Hues</a></li>
 									<li><a href="service.html">What We Do?</a></li>
 									<li><a href="project.html">Projects</a></li>
+									<li><a href="gallery.html">Gallery</a></li>
 									<li><a href="contact.html">Contact Us</a></li>
-									<li class="nav-quote-cta">
-										<a href="https://wa.me/919686211977?text=Hello%20Tree%20Hues%2C%20I%20would%20like%20to%20get%20a%20quote%20for%20my%20project" target="_blank" class="quote-btn">
-											<svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.05 20.15C10.57 20.15 9.12 19.75 7.85 19L7.55 18.82L4.43 19.64L5.26 16.6L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.68 12.04 3.68C14.25 3.68 16.31 4.54 17.87 6.1C19.42 7.66 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.05 20.15ZM16.57 14.46C16.32 14.33 15.1 13.73 14.88 13.65C14.65 13.56 14.49 13.52 14.32 13.77C14.16 14.02 13.69 14.57 13.55 14.73C13.41 14.89 13.27 14.91 13.02 14.79C12.77 14.66 11.98 14.4 11.04 13.56C10.31 12.91 9.81 12.11 9.67 11.86C9.53 11.61 9.65 11.48 9.78 11.35C9.89 11.24 10.03 11.06 10.15 10.92C10.28 10.78 10.32 10.68 10.4 10.51C10.49 10.35 10.44 10.2 10.38 10.08C10.32 9.96 9.83 8.75 9.62 8.26C9.42 7.78 9.22 7.84 9.07 7.83C8.93 7.83 8.76 7.82 8.6 7.82C8.43 7.82 8.16 7.88 7.93 8.13C7.7 8.38 7.05 8.99 7.05 10.23C7.05 11.47 7.95 12.67 8.08 12.83C8.2 13 9.86 15.55 12.39 16.64C12.99 16.9 13.46 17.06 13.82 17.17C14.43 17.37 14.98 17.34 15.42 17.27C15.91 17.2 16.93 16.65 17.14 16.05C17.35 15.45 17.35 14.94 17.29 14.83C17.23 14.73 17.07 14.67 16.82 14.54L16.57 14.46Z"/></svg>
-											<span>Get a Quote</span>
-										</a>
+									<li class="mobile-drawer-footer">
+										<div class="mdf-contact">
+											<a href="tel:+919686211977">+91 96862 11977</a>
+											<a href="mailto:treehuesstudio@gmail.com">treehuesstudio@gmail.com</a>
+										</div>
+										<div class="mdf-socials">
+											<a href="https://instagram.com" target="_blank">Instagram</a>
+											<span class="mdf-dot">•</span>
+											<a href="https://facebook.com" target="_blank">Facebook</a>
+											<span class="mdf-dot">•</span>
+											<a href="https://linkedin.com" target="_blank">LinkedIn</a>
+										</div>
 									</li>
 								</ul>
 							</nav>
@@ -195,54 +226,68 @@
 			</div>
 			<div class="sp-social">
 				<ul class="social-list">
-					<li data-aos="fade-up" data-aos-duration="1500"><a href="#"><i class="flaticon-twitter"></i></a></li>
-					<li data-aos="fade-up" data-aos-duration="2000"><a href="#"><i class="flaticon-facebook"></i></a>
-					</li>
-					<li data-aos="fade-up" data-aos-duration="2500"><a href="#"><i class="flaticon-instagram"></i></a>
-					</li>
-					<li data-aos="fade-up" data-aos-duration="3000"><a href="#"><i class="flaticon-linkedin"></i></a>
-					</li>
+					<li data-aos="fade-up" data-aos-duration="1500"><a href="#" aria-label="X (Twitter)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 24.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a></li>
+					<li data-aos="fade-up" data-aos-duration="2000"><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+					<li data-aos="fade-up" data-aos-duration="2500"><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+					<li data-aos="fade-up" data-aos-duration="3000"><a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
 				</ul>
 			</div>
 		</div>
 	</div>
 	<!-- /Right Side Panel -->
-	<!--Social Icon-->
-	<div class="hero-social">
-		<ul>
-			<li data-aos="fade-up" data-aos-duration="1500"><a href="#"><i class="flaticon-twitter"></i></a></li>
-			<li data-aos="fade-up" data-aos-duration="2000"><a href="#"><i class="flaticon-facebook"></i></a></li>
-			<li data-aos="fade-up" data-aos-duration="2500"><a href="#"><i class="flaticon-instagram"></i></a></li>
-			<li data-aos="fade-up" data-aos-duration="3000"><a href="#"><i class="flaticon-linkedin"></i></a></li>
-		</ul>
-	</div>
-	<!--End Social Icon-->
-	<!-- Mextreo Hero Section -->
-	<section class="mextreo-hero inner mar-bot-140">
+	<!-- Modern About Cinematic Hero Header with Breadcrumbs -->
+	<section class="tree-hues-about-hero tree-hues-cinematic-hero">
 		<div class="container">
-			<div class="row">
-				<div class="col-md-6">
-					<div class="hero-content">
-						<h6 class="ht-tittle" data-aos="fade-right" data-aos-duration="1500">ABOUT TREE HUES</h6>
-						<h2 data-aos="fade-up" data-aos-duration="2000">About Tree Hues</h2>
-						<p data-aos="fade-up" data-aos-duration="2500">Tree Hues is a dream and hardwork of our founder Sachin Shetty. He is from a village in Mangalore, who began his career in civil engineering and harbored a grand ambition of building his own company. Armed with B.Tech. in Civil Engineering from NITK Surathkal, he slowly developed his interest in construction and interiors when he started his Job in Bangalore 13 years ago.</p>
-						<p data-aos="fade-up" data-aos-duration="2700">Tree Hues is built on the idea of creating spaces that feel rooted yet progressive. We believe, design is a balance of timeless character and modern expression.</p>
-						<p data-aos="fade-up" data-aos-duration="2900">Our design approach is flexible, allowing us to work across styles while staying true to each client’s needs.</p>
-						<p data-aos="fade-up" data-aos-duration="3000">Our process-driven execution and focus on fine details set us apart. With a clear workflow and careful coordination, we ensure every project is delivered efficiently and with quality.</p>
+			<div class="row align-items-center">
+				<div class="col-lg-8 mx-auto text-center" data-aos="fade-up" data-aos-duration="1200">
+					<div class="hero-top-meta-wrap" data-aos="fade-down" data-aos-duration="1000">
+						<div class="tree-hues-breadcrumb">
+							<a href="index.html">HOME</a>
+							<span class="crumb-separator">✦</span>
+							<span class="current-crumb">ABOUT TREE HUES</span>
+						</div>
+						<div class="service-hero-badge">
+							<span class="badge-dot"></span>
+							<span>13+ YEARS ARCHITECTURAL HERITAGE</span>
+						</div>
+					</div>
+					<h1 class="service-hero-title">About Tree Hues</h1>
+					<p class="service-hero-subtitle">
+						Crafting spaces that feel rooted yet progressive &bull; Blending Indian heritage with modern design.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- /Tree Hues Cinematic Hero Section-->
+
+	<!-- Mextreo About Section-->
+	<section class="mextreo-about" style="padding-top: 75px; padding-bottom: 50px;">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-md-6 order-md-1 order-2">
+					<div class="about-bg" data-aos="fade-left" data-aos-duration="2500">
+						<img src="assets/img/about/abou-bg.jpg" alt="">
+					</div>
+					<div class="m-about-img" data-aos="fade-up" data-aos-duration="2500">
+						<img src="assets/img/about/about.jpg" alt="About Tree Hues">
 					</div>
 				</div>
-				<div class="col-md-6">
-					<div class="hero-inner-img">
-						<img src="assets/img/hero/inner-hero.jpg" alt="" data-aos="fade-left" data-aos-duration="2000">
-						<img src="assets/img/hero/inner-hero-after2.jpg" alt="" class="hero-inner-2" data-aos="fade-up"
-							data-aos-duration="3000">
+				<div class="col-md-6 order-md-2 order-1">
+					<div class="m-about-content">
+						<h2 class="ab-tittle">ABOUT US</h2>
+						<h6 class="ht-tittle" data-aos="fade-right" data-aos-duration="1500">ABOUT TREE HUES</h6>
+						<h2 data-aos="fade-up" data-aos-duration="2000">About Tree Hues</h2>
+						<p data-aos="fade-up" data-aos-duration="2200">Tree Hues is a dream and hardwork of our founder Sachin Shetty. He is from a village in Mangalore, who began his career in civil engineering and harbored a grand ambition of building his own company. Armed with B.Tech. in Civil Engineering from NITK Surathkal, he slowly developed his interest in construction and interiors when he started his Job in Bangalore 13 years ago.</p>
+						<p data-aos="fade-up" data-aos-duration="2400">Tree Hues is built on the idea of creating spaces that feel rooted yet progressive. We believe, design is a balance of timeless character and modern expression.</p>
+						<p data-aos="fade-up" data-aos-duration="2600">Our design approach is flexible, allowing us to work across styles while staying true to each client’s needs.</p>
+						<p data-aos="fade-up" data-aos-duration="2800">Our process-driven execution and focus on fine details set us apart. With a clear workflow and careful coordination, we ensure every project is delivered efficiently and with quality.</p>
 					</div>
 				</div>
 			</div>
 		</div>
-
 	</section>
-	<!-- /Mextreo Hero Section-->
+	<!-- /Mextreo About Section-->
 
 	<!-- Mextreo About / Founder Section-->
 	<section class="mextreo-about pt-res-50">
@@ -272,41 +317,110 @@
 	<!-- /Mextreo About Section-->
 
 	<!--Core Values Section-->
-	<section class="mextreo-blog" style="padding-top: 100px;">
+	<section class="tree-hues-values-section" style="padding-top: 70px;">
 		<div class="container">
-			<div class="mex-blog-top">
-				<h6 class="ht-tittle" data-aos="fade-up" data-aos-duration="2000">Principles</h6>
-				<h2 data-aos="fade-up" data-aos-duration="3000">Our Core Values</h2>
+			<div class="values-top-heading">
+				<div class="values-badge" data-aos="fade-down" data-aos-duration="1200">
+					<span class="badge-gold-sparkle">✦</span>
+					<span>Core Philosophy &amp; Principles</span>
+				</div>
+				<h2 class="values-main-heading" data-aos="fade-up" data-aos-duration="1500">Our Core Values</h2>
+				<div class="values-gold-bar" data-aos="zoom-in" data-aos-duration="1500">
+					<span class="gold-line"></span>
+					<span class="gold-diamond">◆</span>
+					<span class="gold-line"></span>
+				</div>
+				<p class="values-subtitle" data-aos="fade-up" data-aos-duration="1800">Guided by purpose, precision, and architectural excellence in every space we transform.</p>
 			</div>
 			<div class="row">
-				<div class="col-md-4" data-aos="fade-up" data-aos-duration="1000" style="margin-bottom: 30px;">
-					<div class="tree-hues-value-card">
-						<h3>Customer Obsession:</h3>
-						<p>We are dedicated to transforming spaces with exceptional interior design and construction services. Our focus is on you, the customer. We listen to your needs and work hard to exceed your expectations. Your satisfaction is our top priority, and we are obsessed with delivering the best results for every project. We believe in creating beautiful, functional spaces that reflect your style and vision.</p>
+				<!-- 01. Customer Obsession -->
+				<div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-duration="1500">
+					<div class="luxury-value-card">
+						<div class="value-card-top">
+							<div class="value-icon-badge">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#dcbc95" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+							</div>
+							<div class="value-meta-wrap">
+								<span class="value-tag">Customer Focus</span>
+								<span class="value-number">01</span>
+							</div>
+						</div>
+						<h3 class="value-title">Customer Obsession</h3>
+						<p class="value-text">We are dedicated to transforming spaces with exceptional interior design and construction services. Our focus is on you, the customer. We listen to your needs and work hard to exceed your expectations. Your satisfaction is our top priority, and we are obsessed with delivering the best results for every project. We believe in creating beautiful, functional spaces that reflect your style and vision.</p>
 					</div>
 				</div>
-				<div class="col-md-4" data-aos="fade-up" data-aos-duration="1500" style="margin-bottom: 30px;">
-					<div class="tree-hues-value-card">
-						<h3>Quality:</h3>
-						<p>We are dedicated to delivering high-grade quality in every project we handle. We define quality as paying attention to every detail and using the best materials and techniques. Our skilled team works hard to ensure that every job is done right, from start to finish. We aim to create spaces that are not only visually stunning but also built to last.</p>
+
+				<!-- 02. Quality -->
+				<div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-duration="2000">
+					<div class="luxury-value-card">
+						<div class="value-card-top">
+							<div class="value-icon-badge">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#dcbc95" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="6 3 18 3 22 9 12 22 2 9 6 3"></polygon><line x1="2" y1="9" x2="22" y2="9"></line><line x1="12" y1="22" x2="12" y2="9"></line></svg>
+							</div>
+							<div class="value-meta-wrap">
+								<span class="value-tag">Grade-A Quality</span>
+								<span class="value-number">02</span>
+							</div>
+						</div>
+						<h3 class="value-title">Quality</h3>
+						<p class="value-text">We are dedicated to delivering high-grade quality in every project we handle. We define quality as paying attention to every detail and using the best materials and techniques. Our skilled team works hard to ensure that every job is done right, from start to finish. We aim to create spaces that are not only visually stunning but also built to last.</p>
 					</div>
 				</div>
-				<div class="col-md-4" data-aos="fade-up" data-aos-duration="2000" style="margin-bottom: 30px;">
-					<div class="tree-hues-value-card">
-						<h3>Innovation:</h3>
-						<p>We blend innovation with timeless elegance. We believe in combining the best of new ideas with classic design principles. Our team embraces the latest trends and technologies while also honoring traditional craftsmanship and styles. We aim to create spaces that are both modern and enduring, using fresh, creative solutions alongside proven methods. By valuing the old and celebrating the new, we strive to deliver designs that are unique, stylish, and stand the test of time. Our goal is to provide you with exceptional results that honor classic beauty and embrace innovative thinking.</p>
+
+				<!-- 03. Innovation (Featured Centerpiece Banner) -->
+				<div class="col-lg-12" data-aos="fade-up" data-aos-duration="2500">
+					<div class="luxury-value-card featured-value-card">
+						<div class="featured-inner">
+							<div class="featured-left">
+								<div class="value-card-top" style="margin-bottom: 12px;">
+									<div class="value-icon-badge">
+										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#dcbc95" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"></path><path d="M10 22h4"></path><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A6 6 0 1 0 7.5 11.5c.76.76 1.23 1.52 1.41 2.5h6.18z"></path></svg>
+									</div>
+									<div class="value-meta-wrap">
+										<span class="value-tag">Timeless &amp; Modern</span>
+										<span class="value-number">03</span>
+									</div>
+								</div>
+								<h3 class="value-title" style="font-size: 26px; margin-top: 10px;">Innovation</h3>
+							</div>
+							<div class="featured-right">
+								<p class="value-text" style="font-size: 14px; line-height: 1.85;">We blend innovation with timeless elegance. We believe in combining the best of new ideas with classic design principles. Our team embraces the latest trends and technologies while also honoring traditional craftsmanship and styles. We aim to create spaces that are both modern and enduring, using fresh, creative solutions alongside proven methods. By valuing the old and celebrating the new, we strive to deliver designs that are unique, stylish, and stand the test of time. Our goal is to provide you with exceptional results that honor classic beauty and embrace innovative thinking.</p>
+							</div>
+						</div>
 					</div>
 				</div>
-				<div class="col-md-6" data-aos="fade-up" data-aos-duration="2500" style="margin-bottom: 30px;">
-					<div class="tree-hues-value-card">
-						<h3>Frugality:</h3>
-						<p>We believe in being smart with our resources. We focus on getting the most value from every rupee spent on interior design and construction. Our team works carefully to avoid waste and use materials and time efficiently. We are dedicated to providing high-quality results while keeping costs under control.</p>
+
+				<!-- 04. Frugality -->
+				<div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-duration="2000">
+					<div class="luxury-value-card">
+						<div class="value-card-top">
+							<div class="value-icon-badge">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#dcbc95" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 16l3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1z"></path><path d="M2 16l3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1z"></path><path d="M7 21h10"></path><path d="M12 3v18"></path><path d="M3 7h18"></path></svg>
+							</div>
+							<div class="value-meta-wrap">
+								<span class="value-tag">Smart Resources</span>
+								<span class="value-number">04</span>
+							</div>
+						</div>
+						<h3 class="value-title">Frugality</h3>
+						<p class="value-text">We believe in being smart with our resources. We focus on getting the most value from every rupee spent on interior design and construction. Our team works carefully to avoid waste and use materials and time efficiently. We are dedicated to providing high-quality results while keeping costs under control.</p>
 					</div>
 				</div>
-				<div class="col-md-6" data-aos="fade-up" data-aos-duration="3000" style="margin-bottom: 30px;">
-					<div class="tree-hues-value-card">
-						<h3>Integrity:</h3>
-						<p>We are committed to being honest, transparent, and ethical in all our interior design and construction projects. We promise to deliver on our commitments and treat every customer with fairness and respect. Our goal is to build trust and provide reliable services that you can count on.</p>
+
+				<!-- 05. Integrity -->
+				<div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-duration="2500">
+					<div class="luxury-value-card">
+						<div class="value-card-top">
+							<div class="value-icon-badge">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#dcbc95" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M9 12l2 2 4-4"></path></svg>
+							</div>
+							<div class="value-meta-wrap">
+								<span class="value-tag">Authentic Trust</span>
+								<span class="value-number">05</span>
+							</div>
+						</div>
+						<h3 class="value-title">Integrity</h3>
+						<p class="value-text">We are committed to being honest, transparent, and ethical in all our interior design and construction projects. We promise to deliver on our commitments and treat every customer with fairness and respect. Our goal is to build trust and provide reliable services that you can count on.</p>
 					</div>
 				</div>
 			</div>
@@ -455,6 +569,7 @@
 						<li><a href="about-us.html">About Tree Hues</a></li>
 						<li><a href="service.html">What We Do?</a></li>
 						<li><a href="project.html">Projects</a></li>
+						<li><a href="gallery.html">Gallery</a></li>
 						<li><a href="contact.html">Contact Us</a></li>
 					</ul>
 				</div>

@@ -46,7 +46,10 @@
 	<!-- Main StyleSheet CSS -->
 	<link rel="stylesheet" href="assets/css/style.css">
 	<!-- Favicon -->
-	<link rel="icon" type="image/png" sizes="16x16" href="assets/img/logo.png">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	<!--[if lt IE 9]>
@@ -85,16 +88,29 @@
 	</div>
 	<!-- /Preloder-->
 	<!--Scroll Top-->
-	<button class="scroll-top scroll-to-target" data-target="html">
+	<button class="scroll-top scroll-to-target" data-target="html" aria-label="Scroll to Top">
 		<i class="flaticon-up scrollup-icon"></i>
 	</button>
-	
-	<!--Scroll Top-->
+	<!--/Scroll Top-->
+
+	<!-- Floating Luxury WhatsApp Concierge -->
+	<a href="https://wa.me/919686211977?text=Hello%20Tree%20Hues%2C%20I%20would%20like%20to%20inquire%20about%20your%20interior%20and%20architectural%20services." target="_blank" rel="noopener noreferrer" class="tree-hues-floating-whatsapp" aria-label="Chat with Tree Hues on WhatsApp">
+		<div class="whatsapp-pulse-ring"></div>
+		<div class="whatsapp-icon-circle">
+			<svg viewBox="0 0 24 24" fill="currentColor">
+				<path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.05 20.15C10.57 20.15 9.12 19.75 7.85 19L7.55 18.82L4.43 19.64L5.26 16.6L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.68 12.04 3.68C14.25 3.68 16.31 4.54 17.87 6.1C19.42 7.66 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.05 20.15ZM16.57 14.46C16.32 14.33 15.1 13.73 14.88 13.65C14.65 13.56 14.49 13.52 14.32 13.77C14.16 14.02 13.69 14.57 13.55 14.73C13.41 14.89 13.27 14.91 13.02 14.79C12.77 14.66 11.98 14.4 11.04 13.56C10.31 12.91 9.81 12.11 9.67 11.86C9.53 11.61 9.65 11.48 9.78 11.35C9.89 11.24 10.03 11.06 10.15 10.92C10.28 10.78 10.32 10.68 10.4 10.51C10.49 10.35 10.44 10.2 10.38 10.08C10.32 9.96 9.83 8.75 9.62 8.26C9.42 7.78 9.22 7.84 9.07 7.83C8.93 7.83 8.76 7.82 8.6 7.82C8.43 7.82 8.16 7.88 7.93 8.13C7.7 8.38 7.05 8.99 7.05 10.23C7.05 11.47 7.95 12.67 8.08 12.83C8.2 13 9.86 15.55 12.39 16.64C12.99 16.9 13.46 17.06 13.82 17.17C14.43 17.37 14.98 17.34 15.42 17.27C15.91 17.2 16.93 16.65 17.14 16.05C17.35 15.45 17.35 14.94 17.29 14.83C17.23 14.73 17.07 14.67 16.82 14.54L16.57 14.46Z"/>
+			</svg>
+		</div>
+		<span class="whatsapp-tooltip-pill">
+			<span class="online-indicator"></span>
+			Chat with Us
+		</span>
+	</a>
 	<!-- Header Area-->
 	<header class="mextreo-header-area">
 		<div class="container c-fulid-max">
 			<div class="row align-items-center">
-				<div class="col-4 col-md-4">
+				<div class="col-8 col-md-4">
 					<div class="logo-wrapper">
 						<a href="index.html" class="tree-hues-brand">
 							<img src="TREE HUES_Final.png" alt="Tree Hues" class="tree-hues-logo-img">
@@ -102,7 +118,7 @@
 						</a>
 					</div>
 				</div>
-				<div class="col-8 col-md-8">
+				<div class="col-4 col-md-8">
 					<div class="mextreo-menu">
 						<div class="mxm-wrspper">
 							<nav class="main-nav" role="navigation">
@@ -113,21 +129,35 @@
 								</label>
 								<!-- main menu definition -->
 								<ul id="main-menu" class="sm sm-mint">
+									<li class="mobile-drawer-brand">
+										<a href="index.html" class="tree-hues-brand">
+											<img src="TREE HUES_Final.png" alt="Tree Hues" class="tree-hues-logo-img">
+											<span class="tree-hues-brand-text">Tree Hues</span>
+										</a>
+									</li>
 									<li class="active"><a href="index.html" class="active">Home</a></li>
 									<li><a href="about-us.html">About Tree Hues</a></li>
 									<li><a href="service.html">What We Do?</a></li>
 									<li><a href="project.html">Projects</a></li>
+									<li><a href="gallery.html">Gallery</a></li>
 									<li><a href="contact.html">Contact Us</a></li>
-									<li class="nav-quote-cta">
-										<a href="https://wa.me/919686211977?text=Hello%20Tree%20Hues%2C%20I%20would%20like%20to%20get%20a%20quote%20for%20my%20project" target="_blank" class="quote-btn">
-											<svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.05 20.15C10.57 20.15 9.12 19.75 7.85 19L7.55 18.82L4.43 19.64L5.26 16.6L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.68 12.04 3.68C14.25 3.68 16.31 4.54 17.87 6.1C19.42 7.66 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.05 20.15ZM16.57 14.46C16.32 14.33 15.1 13.73 14.88 13.65C14.65 13.56 14.49 13.52 14.32 13.77C14.16 14.02 13.69 14.57 13.55 14.73C13.41 14.89 13.27 14.91 13.02 14.79C12.77 14.66 11.98 14.4 11.04 13.56C10.31 12.91 9.81 12.11 9.67 11.86C9.53 11.61 9.65 11.48 9.78 11.35C9.89 11.24 10.03 11.06 10.15 10.92C10.28 10.78 10.32 10.68 10.4 10.51C10.49 10.35 10.44 10.2 10.38 10.08C10.32 9.96 9.83 8.75 9.62 8.26C9.42 7.78 9.22 7.84 9.07 7.83C8.93 7.83 8.76 7.82 8.6 7.82C8.43 7.82 8.16 7.88 7.93 8.13C7.7 8.38 7.05 8.99 7.05 10.23C7.05 11.47 7.95 12.67 8.08 12.83C8.2 13 9.86 15.55 12.39 16.64C12.99 16.9 13.46 17.06 13.82 17.17C14.43 17.37 14.98 17.34 15.42 17.27C15.91 17.2 16.93 16.65 17.14 16.05C17.35 15.45 17.35 14.94 17.29 14.83C17.23 14.73 17.07 14.67 16.82 14.54L16.57 14.46Z"/></svg>
-											<span>Get a Quote</span>
-										</a>
+									<li class="mobile-drawer-footer">
+										<div class="mdf-contact">
+											<a href="tel:+919686211977">+91 96862 11977</a>
+											<a href="mailto:treehuesstudio@gmail.com">treehuesstudio@gmail.com</a>
+										</div>
+										<div class="mdf-socials">
+											<a href="https://instagram.com" target="_blank">Instagram</a>
+											<span class="mdf-dot">•</span>
+											<a href="https://facebook.com" target="_blank">Facebook</a>
+											<span class="mdf-dot">•</span>
+											<a href="https://linkedin.com" target="_blank">LinkedIn</a>
+										</div>
 									</li>
 								</ul>
 							</nav>
 						</div>
-						<div class="side-ber black">
+						<div class="side-ber">
 							<button class="sidebar-btn"><i class="fas fa-bars" aria-hidden="true"></i></button>
 						</div>
 					</div>
@@ -198,13 +228,10 @@
 			</div>
 			<div class="sp-social">
 				<ul class="social-list">
-					<li data-aos="fade-up" data-aos-duration="1500"><a href="#"><i class="flaticon-twitter"></i></a></li>
-					<li data-aos="fade-up" data-aos-duration="2000"><a href="#"><i class="flaticon-facebook"></i></a>
-					</li>
-					<li data-aos="fade-up" data-aos-duration="2500"><a href="#"><i class="flaticon-instagram"></i></a>
-					</li>
-					<li data-aos="fade-up" data-aos-duration="3000"><a href="#"><i class="flaticon-linkedin"></i></a>
-					</li>
+					<li data-aos="fade-up" data-aos-duration="1500"><a href="#" aria-label="X (Twitter)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 24.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a></li>
+					<li data-aos="fade-up" data-aos-duration="2000"><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+					<li data-aos="fade-up" data-aos-duration="2500"><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+					<li data-aos="fade-up" data-aos-duration="3000"><a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
 				</ul>
 			</div>
 		</div>
@@ -232,102 +259,92 @@
 							-->
 									<rs-layer id="slider-22-slide-33-layer-0" data-type="shape" data-rsp_ch="on"
 										data-text="w:normal;" data-dim="w:100%;h:100%;"
-										data-frame_999="o:0;st:5000;sp:1460;sR:4700;"
+										data-frame_999="o:0;st:w;sp:1460;sR:4700;"
 										style="z-index:8;background-color:rgba(23,22,22,0.71);">
 									</rs-layer>
 									<!--
 
 							-->
+									<rs-layer id="slider-22-slide-33-layer-7" class="rs-pxl-1" data-type="text"
+										data-color="#fff" data-rsp_ch="on" data-xy="x:c;y:248,220,170,105;"
+										data-text="w:normal;s:90,75,50,36;l:90,75,52,40;fw:900;a:center;" data-dim="minh:0;"
+										data-frame_0="y:50;" data-frame_1="e:Power0.easeInOut;sp:1430;"
+										data-frame_999="y:0;o:0;rX:70deg;oZ:-50;e:Power4.easeInOut;st:w;sp:1750;sR:3570;"
+										data-loop_999="crd:t;rA:1;"
+										style="z-index:10;font-family:Philosopher, Chronicle Display;text-transform:capitalize;">
+										Tree Hues<br />
+									</rs-layer>
+									<!--
+							-->
 									<rs-layer id="slider-22-slide-33-layer-1" class="rs-pxl-1" data-type="text"
-										data-color="#fff" data-rsp_ch="on" data-xy="x:c;xo:3px;y:343px;"
-										data-text="w:normal;s:80;l:85;fw:900;a:center;" data-dim="minh:0px;"
+										data-color="#fff" data-rsp_ch="on" data-xy="x:c;xo:0;y:343,300,230,150;"
+										data-text="w:normal;s:80,65,40,25;l:85,70,44,30;fw:900;a:center;" data-dim="minh:0;"
 										data-frame_0="y:50;" data-frame_1="e:Power0.easeInOut;st:230;sp:1500;sR:230;"
-										data-frame_999="y:0;o:0;rX:70deg;oZ:-50;e:Power4.easeInOut;st:5000;sp:1750;sR:3270;"
+										data-frame_999="y:0;o:0;rX:70deg;oZ:-50;e:Power4.easeInOut;st:w;sp:1750;sR:3270;"
 										data-loop_999="crd:t;rA:1;"
 										style="z-index:11;font-family:Chronicle Display;text-transform:capitalize;">
 										Interior Design & Build<br />
-
 									</rs-layer>
 									<!--
-
 							-->
 									<rs-layer id="slider-22-slide-33-layer-3" data-type="text" data-color="#fff"
-										data-rsp_ch="on" data-xy="x:c;y:458px;"
-										data-text="w:normal;s:18;l:30;ls:0px;fw:500;a:center;"
-										data-dim="w:570px;minh:0px;" data-frame_0="y:50;" data-frame_1="sp:2500;"
-										data-frame_999="y:0;o:0;rX:70deg;oZ:-50;e:Power4.easeInOut;st:5000;sp:1750;sR:3000;"
+										data-rsp_ch="on" data-xy="x:c;y:458,390,290,195;"
+										data-text="w:normal;s:18,16,13,13.5;l:30,26,20,20;ls:0px;fw:500;a:center;"
+										data-dim="w:570,500,420,330;minh:0;" data-frame_0="y:50;" data-frame_1="sp:2500;"
+										data-frame_999="y:0;o:0;rX:70deg;oZ:-50;e:Power4.easeInOut;st:w;sp:1750;sR:3000;"
 										style="z-index:12;font-family:Gotham Narrow;">At Tree Hues, we specialize in blending Indian heritage with modern design, but our creativity is not limited to any single style.
 									</rs-layer>
 									<!--
-
 							--><a id="slider-22-slide-33-layer-4" class="rs-layer hero-btn rev-btn" href="project.html" target="_self"
 										rel="nofollow" data-type="button" data-color="#ffffff" data-rsp_ch="on"
-										data-xy="x:c;y:570px;" data-text="w:normal;s:15;l:25;" data-dim="minh:0px;"
-										data-padding="t:20;r:35;b:20;l:35;" data-frame_0="y:50;" data-frame_1="sp:2500;"
-										data-frame_999="y:0;o:0;rX:70deg;oZ:-50;e:Power4.easeInOut;st:5000;sp:1750;sR:2500;"
+										data-xy="x:c;y:570,480,360,285;" data-text="w:normal;s:15,14,12,12;l:25,22,18,16;" data-dim="minh:0;"
+										data-padding="t:20,16,12,10;r:35,28,22,22;b:20,16,12,10;l:35,28,22,22;" data-frame_0="y:50;" data-frame_1="sp:2500;"
+										data-frame_999="y:0;o:0;rX:70deg;oZ:-50;e:Power4.easeInOut;st:w;sp:1750;sR:2500;"
 										data-frame_hover="rX:0deg;rY:0deg;rZ:0deg;bgc:#dbaa6f;bor:0px,0px,0px,0px;bri:120%;iC:true;"
 										style="z-index:13;background-color:#dcbc95;font-family:Gotham Narrow;text-transform:uppercase;cursor:pointer;">Discover
 										More
 									</a>
 									<!--
-
-							-->
-									<rs-layer id="slider-22-slide-33-layer-7" class="rs-pxl-1" data-type="text"
-										data-color="#fff" data-rsp_ch="on" data-xy="x:c;y:248px;"
-										data-text="w:normal;s:90;l:90;fw:900;a:center;" data-dim="minh:0px;"
-										data-frame_0="y:50;" data-frame_1="e:Power0.easeInOut;sp:1430;"
-										data-frame_999="y:0;o:0;rX:70deg;oZ:-50;e:Power4.easeInOut;st:5000;sp:1750;sR:3570;"
-										data-loop_999="crd:t;rA:1;"
-										style="z-index:10;font-family:Philosopher, Chronicle Display;text-transform:capitalize;">
-										Tree Hues<br />
-
-									</rs-layer>
-									<!--
-
-							--><a id="slider-22-slide-33-layer-9" class="rs-layer" href="#" target="_self" rel="nofollow" data-type="text"
+							--><a id="slider-22-slide-33-layer-9" class="rs-layer hero-social-layer" href="#" target="_self" rel="nofollow" data-type="text"
 										data-color="#a3a3a3" data-rsp_ch="on" data-xy="x:154px;y:446px;"
 										data-text="w:normal;s:25;l:50;" data-frame_0="y:50;"
-										data-frame_1="e:Power0.easeInOut;sp:1600;" data-frame_999="o:0;st:5000;"
+										data-frame_1="e:Power0.easeInOut;sp:1600;" data-frame_999="o:0;st:w;"
 										data-frame_hover="c:#dcbc95;"
 										style="z-index:14;font-family:Roboto;cursor:pointer;"><i
-											class="fa-facebook-f"></i>
+											class="fab fa-facebook-f"></i>
 									</a>
 									<!--
-
-							--><a id="slider-22-slide-33-layer-10" class="rs-layer" href="#" target="_self" rel="nofollow" data-type="text"
+							--><a id="slider-22-slide-33-layer-10" class="rs-layer hero-social-layer" href="#" target="_self" rel="nofollow" data-type="text"
 										data-color="#a3a3a3" data-rsp_ch="on" data-xy="x:152px;y:403px;"
 										data-text="w:normal;s:25;l:50;" data-frame_0="y:50;"
-										data-frame_1="e:Power0.easeInOut;sp:1500;" data-frame_999="o:0;st:5000;"
+										data-frame_1="e:Power0.easeInOut;sp:1500;" data-frame_999="o:0;st:w;"
 										data-frame_hover="c:#dcbc95;"
-										style="z-index:15;font-family:Roboto;cursor:pointer;"><i class="fa-twitter"></i>
+										style="z-index:15;font-family:Roboto;cursor:pointer;"><i class="fab fa-twitter"></i>
 									</a>
 									<!--
-
-							--><a id="slider-22-slide-33-layer-11" class="rs-layer" href="#" target="_self" rel="nofollow" data-type="text"
+							--><a id="slider-22-slide-33-layer-11" class="rs-layer hero-social-layer" href="#" target="_self" rel="nofollow" data-type="text"
 										data-color="#a3a3a3" data-rsp_ch="on" data-xy="x:151px;y:531px;"
 										data-text="w:normal;s:25;l:50;" data-frame_0="y:50;"
-										data-frame_1="e:Power0.easeInOut;sp:2000;" data-frame_999="o:0;st:5000;"
+										data-frame_1="e:Power0.easeInOut;sp:2000;" data-frame_999="o:0;st:w;"
 										data-frame_hover="c:#dcbc95;"
 										style="z-index:16;font-family:Roboto;cursor:pointer;"><i
-											class="fa-linkedin"></i>
+											class="fab fa-linkedin"></i>
 									</a>
 									<!--
-
-							--><a id="slider-22-slide-33-layer-12" class="rs-layer" href="#" target="_self" rel="nofollow" data-type="text"
+							--><a id="slider-22-slide-33-layer-12" class="rs-layer hero-social-layer" href="#" target="_self" rel="nofollow" data-type="text"
 										data-color="#a3a3a3" data-rsp_ch="on" data-xy="x:151px;y:491px;"
 										data-text="w:normal;s:25;l:50;" data-frame_0="y:50;"
-										data-frame_1="e:Power0.easeInOut;sp:1700;" data-frame_999="o:0;st:5000;"
+										data-frame_1="e:Power0.easeInOut;sp:1700;" data-frame_999="o:0;st:w;"
 										data-frame_hover="c:#dcbc95;"
 										style="z-index:17;font-family:Roboto;cursor:pointer;"><i
-											class="fa-instagram"></i>
+											class="fab fa-instagram"></i>
 									</a>
 									<!--
-
 							-->
-									<rs-layer id="slider-22-slide-33-layer-13" data-type="shape" data-rsp_ch="on"
+									<rs-layer id="slider-22-slide-33-layer-13" class="hero-social-layer" data-type="shape" data-rsp_ch="on"
 										data-xy="x:162px;y:303px;" data-text="w:normal;" data-dim="w:2px;h:100px;"
 										data-frame_0="y:50;" data-frame_1="e:Power0.easeInOut;sp:1200;"
-										data-frame_999="o:0;st:5000;" data-frame_hover="bgc:#dcbc95;"
+										data-frame_999="o:0;st:w;" data-frame_hover="bgc:#dcbc95;"
 										style="z-index:5;background-color:#dcbc95;">
 									</rs-layer>
 									<!--
@@ -344,102 +361,92 @@
 							-->
 									<rs-layer id="slider-22-slide-36-layer-0" data-type="shape" data-rsp_ch="on"
 										data-text="w:normal;" data-dim="w:100%;h:100%;"
-										data-frame_999="o:0;st:5000;sp:1460;sR:4700;"
+										data-frame_999="o:0;st:w;sp:1460;sR:4700;"
 										style="z-index:8;background-color:rgba(23,22,22,0.71);">
 									</rs-layer>
 									<!--
 
 							-->
-									<rs-layer id="slider-22-slide-36-layer-1" class="rs-pxl-1" data-type="text"
-										data-color="#fff" data-rsp_ch="on" data-xy="x:c;xo:3px;y:343px;"
-										data-text="w:normal;s:80;l:85;fw:900;a:center;" data-dim="minh:0px;"
-										data-frame_0="y:50;" data-frame_1="e:Power0.easeInOut;st:230;sp:1500;sR:230;"
-										data-frame_999="y:0;o:0;rX:70deg;oZ:-50;e:Power4.easeInOut;st:5000;sp:1750;sR:3270;"
-										data-loop_999="crd:t;rA:1;"
-										style="z-index:11;font-family:Chronicle Display;text-transform:capitalize;">
-										Architectural projects<br />
-
-									</rs-layer>
-									<!--
-
-							-->
-									<rs-layer id="slider-22-slide-36-layer-3" data-type="text" data-color="#fff"
-										data-rsp_ch="on" data-xy="x:c;y:458px;"
-										data-text="w:normal;s:18;l:30;ls:0px;fw:500;a:center;"
-										data-dim="w:570px;minh:0px;" data-frame_0="y:50;" data-frame_1="sp:2500;"
-										data-frame_999="y:0;o:0;rX:70deg;oZ:-50;e:Power4.easeInOut;st:5000;sp:1750;sR:3000;"
-										style="z-index:12;font-family:Gotham Narrow;">Tree Hues is built on the idea of creating spaces that feel rooted yet progressive. We believe, design is a balance of timeless character and modern expression.
-									</rs-layer>
-									<!--
-
-							--><a id="slider-22-slide-36-layer-4" class="rs-layer rev-btn" href="project.html" target="_self" rel="nofollow"
-										data-type="button" data-color="#ffffff" data-rsp_ch="on" data-xy="x:c;y:566px;"
-										data-text="w:normal;s:15;l:25;" data-dim="minh:0px;"
-										data-padding="t:20;r:35;b:20;l:35;" data-frame_0="y:50;" data-frame_1="sp:2700;"
-										data-frame_999="y:0;o:0;rX:70deg;oZ:-50;e:Power4.easeInOut;st:5000;sp:1750;sR:2500;"
-										data-frame_hover="bgc:#dbaa6f;bor:0px,0px,0px,0px;bri:120%;"
-										style="z-index:13;background-color:#dcbc95;font-family:Gotham Narrow;text-transform:uppercase;">Discover
-										More
-									</a>
-									<!--
-
-							-->
 									<rs-layer id="slider-22-slide-36-layer-7" class="rs-pxl-1" data-type="text"
-										data-color="#fff" data-rsp_ch="on" data-xy="x:c;y:248px;"
-										data-text="w:normal;s:90;l:90;fw:900;a:center;" data-dim="minh:0px;"
+										data-color="#fff" data-rsp_ch="on" data-xy="x:c;y:248,220,170,105;"
+										data-text="w:normal;s:90,75,50,36;l:90,75,52,40;fw:900;a:center;" data-dim="minh:0;"
 										data-frame_0="y:50;" data-frame_1="e:Power0.easeInOut;sp:1430;"
-										data-frame_999="y:0;o:0;rX:70deg;oZ:-50;e:Power4.easeInOut;st:5000;sp:1750;sR:3570;"
+										data-frame_999="y:0;o:0;rX:70deg;oZ:-50;e:Power4.easeInOut;st:w;sp:1750;sR:3570;"
 										data-loop_999="crd:t;rA:1;"
 										style="z-index:10;font-family:Philosopher, Chronicle Display;text-transform:capitalize;">
 										Tree Hues<br />
-
 									</rs-layer>
 									<!--
-
-							--><a id="slider-22-slide-36-layer-9" class="rs-layer" href="#" target="_self" rel="nofollow" data-type="text"
+							-->
+									<rs-layer id="slider-22-slide-36-layer-1" class="rs-pxl-1" data-type="text"
+										data-color="#fff" data-rsp_ch="on" data-xy="x:c;xo:0;y:343,300,230,150;"
+										data-text="w:normal;s:80,65,40,25;l:85,70,44,30;fw:900;a:center;" data-dim="minh:0;"
+										data-frame_0="y:50;" data-frame_1="e:Power0.easeInOut;st:230;sp:1500;sR:230;"
+										data-frame_999="y:0;o:0;rX:70deg;oZ:-50;e:Power4.easeInOut;st:w;sp:1750;sR:3270;"
+										data-loop_999="crd:t;rA:1;"
+										style="z-index:11;font-family:Chronicle Display;text-transform:capitalize;">
+										Architectural projects<br />
+									</rs-layer>
+									<!--
+							-->
+									<rs-layer id="slider-22-slide-36-layer-3" data-type="text" data-color="#fff"
+										data-rsp_ch="on" data-xy="x:c;y:458,390,290,195;"
+										data-text="w:normal;s:18,16,13,13.5;l:30,26,20,20;ls:0px;fw:500;a:center;"
+										data-dim="w:570,500,420,330;minh:0;" data-frame_0="y:50;" data-frame_1="sp:2500;"
+										data-frame_999="y:0;o:0;rX:70deg;oZ:-50;e:Power4.easeInOut;st:w;sp:1750;sR:3000;"
+										style="z-index:12;font-family:Gotham Narrow;">Tree Hues is built on the idea of creating spaces that feel rooted yet progressive. We believe, design is a balance of timeless character and modern expression.
+									</rs-layer>
+									<!--
+							--><a id="slider-22-slide-36-layer-4" class="rs-layer hero-btn rev-btn" href="project.html" target="_self" rel="nofollow"
+										data-type="button" data-color="#ffffff" data-rsp_ch="on" data-xy="x:c;y:566,480,360,285;"
+										data-text="w:normal;s:15,14,12,12;l:25,22,18,16;" data-dim="minh:0;"
+										data-padding="t:20,16,12,10;r:35,28,22,22;b:20,16,12,10;l:35,28,22,22;" data-frame_0="y:50;" data-frame_1="sp:2700;"
+										data-frame_999="y:0;o:0;rX:70deg;oZ:-50;e:Power4.easeInOut;st:w;sp:1750;sR:2500;"
+										data-frame_hover="bgc:#dbaa6f;bor:0px,0px,0px,0px;bri:120%;"
+										style="z-index:13;background-color:#dcbc95;font-family:Gotham Narrow;text-transform:uppercase;cursor:pointer;">Discover
+										More
+									</a>
+									<!--
+							--><a id="slider-22-slide-36-layer-9" class="rs-layer hero-social-layer" href="#" target="_self" rel="nofollow" data-type="text"
 										data-color="#a3a3a3" data-rsp_ch="on" data-xy="x:154px;y:446px;"
 										data-text="w:normal;s:25;l:50;" data-frame_0="y:50;"
-										data-frame_1="e:Power0.easeInOut;sp:1600;" data-frame_999="o:0;st:5000;"
+										data-frame_1="e:Power0.easeInOut;sp:1600;" data-frame_999="o:0;st:w;"
 										data-frame_hover="c:#dcbc95;"
 										style="z-index:14;font-family:Roboto;cursor:pointer;"><i
-											class="fa-facebook-f"></i>
+											class="fab fa-facebook-f"></i>
 									</a>
 									<!--
-
-							--><a id="slider-22-slide-36-layer-10" class="rs-layer" href="#" target="_self" rel="nofollow" data-type="text"
+							--><a id="slider-22-slide-36-layer-10" class="rs-layer hero-social-layer" href="#" target="_self" rel="nofollow" data-type="text"
 										data-color="#a3a3a3" data-rsp_ch="on" data-xy="x:152px;y:403px;"
 										data-text="w:normal;s:25;l:50;" data-frame_0="y:50;"
-										data-frame_1="e:Power0.easeInOut;sp:1500;" data-frame_999="o:0;st:5000;"
+										data-frame_1="e:Power0.easeInOut;sp:1500;" data-frame_999="o:0;st:w;"
 										data-frame_hover="c:#dcbc95;"
-										style="z-index:15;font-family:Roboto;cursor:pointer;"><i class="fa-twitter"></i>
+										style="z-index:15;font-family:Roboto;cursor:pointer;"><i class="fab fa-twitter"></i>
 									</a>
 									<!--
-
-							--><a id="slider-22-slide-36-layer-11" class="rs-layer" href="#" target="_self" rel="nofollow" data-type="text"
+							--><a id="slider-22-slide-36-layer-11" class="rs-layer hero-social-layer" href="#" target="_self" rel="nofollow" data-type="text"
 										data-color="#a3a3a3" data-rsp_ch="on" data-xy="x:151px;y:531px;"
 										data-text="w:normal;s:25;l:50;" data-frame_0="y:50;"
-										data-frame_1="e:Power0.easeInOut;sp:2000;" data-frame_999="o:0;st:5000;"
+										data-frame_1="e:Power0.easeInOut;sp:2000;" data-frame_999="o:0;st:w;"
 										data-frame_hover="c:#dcbc95;"
 										style="z-index:16;font-family:Roboto;cursor:pointer;"><i
-											class="fa-linkedin"></i>
+											class="fab fa-linkedin"></i>
 									</a>
 									<!--
-
-							--><a id="slider-22-slide-36-layer-12" class="rs-layer" href="#" target="_self" rel="nofollow" data-type="text"
+							--><a id="slider-22-slide-36-layer-12" class="rs-layer hero-social-layer" href="#" target="_self" rel="nofollow" data-type="text"
 										data-color="#a3a3a3" data-rsp_ch="on" data-xy="x:151px;y:491px;"
 										data-text="w:normal;s:25;l:50;" data-frame_0="y:50;"
-										data-frame_1="e:Power0.easeInOut;sp:1700;" data-frame_999="o:0;st:5000;"
+										data-frame_1="e:Power0.easeInOut;sp:1700;" data-frame_999="o:0;st:w;"
 										data-frame_hover="c:#dcbc95;"
 										style="z-index:17;font-family:Roboto;cursor:pointer;"><i
-											class="fa-instagram"></i>
+											class="fab fa-instagram"></i>
 									</a>
 									<!--
-
 							-->
-									<rs-layer id="slider-22-slide-36-layer-13" data-type="shape" data-rsp_ch="on"
+									<rs-layer id="slider-22-slide-36-layer-13" class="hero-social-layer" data-type="shape" data-rsp_ch="on"
 										data-xy="x:162px;y:303px;" data-text="w:normal;" data-dim="w:2px;h:100px;"
 										data-frame_0="y:50;" data-frame_1="e:Power0.easeInOut;sp:1200;"
-										data-frame_999="o:0;st:5000;" data-frame_hover="bgc:#dcbc95;"
+										data-frame_999="o:0;st:w;" data-frame_hover="bgc:#dcbc95;"
 										style="z-index:10;background-color:#dcbc95;">
 									</rs-layer>
 									<!--
@@ -462,93 +469,83 @@
 									<!--
 
 							-->
-									<rs-layer id="slider-22-slide-37-layer-1" class="rs-pxl-1" data-type="text"
-										data-color="#fff" data-rsp_ch="on" data-xy="x:c;xo:3px;y:343px;"
-										data-text="w:normal;s:80;l:85;fw:900;a:center;" data-dim="minh:0px;"
-										data-frame_0="y:50;" data-frame_1="e:Power0.easeInOut;st:230;sp:1500;sR:230;"
-										data-frame_999="y:0;o:0;rX:70deg;oZ:-50;e:Power4.easeInOut;st:w;sp:1750;sR:3270;"
-										data-loop_999="crd:t;rA:1;"
-										style="z-index:10;font-family:Chronicle Display;text-transform:capitalize;">
-										Home Theatre solution<br />
-
-									</rs-layer>
-									<!--
-
-							-->
-									<rs-layer id="slider-22-slide-37-layer-3" data-type="text" data-color="#fff"
-										data-rsp_ch="on" data-xy="x:c;y:458px;"
-										data-text="w:normal;s:18;l:30;ls:0px;fw:500;a:center;"
-										data-dim="w:570px;minh:0px;" data-frame_0="y:50;" data-frame_1="sp:2500;"
-										data-frame_999="y:0;o:0;rX:70deg;oZ:-50;e:Power4.easeInOut;st:w;sp:1750;sR:3000;"
-										style="z-index:11;font-family:Gotham Narrow;">We place a strong emphasis on post-handover service. We don’t just complete the project and move on; we are committed to supporting you even after the work is done.
-									</rs-layer>
-									<!--
-
-							--><a id="slider-22-slide-37-layer-4" class="rs-layer rev-btn" href="project.html" target="_self" rel="nofollow"
-										data-type="button" data-color="#ffffff" data-rsp_ch="on" data-xy="x:c;y:566px;"
-										data-text="w:normal;s:15;l:25;" data-dim="minh:0px;"
-										data-padding="t:20;r:35;b:20;l:35;" data-frame_0="y:50;" data-frame_1="sp:2700;"
-										data-frame_999="y:0;o:0;rX:70deg;oZ:-50;e:Power4.easeInOut;st:w;sp:1750;sR:2500;"
-										data-frame_hover="bgc:#dbaa6f;bor:0px,0px,0px,0px;bri:120%;"
-										style="z-index:12;background-color:#dcbc95;font-family:Gotham Narrow;text-transform:uppercase;">Discover
-										More
-									</a>
-									<!--
-
-							-->
 									<rs-layer id="slider-22-slide-37-layer-7" class="rs-pxl-1" data-type="text"
-										data-color="#fff" data-rsp_ch="on" data-xy="x:c;y:248px;"
-										data-text="w:normal;s:90;l:90;fw:900;a:center;" data-dim="minh:0px;"
+										data-color="#fff" data-rsp_ch="on" data-xy="x:c;y:248,220,170,105;"
+										data-text="w:normal;s:90,75,50,36;l:90,75,52,40;fw:900;a:center;" data-dim="minh:0;"
 										data-frame_0="y:50;" data-frame_1="e:Power0.easeInOut;sp:1430;"
 										data-frame_999="y:0;o:0;rX:70deg;oZ:-50;e:Power4.easeInOut;st:w;sp:1750;sR:3570;"
 										data-loop_999="crd:t;rA:1;"
 										style="z-index:9;font-family:Philosopher, Chronicle Display;text-transform:capitalize;">
 										Tree Hues<br />
-
 									</rs-layer>
 									<!--
-
-							--><a id="slider-22-slide-37-layer-9" class="rs-layer" href="#" target="_self" rel="nofollow" data-type="text"
+							-->
+									<rs-layer id="slider-22-slide-37-layer-1" class="rs-pxl-1" data-type="text"
+										data-color="#fff" data-rsp_ch="on" data-xy="x:c;xo:0;y:343,300,230,150;"
+										data-text="w:normal;s:80,65,40,25;l:85,70,44,30;fw:900;a:center;" data-dim="minh:0;"
+										data-frame_0="y:50;" data-frame_1="e:Power0.easeInOut;st:230;sp:1500;sR:230;"
+										data-frame_999="y:0;o:0;rX:70deg;oZ:-50;e:Power4.easeInOut;st:w;sp:1750;sR:3270;"
+										data-loop_999="crd:t;rA:1;"
+										style="z-index:10;font-family:Chronicle Display;text-transform:capitalize;">
+										Home Theatre solution<br />
+									</rs-layer>
+									<!--
+							-->
+									<rs-layer id="slider-22-slide-37-layer-3" data-type="text" data-color="#fff"
+										data-rsp_ch="on" data-xy="x:c;y:458,390,290,195;"
+										data-text="w:normal;s:18,16,13,13.5;l:30,26,20,20;ls:0px;fw:500;a:center;"
+										data-dim="w:570,500,420,330;minh:0;" data-frame_0="y:50;" data-frame_1="sp:2500;"
+										data-frame_999="y:0;o:0;rX:70deg;oZ:-50;e:Power4.easeInOut;st:w;sp:1750;sR:3000;"
+										style="z-index:11;font-family:Gotham Narrow;">We place a strong emphasis on post-handover service. We don’t just complete the project and move on; we are committed to supporting you even after the work is done.
+									</rs-layer>
+									<!--
+							--><a id="slider-22-slide-37-layer-4" class="rs-layer hero-btn rev-btn" href="project.html" target="_self" rel="nofollow"
+										data-type="button" data-color="#ffffff" data-rsp_ch="on" data-xy="x:c;y:566,480,360,285;"
+										data-text="w:normal;s:15,14,12,12;l:25,22,18,16;" data-dim="minh:0;"
+										data-padding="t:20,16,12,10;r:35,28,22,22;b:20,16,12,10;l:35,28,22,22;" data-frame_0="y:50;" data-frame_1="sp:2700;"
+										data-frame_999="y:0;o:0;rX:70deg;oZ:-50;e:Power4.easeInOut;st:w;sp:1750;sR:2500;"
+										data-frame_hover="bgc:#dbaa6f;bor:0px,0px,0px,0px;bri:120%;"
+										style="z-index:12;background-color:#dcbc95;font-family:Gotham Narrow;text-transform:uppercase;cursor:pointer;">Discover
+										More
+									</a>
+									<!--
+							--><a id="slider-22-slide-37-layer-9" class="rs-layer hero-social-layer" href="#" target="_self" rel="nofollow" data-type="text"
 										data-color="#a3a3a3" data-rsp_ch="on" data-xy="x:154px;y:446px;"
 										data-text="w:normal;s:25;l:50;" data-frame_0="y:50;"
 										data-frame_1="e:Power0.easeInOut;sp:1600;" data-frame_999="o:0;st:w;"
 										data-frame_hover="c:#dcbc95;"
 										style="z-index:13;font-family:Roboto;cursor:pointer;"><i
-											class="fa-facebook-f"></i>
+											class="fab fa-facebook-f"></i>
 									</a>
 									<!--
-
-							--><a id="slider-22-slide-37-layer-10" class="rs-layer" href="#" target="_self" rel="nofollow" data-type="text"
+							--><a id="slider-22-slide-37-layer-10" class="rs-layer hero-social-layer" href="#" target="_self" rel="nofollow" data-type="text"
 										data-color="#a3a3a3" data-rsp_ch="on" data-xy="x:152px;y:403px;"
 										data-text="w:normal;s:25;l:50;" data-frame_0="y:50;"
 										data-frame_1="e:Power0.easeInOut;sp:1500;" data-frame_999="o:0;st:w;"
 										data-frame_hover="c:#dcbc95;"
-										style="z-index:14;font-family:Roboto;cursor:pointer;"><i class="fa-twitter"></i>
+										style="z-index:14;font-family:Roboto;cursor:pointer;"><i class="fab fa-twitter"></i>
 									</a>
 									<!--
-
-							--><a id="slider-22-slide-37-layer-11" class="rs-layer" href="#" target="_self" rel="nofollow" data-type="text"
+							--><a id="slider-22-slide-37-layer-11" class="rs-layer hero-social-layer" href="#" target="_self" rel="nofollow" data-type="text"
 										data-color="#a3a3a3" data-rsp_ch="on" data-xy="x:151px;y:531px;"
 										data-text="w:normal;s:25;l:50;" data-frame_0="y:50;"
 										data-frame_1="e:Power0.easeInOut;sp:2000;" data-frame_999="o:0;st:w;"
 										data-frame_hover="c:#dcbc95;"
 										style="z-index:15;font-family:Roboto;cursor:pointer;"><i
-											class="fa-linkedin"></i>
+											class="fab fa-linkedin"></i>
 									</a>
 									<!--
-
-							--><a id="slider-22-slide-37-layer-12" class="rs-layer" href="#" target="_self" rel="nofollow" data-type="text"
+							--><a id="slider-22-slide-37-layer-12" class="rs-layer hero-social-layer" href="#" target="_self" rel="nofollow" data-type="text"
 										data-color="#a3a3a3" data-rsp_ch="on" data-xy="x:151px;y:491px;"
 										data-text="w:normal;s:25;l:50;" data-frame_0="y:50;"
 										data-frame_1="e:Power0.easeInOut;sp:1700;" data-frame_999="o:0;st:w;"
 										data-frame_hover="c:#dcbc95;"
 										style="z-index:16;font-family:Roboto;cursor:pointer;"><i
-											class="fa-instagram"></i>
+											class="fab fa-instagram"></i>
 									</a>
 									<!--
-
 							-->
-									<rs-layer id="slider-22-slide-37-layer-13" data-type="shape" data-rsp_ch="on"
+									<rs-layer id="slider-22-slide-37-layer-13" class="hero-social-layer" data-type="shape" data-rsp_ch="on"
 										data-xy="x:162px;y:303px;" data-text="w:normal;" data-dim="w:2px;h:100px;"
 										data-frame_0="y:50;" data-frame_1="e:Power0.easeInOut;sp:1200;"
 										data-frame_999="o:0;st:w;" data-frame_hover="bgc:#dcbc95;"
@@ -602,79 +599,144 @@
 	</section>
 	<!-- /Mextreo About Section-->
 
-	<!--Mextreo Service Section-->
-	<section class="mextreo-service">
+	<!-- Luxury Services Section -->
+	<section class="tree-hues-services-section">
 		<div class="container">
-			<div class="row">
-				<div class="col-md-5">
-					<div class="m-s-content">
-						<h2 class="ms-tittle">Services</h2>
-						<h6 class="ht-tittle" data-aos="fade-right" data-aos-duration="2000">What We Do?</h6>
-						<h2 data-aos="fade-up" data-aos-duration="2000">What We Do?</h2>
-						<p data-aos="fade-up" data-aos-duration="2500">At Tree Hues, we specialize in blending Indian heritage with modern design, but our creativity is not limited to any single style. What sets us apart is our well-organized approach and keen attention to detail during execution. We use a detailed, step-by-step process to ensure that every aspect of your project is handled smoothly and with precision, meeting your expectations.</p>
-						<p data-aos="fade-up" data-aos-duration="2700">We place a strong emphasis on post-handover service. We don’t just complete the project and move on; we are committed to supporting you even after the work is done. Our goal is to ensure that everything continues to perform well and meets your needs long after the project’s completion.</p>
-						<a href="service.html" class="btn-1" data-aos="fade-up" data-aos-duration="3000">LEARN MORE</a>
-					</div>
+			<!-- Section Header -->
+			<div class="services-header-wrap text-center">
+				<div class="services-badge" data-aos="fade-down" data-aos-duration="1200">
+					<span class="badge-gold-sparkle">✦</span>
+					<span>OUR EXPERTISE</span>
 				</div>
-				<div class="col-md-5 offset-md-2">
-					<div class="row">
-						<div class="col-md-6" data-aos="fade-down-right" data-aos-duration="3000">
-							<div class="single-service si-1">
-								<i class="flaticon-interior-design service-icon"></i>
-								<h3>Interior Design & Build</h3>
+				<h2 class="services-main-heading" data-aos="fade-up" data-aos-duration="1500">What We Do</h2>
+				<div class="services-gold-bar" data-aos="zoom-in" data-aos-duration="1500">
+					<span class="gold-line"></span>
+					<span class="gold-diamond">◆</span>
+					<span class="gold-line"></span>
+				</div>
+				<p class="services-lead-desc" data-aos="fade-up" data-aos-duration="1800">At Tree Hues, we specialize in blending Indian heritage with modern design through meticulous planning, fine craftsmanship, and seamless turnkey execution.</p>
+			</div>
+
+			<!-- 3 Luxury Architectural Service Cards Grid -->
+			<div class="row service-cards-grid">
+				<!-- Service 01: Interior Design & Build -->
+				<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="1500">
+					<div class="luxury-service-card">
+						<div class="service-image-box">
+							<img src="assets/img/service/service_interior_thumb.jpg" alt="Interior Design &amp; Build" class="service-img">
+							<div class="service-img-overlay"></div>
+							<div class="service-floating-pill">
+								<span class="service-num">01</span>
+								<span class="service-cat">INTERIORS</span>
 							</div>
 						</div>
-						<div class="col-md-6">
-							<div class="row">
-								<div class="col-md-12" data-aos="fade-down-left" data-aos-duration="3000">
-									<div class="single-service si-2">
-										<i class="flaticon-house service-icon"></i>
-										<h3>Architectural projects</h3>
-									</div>
+						<div class="service-card-body">
+							<div class="service-icon-row">
+								<div class="service-badge-icon">
+									<i class="flaticon-interior-design"></i>
 								</div>
-								<div class="col-md-12" data-aos="fade-up-left" data-aos-duration="3000">
-									<div class="single-service">
-										<svg class="service-svg-icon" viewBox="0 0 96 96" fill="none" stroke="#dcbc95" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
-											<!-- Curved Cinema Screen -->
-											<rect x="16" y="12" width="64" height="38" rx="4" />
-											<!-- Cinema Screen Inner Bezel -->
-											<rect x="21" y="17" width="54" height="28" rx="2" stroke-width="1.8" />
-											<!-- Play / Cinema Icon in Center -->
-											<polygon points="45,26 53,31 45,36" fill="#dcbc95" stroke="#dcbc95" stroke-width="1" />
-											<!-- Screen Stand / Mount -->
-											<path d="M48 50 L48 58 M40 58 L56 58" stroke-width="2.6" />
-											<!-- Left Sound Tower -->
-											<rect x="5" y="22" width="8" height="54" rx="2" stroke-width="2.4" />
-											<circle cx="9" cy="32" r="1.8" fill="#dcbc95" />
-											<circle cx="9" cy="46" r="2.2" stroke-width="2" />
-											<circle cx="9" cy="62" r="2.5" stroke-width="2" />
-											<!-- Right Sound Tower -->
-											<rect x="83" y="22" width="8" height="54" rx="2" stroke-width="2.4" />
-											<circle cx="87" cy="32" r="1.8" fill="#dcbc95" />
-											<circle cx="87" cy="46" r="2.2" stroke-width="2" />
-											<circle cx="87" cy="62" r="2.5" stroke-width="2" />
-											<!-- AV Media Console / Soundbar -->
-											<rect x="26" y="62" width="44" height="14" rx="2" stroke-width="2.4" />
-											<line x1="32" y1="69" x2="44" y2="69" stroke-width="2" />
-											<circle cx="62" cy="69" r="2.5" stroke-width="2" />
-											<circle cx="54" cy="69" r="1.5" fill="#dcbc95" />
-											<!-- Acoustic Soundwaves -->
-											<path d="M14 42 A5 5 0 0 1 14 50" stroke-width="2" />
-											<path d="M82 42 A5 5 0 0 0 82 50" stroke-width="2" />
-											<!-- Base Platform -->
-											<line x1="3" y1="76" x2="93" y2="76" stroke-width="2.4" />
-										</svg>
-										<h3>Home Theatre solution</h3>
-									</div>
-								</div>
+								<h3 class="service-title">Interior Design &amp; Build</h3>
 							</div>
+							<p class="service-text">We create bespoke living and working spaces blending Indian heritage with contemporary luxury, customized modular joinery, and precision turnkey execution.</p>
+							<div class="service-tags">
+								<span class="s-tag">Turnkey Execution</span>
+								<span class="s-tag">Heritage &amp; Modern</span>
+								<span class="s-tag">Custom Joinery</span>
+							</div>
+							<a href="service.html" class="service-explore-btn">
+								<span>Explore Service</span>
+								<i class="fas fa-arrow-right"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- Service 02: Architectural Projects -->
+				<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="2000">
+					<div class="luxury-service-card">
+						<div class="service-image-box">
+							<img src="assets/img/service/service_architecture_thumb.jpg" alt="Architectural Projects" class="service-img">
+							<div class="service-img-overlay"></div>
+							<div class="service-floating-pill">
+								<span class="service-num">02</span>
+								<span class="service-cat">ARCHITECTURE</span>
+							</div>
+						</div>
+						<div class="service-card-body">
+							<div class="service-icon-row">
+								<div class="service-badge-icon">
+									<i class="flaticon-house"></i>
+								</div>
+								<h3 class="service-title">Architectural Projects</h3>
+							</div>
+							<p class="service-text">Rooted yet progressive architecture with flexible design approaches, sustainable spatial planning, and NITK Surathkal civil engineering rigor.</p>
+							<div class="service-tags">
+								<span class="s-tag">Spatial Planning</span>
+								<span class="s-tag">Luxury Villas</span>
+								<span class="s-tag">Structural Design</span>
+							</div>
+							<a href="service.html" class="service-explore-btn">
+								<span>Explore Service</span>
+								<i class="fas fa-arrow-right"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- Service 03: Home Theatre Solutions -->
+				<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="2500">
+					<div class="luxury-service-card">
+						<div class="service-image-box">
+							<img src="assets/img/service/service_theatre_thumb.jpg" alt="Home Theatre Solutions" class="service-img">
+							<div class="service-img-overlay"></div>
+							<div class="service-floating-pill">
+								<span class="service-num">03</span>
+								<span class="service-cat">ACOUSTICS &amp; AV</span>
+							</div>
+						</div>
+						<div class="service-card-body">
+							<div class="service-icon-row">
+								<div class="service-badge-icon">
+									<i class="fas fa-film"></i>
+								</div>
+								<h3 class="service-title">Home Theatre Solutions</h3>
+							</div>
+							<p class="service-text">Ultra-premium private cinema rooms with acoustic treatment, Dolby Atmos surround engineering, 4K laser projection, and smart automation.</p>
+							<div class="service-tags">
+								<span class="s-tag">Acoustic Treatment</span>
+								<span class="s-tag">Dolby Atmos</span>
+								<span class="s-tag">Smart Automation</span>
+							</div>
+							<a href="service.html" class="service-explore-btn">
+								<span>Explore Service</span>
+								<i class="fas fa-arrow-right"></i>
+							</a>
 						</div>
 					</div>
 				</div>
 			</div>
+
+			<!-- Bottom Post-Handover Commitment Banner -->
+			<div class="service-promise-strip" data-aos="fade-up" data-aos-duration="2000">
+				<div class="promise-content-wrap">
+					<div class="promise-icon-wrap">
+						<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#dcbc95" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M9 12l2 2 4-4"></path></svg>
+					</div>
+					<div class="promise-text-wrap">
+						<h4>Our Post-Handover Commitment</h4>
+						<p>We place a strong emphasis on post-handover service. We don’t just complete the project and move on—our team is committed to supporting you long after completion to ensure lasting perfection.</p>
+					</div>
+				</div>
+				<div class="promise-cta-wrap">
+					<a href="contact.html" class="promise-btn">
+						<span>Start Your Project</span>
+						<i class="fas fa-arrow-right"></i>
+					</a>
+				</div>
+			</div>
 		</div>
 	</section>
-	<!--/Mextreo Service Section-->
+	<!-- /Luxury Services Section -->
 
 	<!--Mextreo success section-->
 	<section class="work-success">
@@ -721,79 +783,79 @@
 						<div class="item">
 							<div class="single-project" data-aos="fade-up" data-aos-duration="2500">
 								<div class="sp-img">
-									<img src="assets/img/slide/project1.jpg" alt="">
+									<img src="assets/img/portfolio/portfolio1.jpg" alt="Prestige White Meadows">
 								</div>
 								<div class="sp-text">
-									<span class="tree-hues-cat-tag">On-going Projects</span>
+									<span class="tree-hues-cat-tag">Ongoing Landmark Villa</span>
 									<h3>Prestige White Meadows - Villa 38</h3>
-									<p>Donata County - Villa 27</p>
+									<p>Whitefield, Bangalore</p>
 								</div>
-								<a href="project.html"><i class="flaticon-add rp-icon"></i></a>
+								<a href="project-details.html?id=prestige-white-meadows"><i class="flaticon-add rp-icon"></i></a>
 							</div>
 						</div>
 						<div class="item">
 							<div class="single-project" data-aos="fade-up" data-aos-duration="3000">
 								<div class="sp-img">
-									<img src="assets/img/slide/project2.jpg" alt="">
+									<img src="assets/img/portfolio/vdb_willow_farm.jpg" alt="VDB Willow Farm">
 								</div>
 								<div class="sp-text">
-									<span class="tree-hues-cat-tag">On-going Projects</span>
-									<h3>HM Winchester - 202</h3>
-									<p>Embassy Springs - 11-16</p>
+									<span class="tree-hues-cat-tag">Luxury Duplex Villa</span>
+									<h3>VDB Willow Farm: Villa Interior</h3>
+									<p>Whitefield, Bangalore</p>
 								</div>
-								<a href="project.html"><i class="flaticon-add rp-icon"></i></a>
+								<a href="project-details.html?id=vdb-willow-farm"><i class="flaticon-add rp-icon"></i></a>
 							</div>
 						</div>
 						<div class="item">
 							<div class="single-project" data-aos="fade-up" data-aos-duration="3000">
 								<div class="sp-img">
-									<img src="assets/img/slide/project3.jpg" alt="">
+									<img src="assets/img/portfolio/portfolio3.jpg" alt="Windmills of your Mind">
 								</div>
 								<div class="sp-text">
-									<span class="tree-hues-cat-tag">Recent Residential Projects</span>
-									<h3>Windmills of your Mind-Villa64</h3>
-									<p>V2 Poorvi Enclave-A408</p>
+									<span class="tree-hues-cat-tag">Earth-Modern Villa</span>
+									<h3>Windmills of Your Mind - Villa 64</h3>
+									<p>Whitefield, Bangalore</p>
 								</div>
-								<a href="project.html"><i class="flaticon-add rp-icon"></i></a>
+								<a href="project-details.html?id=windmills-villa-64"><i class="flaticon-add rp-icon"></i></a>
 							</div>
 						</div>
 						<div class="item">
 							<div class="single-project" data-aos="fade-up" data-aos-duration="2500">
 								<div class="sp-img">
-									<img src="assets/img/slide/project1.jpg" alt="">
+									<img src="assets/img/portfolio/shriram_sahana.jpg" alt="Shriram Sahana Penthouse">
 								</div>
 								<div class="sp-text">
-									<span class="tree-hues-cat-tag">Recent Residential Projects</span>
-									<h3>Neeraja Serenity-RH48</h3>
-									<p>Vajram Newtown- T1 C 1002</p>
+									<span class="tree-hues-cat-tag">Penthouse Interiors</span>
+									<h3>Shriram Sahana Apartment</h3>
+									<p>Yelahanka, Bangalore</p>
 								</div>
-								<a href="project.html"><i class="flaticon-add rp-icon"></i></a>
+								<a href="project-details.html?id=shriram-sahana"><i class="flaticon-add rp-icon"></i></a>
 							</div>
 						</div>
 						<div class="item">
 							<div class="single-project" data-aos="fade-up" data-aos-duration="2500">
 								<div class="sp-img">
-									<img src="assets/img/slide/project2.jpg" alt="">
+									<img src="assets/img/portfolio/portfolio5.jpg" alt="Araku Coffee Flagship">
 								</div>
 								<div class="sp-text">
-									<span class="tree-hues-cat-tag">Commercial & Institutional Projects</span>
-									<h3>Araku Coffee | Ashok Nagar, Bangalore</h3>
-									<p>Bangalore International School</p>
+									<span class="tree-hues-cat-tag">Commercial Flagship Store</span>
+									<h3>Araku Coffee | Ashok Nagar</h3>
+									<p>Ashok Nagar, Bangalore</p>
 								</div>
-								<a href="project.html"><i class="flaticon-add rp-icon"></i></a>
+								<a href="project-details.html?id=araku-coffee-flagship"><i class="flaticon-add rp-icon"></i></a>
 							</div>
 						</div>
 						<div class="item">
 							<div class="single-project" data-aos="fade-up" data-aos-duration="2500">
 								<div class="sp-img">
-									<img src="assets/img/slide/project3.jpg" alt="">
+									<img src="assets/img/portfolio/portfolio6.jpg" alt="After The Rain Home Cinema">
 								</div>
 								<div class="sp-text">
-									<span class="tree-hues-cat-tag">Home Theatre Projects</span>
-									<h3>After The Rain-Villa 87-89, Bangalore</h3>
-									<p>Chandru Residency | Bangalore</p>
+									<span class="tree-hues-cat-tag">9.4.4 Dolby Atmos Cinema</span>
+									<h3>After The Rain - Villa 87-89</h3>
+									<p>Yelahanka, Bangalore</p>
 								</div>
-								<a href="project.html"><i class="flaticon-add rp-icon"></i></a>
+								<a href="project-details.html?id=after-the-rain-theatre"><i class="flaticon-add rp-icon"></i></a>
 							</div>
 						</div>
 					</div>
@@ -803,205 +865,336 @@
 	</section>
 	<!--/Project Section-->
 
-	<!--Testimonial / Core Values Section-->
-	<section class="testimonial">
+	<!--Core Values Section-->
+	<section class="tree-hues-values-section">
 		<div class="container">
-			<div class="recent-pro-top" style="margin-bottom: 40px;">
-				<h2 class="rp-tittle">values</h2>
-				<h6 class="ht-tittle" data-aos="fade-up" data-aos-duration="2000">Principles</h6>
-				<h2 data-aos="fade-up" data-aos-duration="3000">Our Core Values</h2>
+			<div class="values-top-heading">
+				<div class="values-badge" data-aos="fade-down" data-aos-duration="1200">
+					<span class="badge-gold-sparkle">✦</span>
+					<span>Core Philosophy &amp; Principles</span>
+				</div>
+				<h2 class="values-main-heading" data-aos="fade-up" data-aos-duration="1500">Our Core Values</h2>
+				<div class="values-gold-bar" data-aos="zoom-in" data-aos-duration="1500">
+					<span class="gold-line"></span>
+					<span class="gold-diamond">◆</span>
+					<span class="gold-line"></span>
+				</div>
+				<p class="values-subtitle" data-aos="fade-up" data-aos-duration="1800">Guided by purpose, precision, and architectural excellence in every space we transform.</p>
 			</div>
 			<div class="row">
-				<div class="col-md-6" data-aos="fade-up" data-aos-duration="2000">
-					<div id="c1" class="testimonial-slid1 owl-carousel owl-theme">
-						<div class="item">
-							<div class="testimonial-img">
-								<img src="assets/img/about/tesimonial-about.jpg" alt="">
+				<!-- 01. Customer Obsession -->
+				<div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-duration="1500">
+					<div class="luxury-value-card">
+						<div class="value-card-top">
+							<div class="value-icon-badge">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#dcbc95" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+							</div>
+							<div class="value-meta-wrap">
+								<span class="value-tag">Customer Focus</span>
+								<span class="value-number">01</span>
 							</div>
 						</div>
-						<div class="item">
-							<div class="testimonial-img">
-								<img src="assets/img/about/tesimonial-about-3.jpg" alt="">
+						<h3 class="value-title">Customer Obsession</h3>
+						<p class="value-text">We are dedicated to transforming spaces with exceptional interior design and construction services. Our focus is on you, the customer. We listen to your needs and work hard to exceed your expectations. Your satisfaction is our top priority, and we are obsessed with delivering the best results for every project. We believe in creating beautiful, functional spaces that reflect your style and vision.</p>
+					</div>
+				</div>
+
+				<!-- 02. Quality -->
+				<div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-duration="2000">
+					<div class="luxury-value-card">
+						<div class="value-card-top">
+							<div class="value-icon-badge">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#dcbc95" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="6 3 18 3 22 9 12 22 2 9 6 3"></polygon><line x1="2" y1="9" x2="22" y2="9"></line><line x1="12" y1="22" x2="12" y2="9"></line></svg>
+							</div>
+							<div class="value-meta-wrap">
+								<span class="value-tag">Grade-A Quality</span>
+								<span class="value-number">02</span>
 							</div>
 						</div>
-						<div class="item">
-							<div class="testimonial-img">
-								<img src="assets/img/about/tesimonial-about-2.jpg" alt="">
+						<h3 class="value-title">Quality</h3>
+						<p class="value-text">We are dedicated to delivering high-grade quality in every project we handle. We define quality as paying attention to every detail and using the best materials and techniques. Our skilled team works hard to ensure that every job is done right, from start to finish. We aim to create spaces that are not only visually stunning but also built to last.</p>
+					</div>
+				</div>
+
+				<!-- 03. Innovation (Featured Centerpiece Banner) -->
+				<div class="col-lg-12" data-aos="fade-up" data-aos-duration="2500">
+					<div class="luxury-value-card featured-value-card">
+						<div class="featured-inner">
+							<div class="featured-left">
+								<div class="value-card-top" style="margin-bottom: 12px;">
+									<div class="value-icon-badge">
+										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#dcbc95" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"></path><path d="M10 22h4"></path><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A6 6 0 1 0 7.5 11.5c.76.76 1.23 1.52 1.41 2.5h6.18z"></path></svg>
+									</div>
+									<div class="value-meta-wrap">
+										<span class="value-tag">Timeless &amp; Modern</span>
+										<span class="value-number">03</span>
+									</div>
+								</div>
+								<h3 class="value-title" style="font-size: 26px; margin-top: 10px;">Innovation</h3>
+							</div>
+							<div class="featured-right">
+								<p class="value-text" style="font-size: 14px; line-height: 1.85;">We blend innovation with timeless elegance. We believe in combining the best of new ideas with classic design principles. Our team embraces the latest trends and technologies while also honoring traditional craftsmanship and styles. We aim to create spaces that are both modern and enduring, using fresh, creative solutions alongside proven methods. By valuing the old and celebrating the new, we strive to deliver designs that are unique, stylish, and stand the test of time. Our goal is to provide you with exceptional results that honor classic beauty and embrace innovative thinking.</p>
 							</div>
 						</div>
 					</div>
 				</div>
 
-				<div class="col-md-6">
-					<div class="row">
-						<div class="col-md-12" data-aos="fade-up" data-aos-duration="2500">
-							<div id="c2" class="testimonial-slid2 owl-carousel owl-theme">
-								<div class="item">
-									<h4 style="color: #000000; margin-bottom: 10px; font-weight: 700;">Customer Obsession:</h4>
-									<p>We are dedicated to transforming spaces with exceptional interior design and construction services. Our focus is on you, the customer. We listen to your needs and work hard to exceed your expectations. Your satisfaction is our top priority, and we are obsessed with delivering the best results for every project. We believe in creating beautiful, functional spaces that reflect your style and vision.</p>
-								</div>
-								<div class="item">
-									<h4 style="color: #000000; margin-bottom: 10px; font-weight: 700;">Quality:</h4>
-									<p>We are dedicated to delivering high-grade quality in every project we handle. We define quality as paying attention to every detail and using the best materials and techniques. Our skilled team works hard to ensure that every job is done right, from start to finish. We aim to create spaces that are not only visually stunning but also built to last.</p>
-								</div>
-								<div class="item">
-									<h4 style="color: #000000; margin-bottom: 10px; font-weight: 700;">Innovation:</h4>
-									<p>We blend innovation with timeless elegance. We believe in combining the best of new ideas with classic design principles. Our team embraces the latest trends and technologies while also honoring traditional craftsmanship and styles. We aim to create spaces that are both modern and enduring, using fresh, creative solutions alongside proven methods. By valuing the old and celebrating the new, we strive to deliver designs that are unique, stylish, and stand the test of time. Our goal is to provide you with exceptional results that honor classic beauty and embrace innovative thinking.</p>
-								</div>
-								<div class="item">
-									<h4 style="color: #000000; margin-bottom: 10px; font-weight: 700;">Frugality:</h4>
-									<p>We believe in being smart with our resources. We focus on getting the most value from every rupee spent on interior design and construction. Our team works carefully to avoid waste and use materials and time efficiently. We are dedicated to providing high-quality results while keeping costs under control.</p>
-								</div>
-								<div class="item">
-									<h4 style="color: #000000; margin-bottom: 10px; font-weight: 700;">Integrity:</h4>
-									<p>We are committed to being honest, transparent, and ethical in all our interior design and construction projects. We promise to deliver on our commitments and treat every customer with fairness and respect. Our goal is to build trust and provide reliable services that you can count on.</p>
-								</div>
+				<!-- 04. Frugality -->
+				<div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-duration="2000">
+					<div class="luxury-value-card">
+						<div class="value-card-top">
+							<div class="value-icon-badge">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#dcbc95" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 16l3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1z"></path><path d="M2 16l3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1z"></path><path d="M7 21h10"></path><path d="M12 3v18"></path><path d="M3 7h18"></path></svg>
+							</div>
+							<div class="value-meta-wrap">
+								<span class="value-tag">Smart Resources</span>
+								<span class="value-number">04</span>
 							</div>
 						</div>
-						<div class="col-md-12" data-aos="fade-up" data-aos-duration="3000">
-							<div id="c3" class="testimonial-slid3 owl-carousel owl-theme">
-								<div class="item">
-									<div class="client-slide-img3">
-										<img src="assets/img/about/tesimonial-about2.jpg" alt="">
-									</div>
-								</div>
-								<div class="item">
-									<div class="client-slide-img3">
-										<img src="assets/img/about/tesimonial-about2-1.jpg" alt="">
-									</div>
-								</div>
-								<div class="item">
-									<div class="client-slide-img3">
-										<img src="assets/img/about/tesimonial-about2-2.jpg" alt="">
-									</div>
-								</div>
+						<h3 class="value-title">Frugality</h3>
+						<p class="value-text">We believe in being smart with our resources. We focus on getting the most value from every rupee spent on interior design and construction. Our team works carefully to avoid waste and use materials and time efficiently. We are dedicated to providing high-quality results while keeping costs under control.</p>
+					</div>
+				</div>
+
+				<!-- 05. Integrity -->
+				<div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-duration="2500">
+					<div class="luxury-value-card">
+						<div class="value-card-top">
+							<div class="value-icon-badge">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#dcbc95" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M9 12l2 2 4-4"></path></svg>
+							</div>
+							<div class="value-meta-wrap">
+								<span class="value-tag">Authentic Trust</span>
+								<span class="value-number">05</span>
 							</div>
 						</div>
+						<h3 class="value-title">Integrity</h3>
+						<p class="value-text">We are committed to being honest, transparent, and ethical in all our interior design and construction projects. We promise to deliver on our commitments and treat every customer with fairness and respect. Our goal is to build trust and provide reliable services that you can count on.</p>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-	<!-- /Testimonial Section-->
+	<!-- /Core Values Section-->
 
-	<!--Team Section-->
-	<section class="mextreo-blog">
-		<div class="container">
-			<div class="mex-blog-top" style="margin-bottom: 40px;">
-				<h2 class="mb-tittle">team</h2>
-				<h6 class="ht-tittle" data-aos="fade-up" data-aos-duration="1500">People</h6>
-				<h2 data-aos="fade-up" data-aos-duration="2000">Our Team</h2>
+	<!-- Curated Architectural Gallery Scroller Section -->
+	<section class="tree-hues-gallery-section">
+		<div class="container-fluid px-lg-5">
+			<!-- Header -->
+			<div class="gallery-header-wrap text-center" data-aos="fade-up" data-aos-duration="1200">
+				<div class="services-badge mb-3">
+					<span class="badge-gold-sparkle">✦</span>
+					<span>VISUAL EXCELLENCE &amp; CRAFTSMANSHIP</span>
+				</div>
+				<h2 class="gallery-main-heading">Curated Spaces &amp; Showcase</h2>
+				<div class="services-gold-bar mb-3">
+					<span class="gold-line"></span>
+					<span class="gold-diamond">◆</span>
+					<span class="gold-line"></span>
+				</div>
+				<p class="gallery-header-desc">
+					Explore our signature portfolio of bespoke turnkey residences, structural architecture, master joinery, and private acoustic cinema sanctuaries.
+				</p>
 			</div>
-			<div class="row">
-				<div class="col-md-12" data-aos="fade-up" data-aos-duration="2000">
-					<div class="tree-hues-team-grid">
-						<div class="tree-hues-team-card featured">
-							<div class="team-avatar-badge">
-								<span>SS</span>
+
+			<!-- Carousel Track -->
+			<div class="gallery-carousel-wrapper" data-aos="fade-up" data-aos-duration="1500">
+				<div class="owl-carousel tree-hues-gallery-carousel" id="treeHuesGalleryCarousel">
+					
+					<!-- 1. Villa Willow Farm -->
+					<div class="gallery-item-card">
+						<a href="assets/img/portfolio/vdb_willow_farm.jpg" data-fancybox="home-gallery" data-caption="Villa Willow Farm — Living Room Suite &amp; Bespoke Architecture" class="gallery-img-box">
+							<img src="assets/img/portfolio/vdb_willow_farm.jpg" alt="Villa Willow Farm Living Suite">
+							<div class="gallery-top-badge">✦ Villa Architecture</div>
+							<div class="gallery-zoom-btn"><i class="fas fa-search-plus"></i></div>
+							<div class="gallery-card-overlay">
+								<div class="gallery-card-content">
+									<div class="gallery-category"><span>✦</span> VDB Willow Farm</div>
+									<h4 class="gallery-item-title">Villa Willow Farm Living Suite</h4>
+									<span class="gallery-cta-link">Preview Space <i class="fas fa-arrow-right"></i></span>
+								</div>
 							</div>
-							<div class="team-info">
-								<h4 class="team-name">Sachin Shetty</h4>
-								<span class="team-role">Founder</span>
-							</div>
-						</div>
-						<div class="tree-hues-team-card featured">
-							<div class="team-avatar-badge">
-								<span>BS</span>
-							</div>
-							<div class="team-info">
-								<h4 class="team-name">Bhakthi Shetty</h4>
-								<span class="team-role">Co-Founder</span>
-							</div>
-						</div>
-						<div class="tree-hues-team-card">
-							<div class="team-avatar-badge">
-								<span>M</span>
-							</div>
-							<div class="team-info">
-								<h4 class="team-name">Marappa</h4>
-								<span class="team-role">Manager - Operations</span>
-							</div>
-						</div>
-						<div class="tree-hues-team-card">
-							<div class="team-avatar-badge">
-								<span>CR</span>
-							</div>
-							<div class="team-info">
-								<h4 class="team-name">Chaitra Roopak</h4>
-								<span class="team-role">PMO</span>
-							</div>
-						</div>
-						<div class="tree-hues-team-card">
-							<div class="team-avatar-badge">
-								<span>SN</span>
-							</div>
-							<div class="team-info">
-								<h4 class="team-name">Suresh Nahak</h4>
-								<span class="team-role">General Foreman</span>
-							</div>
-						</div>
-						<div class="tree-hues-team-card">
-							<div class="team-avatar-badge">
-								<span>MS</span>
-							</div>
-							<div class="team-info">
-								<h4 class="team-name">Murshid SK</h4>
-								<span class="team-role">Craftsman</span>
-							</div>
-						</div>
-						<div class="tree-hues-team-card">
-							<div class="team-avatar-badge">
-								<span>P</span>
-							</div>
-							<div class="team-info">
-								<h4 class="team-name">Pradeep</h4>
-								<span class="team-role">Associate Services</span>
-							</div>
-						</div>
-						<div class="tree-hues-team-card">
-							<div class="team-avatar-badge">
-								<span>R</span>
-							</div>
-							<div class="team-info">
-								<h4 class="team-name">Ramesh</h4>
-								<span class="team-role">Associate Services</span>
-							</div>
-						</div>
-						<div class="tree-hues-team-card">
-							<div class="team-avatar-badge">
-								<span>B</span>
-							</div>
-							<div class="team-info">
-								<h4 class="team-name">Bhawarlal</h4>
-								<span class="team-role">Associate Craftsman</span>
-							</div>
-						</div>
-						<div class="tree-hues-team-card">
-							<div class="team-avatar-badge">
-								<span>R</span>
-							</div>
-							<div class="team-info">
-								<h4 class="team-name">Rajendra</h4>
-								<span class="team-role">Associate Civil works</span>
-							</div>
-						</div>
-						<div class="tree-hues-team-card">
-							<div class="team-avatar-badge">
-								<span>R</span>
-							</div>
-							<div class="team-info">
-								<h4 class="team-name">Roopesh</h4>
-								<span class="team-role">Associate Civil works</span>
-							</div>
-						</div>
+						</a>
 					</div>
+
+					<!-- 2. Shriram Sahana Penthouse -->
+					<div class="gallery-item-card">
+						<a href="assets/img/portfolio/shriram_sahana.jpg" data-fancybox="home-gallery" data-caption="Shriram Sahana — Luxury Penthouse &amp; Spatial Flow" class="gallery-img-box">
+							<img src="assets/img/portfolio/shriram_sahana.jpg" alt="Shriram Sahana Penthouse">
+							<div class="gallery-top-badge">✦ Penthouse Interior</div>
+							<div class="gallery-zoom-btn"><i class="fas fa-search-plus"></i></div>
+							<div class="gallery-card-overlay">
+								<div class="gallery-card-content">
+									<div class="gallery-category"><span>✦</span> Shriram Sahana</div>
+									<h4 class="gallery-item-title">Luxury Penthouse &amp; Spatial Flow</h4>
+									<span class="gallery-cta-link">Preview Space <i class="fas fa-arrow-right"></i></span>
+								</div>
+							</div>
+						</a>
+					</div>
+
+					<!-- 3. Independent House Villa -->
+					<div class="gallery-item-card">
+						<a href="assets/img/portfolio/independent_house.jpg" data-fancybox="home-gallery" data-caption="Contemporary Residence — Architectural Design &amp; Build" class="gallery-img-box">
+							<img src="assets/img/portfolio/independent_house.jpg" alt="Independent House Architecture">
+							<div class="gallery-top-badge">✦ Architecture &amp; Build</div>
+							<div class="gallery-zoom-btn"><i class="fas fa-search-plus"></i></div>
+							<div class="gallery-card-overlay">
+								<div class="gallery-card-content">
+									<div class="gallery-category"><span>✦</span> Independent Villa</div>
+									<h4 class="gallery-item-title">Contemporary Geometric Residence</h4>
+									<span class="gallery-cta-link">Preview Space <i class="fas fa-arrow-right"></i></span>
+								</div>
+							</div>
+						</a>
+					</div>
+
+					<!-- 4. Italian Modular Kitchen -->
+					<div class="gallery-item-card">
+						<a href="assets/img/portfolio/modular_kitchen.jpg" data-fancybox="home-gallery" data-caption="Gourmet Modular Kitchen — Island Counter &amp; German Hardware" class="gallery-img-box">
+							<img src="assets/img/portfolio/modular_kitchen.jpg" alt="Modular Kitchen &amp; Island">
+							<div class="gallery-top-badge">✦ Modular Kitchen</div>
+							<div class="gallery-zoom-btn"><i class="fas fa-search-plus"></i></div>
+							<div class="gallery-card-overlay">
+								<div class="gallery-card-content">
+									<div class="gallery-category"><span>✦</span> Turnkey Culinary</div>
+									<h4 class="gallery-item-title">Italian Modular Kitchen &amp; Island</h4>
+									<span class="gallery-cta-link">Preview Space <i class="fas fa-arrow-right"></i></span>
+								</div>
+							</div>
+						</a>
+					</div>
+
+					<!-- 5. Dolby Atmos Home Theatre -->
+					<div class="gallery-item-card">
+						<a href="assets/img/service/service_theatre_thumb.jpg" data-fancybox="home-gallery" data-caption="Private Cinema — Dolby Atmos Acoustic Sanctuary" class="gallery-img-box">
+							<img src="assets/img/service/service_theatre_thumb.jpg" alt="Dolby Atmos Acoustic Theatre">
+							<div class="gallery-top-badge">✦ Home Theatre</div>
+							<div class="gallery-zoom-btn"><i class="fas fa-search-plus"></i></div>
+							<div class="gallery-card-overlay">
+								<div class="gallery-card-content">
+									<div class="gallery-category"><span>✦</span> Acoustic Solution</div>
+									<h4 class="gallery-item-title">Dolby Atmos Cinema Sanctuary</h4>
+									<span class="gallery-cta-link">Preview Space <i class="fas fa-arrow-right"></i></span>
+								</div>
+							</div>
+						</a>
+					</div>
+
+					<!-- 6. Minimalist Architectural Lounge -->
+					<div class="gallery-item-card">
+						<a href="assets/img/service/service_interior_thumb.jpg" data-fancybox="home-gallery" data-caption="Minimalist Lounge — Harmonious Materiality &amp; Light" class="gallery-img-box">
+							<img src="assets/img/service/service_interior_thumb.jpg" alt="Interior Architecture Lounge">
+							<div class="gallery-top-badge">✦ Interior Architecture</div>
+							<div class="gallery-zoom-btn"><i class="fas fa-search-plus"></i></div>
+							<div class="gallery-card-overlay">
+								<div class="gallery-card-content">
+									<div class="gallery-category"><span>✦</span> Spatial Harmony</div>
+									<h4 class="gallery-item-title">Warm Minimalist Architectural Lounge</h4>
+									<span class="gallery-cta-link">Preview Space <i class="fas fa-arrow-right"></i></span>
+								</div>
+							</div>
+						</a>
+					</div>
+
+					<!-- 7. Modern Villa Façade -->
+					<div class="gallery-item-card">
+						<a href="assets/img/service/service_architecture_thumb.jpg" data-fancybox="home-gallery" data-caption="Modern Villa Façade — Structural Engineering &amp; Landscape" class="gallery-img-box">
+							<img src="assets/img/service/service_architecture_thumb.jpg" alt="Modern Villa Facade">
+							<div class="gallery-top-badge">✦ Civil Engineering</div>
+							<div class="gallery-zoom-btn"><i class="fas fa-search-plus"></i></div>
+							<div class="gallery-card-overlay">
+								<div class="gallery-card-content">
+									<div class="gallery-category"><span>✦</span> Structural Design</div>
+									<h4 class="gallery-item-title">Modern Villa Façade &amp; Landscape</h4>
+									<span class="gallery-cta-link">Preview Space <i class="fas fa-arrow-right"></i></span>
+								</div>
+							</div>
+						</a>
+					</div>
+
+					<!-- 8. Bespoke Timber Joinery -->
+					<div class="gallery-item-card">
+						<a href="assets/img/portfolio/portfolio1.jpg" data-fancybox="home-gallery" data-caption="Bespoke Joinery — Fluted Wood Paneling &amp; Millwork" class="gallery-img-box">
+							<img src="assets/img/portfolio/portfolio1.jpg" alt="Bespoke Millwork and Joinery">
+							<div class="gallery-top-badge">✦ Master Joinery</div>
+							<div class="gallery-zoom-btn"><i class="fas fa-search-plus"></i></div>
+							<div class="gallery-card-overlay">
+								<div class="gallery-card-content">
+									<div class="gallery-category"><span>✦</span> Artisanal Craft</div>
+									<h4 class="gallery-item-title">Bespoke Timber Joinery &amp; Paneling</h4>
+									<span class="gallery-cta-link">Preview Space <i class="fas fa-arrow-right"></i></span>
+								</div>
+							</div>
+						</a>
+					</div>
+
+					<!-- 9. Ambient Dining Suite -->
+					<div class="gallery-item-card">
+						<a href="assets/img/portfolio/portfolio2.jpg" data-fancybox="home-gallery" data-caption="Dining &amp; Lighting — Crafted Chandelier &amp; Spatial Warmth" class="gallery-img-box">
+							<img src="assets/img/portfolio/portfolio2.jpg" alt="Dining Room Architecture">
+							<div class="gallery-top-badge">✦ Lighting &amp; Ambience</div>
+							<div class="gallery-zoom-btn"><i class="fas fa-search-plus"></i></div>
+							<div class="gallery-card-overlay">
+								<div class="gallery-card-content">
+									<div class="gallery-category"><span>✦</span> Living Experience</div>
+									<h4 class="gallery-item-title">Ambient Dining &amp; Spatial Warmth</h4>
+									<span class="gallery-cta-link">Preview Space <i class="fas fa-arrow-right"></i></span>
+								</div>
+							</div>
+						</a>
+					</div>
+
+					<!-- 10. Master Bedroom Suite -->
+					<div class="gallery-item-card">
+						<a href="assets/img/portfolio/portfolio3.jpg" data-fancybox="home-gallery" data-caption="Master Bedroom Suite — Acoustic Headboard &amp; Textures" class="gallery-img-box">
+							<img src="assets/img/portfolio/portfolio3.jpg" alt="Master Bedroom Architecture">
+							<div class="gallery-top-badge">✦ Master Sanctuary</div>
+							<div class="gallery-zoom-btn"><i class="fas fa-search-plus"></i></div>
+							<div class="gallery-card-overlay">
+								<div class="gallery-card-content">
+									<div class="gallery-category"><span>✦</span> Private Suite</div>
+									<h4 class="gallery-item-title">Master Bedroom Sanctuary &amp; Textures</h4>
+									<span class="gallery-cta-link">Preview Space <i class="fas fa-arrow-right"></i></span>
+								</div>
+							</div>
+						</a>
+					</div>
+
+					<!-- 11. Tree Hues Innovation Studio -->
+					<div class="gallery-item-card">
+						<a href="assets/img/hero/contact_studio.jpg" data-fancybox="home-gallery" data-caption="Tree Hues Studio — Material Palette &amp; Architectural Innovation" class="gallery-img-box">
+							<img src="assets/img/hero/contact_studio.jpg" alt="Tree Hues Design Studio">
+							<div class="gallery-top-badge">✦ Design Studio</div>
+							<div class="gallery-zoom-btn"><i class="fas fa-search-plus"></i></div>
+							<div class="gallery-card-overlay">
+								<div class="gallery-card-content">
+									<div class="gallery-category"><span>✦</span> Innovation Hub</div>
+									<h4 class="gallery-item-title">Tree Hues Architectural Studio</h4>
+									<span class="gallery-cta-link">Preview Space <i class="fas fa-arrow-right"></i></span>
+								</div>
+							</div>
+						</a>
+					</div>
+
+				</div>
+
+				<!-- Navigation Controls & Counter -->
+				<div class="gallery-nav-controls">
+					<button class="gallery-nav-btn gallery-prev-btn" id="galleryPrevBtn" type="button" aria-label="Previous image">
+						<i class="fas fa-arrow-left"></i>
+					</button>
+					<div class="gallery-counter-pill">
+						<span>✦ 11 Curated Spaces</span>
+					</div>
+					<button class="gallery-nav-btn gallery-next-btn" id="galleryNextBtn" type="button" aria-label="Next image">
+						<i class="fas fa-arrow-right"></i>
+					</button>
 				</div>
 			</div>
 		</div>
 	</section>
-	<!--/Team Section-->
-
-
+	<!-- /Curated Architectural Gallery Scroller Section -->
 
 	<!--Footer-->
 	<footer class="tree-hues-footer">
@@ -1028,6 +1221,7 @@
 						<li><a href="about-us.html">About Tree Hues</a></li>
 						<li><a href="service.html">What We Do?</a></li>
 						<li><a href="project.html">Projects</a></li>
+						<li><a href="gallery.html">Gallery</a></li>
 						<li><a href="contact.html">Contact Us</a></li>
 					</ul>
 				</div>
@@ -1074,7 +1268,6 @@
 			</div>
 		</div>
 	</footer>
-	<!--/Footer-->
 	<!--/Footer-->
 	<!--jQuery Plugin -->
 	<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/jquery-3.4.1.min.js"></script>
