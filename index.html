@@ -1014,36 +1014,6 @@
 	</section>
 	<!-- /Core Values Section-->
 
-	<!-- Cinematic Video Showcase Section -->
-	<section class="tree-hues-video-section">
-		<div class="tree-hues-video-bg">
-			<img src="assets/img/portfolio/vdb_willow_farm.jpg" alt="Tree Hues Architectural Video Tour">
-			<div class="video-overlay-scrim"></div>
-		</div>
-		<div class="container text-center position-relative" style="z-index: 5;">
-			<div class="video-content-wrap" data-aos="zoom-in" data-aos-duration="1500">
-				<div class="services-badge mb-3 d-inline-flex align-items-center">
-					<span class="badge-gold-sparkle">✦</span>
-					<span>VIRTUAL ARCHITECTURAL TOUR</span>
-				</div>
-				<h2 class="video-main-heading">Step Inside Our Signature Spaces</h2>
-				<p class="video-sub-heading">Experience the spatial harmony, master timber joinery, and acoustic precision of Tree Hues turnkey projects.</p>
-				
-				<!-- Pulsing Circular Play Button matching User Reference Screenshot -->
-				<div class="video-play-button-wrap">
-					<a href="https://www.youtube.com/watch?v=Lv_1H_Sr0wA" data-fancybox="video-showcase" class="video-play-btn" aria-label="Play Architectural Tour Video">
-						<span class="play-pulse-ring"></span>
-						<span class="play-pulse-ring delay-pulse"></span>
-						<span class="play-btn-circle">
-							<span class="play-text">Play</span>
-						</span>
-					</a>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- /Cinematic Video Showcase Section -->
-
 	<!-- Client Testimonials Section -->
 	<section class="tree-hues-testimonials-section">
 		<div class="container">
@@ -1061,9 +1031,10 @@
 				<p class="gallery-header-desc" style="color: #666666;">Read what home owners and commercial partners say about their experience building with Tree Hues.</p>
 			</div>
 
-			<div class="row g-4">
+			<!-- Testimonials Owl Carousel Slider -->
+			<div class="owl-carousel tree-hues-testimonial-carousel" id="testimonialCarousel">
 				<!-- Testimonial 1 -->
-				<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="1400">
+				<div class="item">
 					<div class="luxury-testimonial-card">
 						<div class="testimonial-stars">★★★★★</div>
 						<p class="testimonial-quote">"Tree Hues transformed our 5,800 sq.ft duplex villa into an architectural masterpiece. Their attention to detail, custom fluted woodwork, and structural precision exceeded all our expectations."</p>
@@ -1075,7 +1046,7 @@
 				</div>
 
 				<!-- Testimonial 2 -->
-				<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="1700">
+				<div class="item">
 					<div class="luxury-testimonial-card">
 						<div class="testimonial-stars">★★★★★</div>
 						<p class="testimonial-quote">"The commercial flagship execution for Araku Coffee was seamless. Tree Hues managed complex acoustics, joinery, and structural finishes with complete professional rigor."</p>
@@ -1087,7 +1058,7 @@
 				</div>
 
 				<!-- Testimonial 3 -->
-				<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="2000">
+				<div class="item">
 					<div class="luxury-testimonial-card">
 						<div class="testimonial-stars">★★★★★</div>
 						<p class="testimonial-quote">"Our Dolby Atmos home theatre and penthouse interior execution was delivered on schedule with flawless audio isolation and high-end timber craftsmanship. Highly recommended!"</p>
@@ -1097,9 +1068,22 @@
 						</div>
 					</div>
 				</div>
+
+				<!-- Testimonial 4 -->
+				<div class="item">
+					<div class="luxury-testimonial-card">
+						<div class="testimonial-stars">★★★★★</div>
+						<p class="testimonial-quote">"From initial architectural renderings to post-handover support, Tree Hues delivered exceptional quality. Their passion for fine design sets them completely apart."</p>
+						<div class="testimonial-author">
+							<h4 class="author-name">Dr. Raghavendra</h4>
+							<span class="author-title">Bungalow Owner &bull; Prestige White Meadows</span>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
+	<!-- /Client Testimonials Section -->
 	<!-- /Client Testimonials Section -->
 
 	<!-- Pure Architectural Image Infinite Scrolling Showcase Section -->
@@ -1248,6 +1232,8 @@
 	<script src="assets/js/countdown.js"></script>
 	<!-- Fancybox Js-->
 	<script src="assets/js/jquery.fancybox.min.js"></script>
+	<!-- Lenis Smooth Scroll -->
+	<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
 	<script src='../../../cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js'></script>
 	<!-- Main Script -->
 	<script src="assets/js/theme.js"></script>

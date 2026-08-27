@@ -436,4 +436,75 @@ $(document).ready(function() {
         loop: true
       });
     }
+
+    // Testimonials Owl Carousel Slider Initialization
+    if ($('#testimonialCarousel').length) {
+      $('#testimonialCarousel').owlCarousel({
+        loop: true,
+        margin: 25,
+        nav: false,
+        dots: true,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        autoplayHoverPause: true,
+        smartSpeed: 800,
+        responsive: {
+          0: { items: 1 },
+          768: { items: 2 },
+          1100: { items: 3 }
+        }
+      });
+    }
   });
+
+  // Lenis Smooth Scroll Initialization
+  if (typeof Lenis !== 'undefined') {
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      smoothWheel: true,
+      smoothTouch: false
+    });
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  }
+
+  // Custom Animated Luxury Mouse Cursor
+  if (window.innerWidth >= 992) {
+    if (!$('.custom-cursor-dot').length) {
+      $('body').append('<div class="custom-cursor-dot"></div><div class="custom-cursor-outline"></div>');
+      
+      var cursorDot = document.querySelector('.custom-cursor-dot');
+      var cursorOutline = document.querySelector('.custom-cursor-outline');
+      var mouseX = 0, mouseY = 0;
+      var outlineX = 0, outlineY = 0;
+
+      window.addEventListener('mousemove', function(e) {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        cursorDot.style.left = mouseX + 'px';
+        cursorDot.style.top = mouseY + 'px';
+      });
+
+      function animateCursor() {
+        outlineX += (mouseX - outlineX) * 0.18;
+        outlineY += (mouseY - outlineY) * 0.18;
+        cursorOutline.style.left = outlineX + 'px';
+        cursorOutline.style.top = outlineY + 'px';
+        requestAnimationFrame(animateCursor);
+      }
+      animateCursor();
+
+      var interactiveElements = 'a, button, .editorial-project-card, .pg-item, .pg-grid-card, .luxury-testimonial-card, input, textarea, select';
+      $(document).on('mouseenter', interactiveElements, function() {
+        $('body').addClass('cursor-hover');
+      }).on('mouseleave', interactiveElements, function() {
+        $('body').removeClass('cursor-hover');
+      });
+    }
+  }

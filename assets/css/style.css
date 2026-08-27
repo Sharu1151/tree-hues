@@ -8482,4 +8482,77 @@ html, body {
   }
 }
 
+/* Custom Animated Luxury Mouse Cursor */
+@media (min-width: 992px) {
+  body {
+    cursor: default;
+  }
+  
+  .custom-cursor-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #a88350;
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 999999;
+    transform: translate(-50%, -50%);
+    transition: transform 0.15s ease-out, background-color 0.3s ease, width 0.3s ease, height 0.3s ease;
+  }
+
+  .custom-cursor-outline {
+    width: 38px;
+    height: 38px;
+    border: 1.5px solid rgba(168, 131, 80, 0.55);
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 999998;
+    transform: translate(-50%, -50%);
+    transition: transform 0.25s ease-out, border-color 0.3s ease, width 0.3s ease, height 0.3s ease, background-color 0.3s ease;
+  }
+
+  body.cursor-hover .custom-cursor-dot {
+    transform: translate(-50%, -50%) scale(0);
+  }
+
+  body.cursor-hover .custom-cursor-outline {
+    width: 55px;
+    height: 55px;
+    background-color: rgba(168, 131, 80, 0.14);
+    border-color: #a88350;
+  }
+}
+
+/* Testimonial Owl Carousel Navigation Dots */
+.tree-hues-testimonial-carousel .owl-dots {
+  text-align: center;
+  margin-top: 35px;
+}
+
+.tree-hues-testimonial-carousel .owl-dot {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.tree-hues-testimonial-carousel .owl-dot span {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #d5cfc5;
+  transition: all 0.3s ease;
+}
+
+.tree-hues-testimonial-carousel .owl-dot.active span,
+.tree-hues-testimonial-carousel .owl-dot:hover span {
+  background: #a88350;
+  width: 28px;
+  border-radius: 10px;
+}
+
 /*# sourceMappingURL=style.css.map */
