@@ -368,6 +368,15 @@ footer .tree-hues-brand-text {
   color: #ffffff !important;
 }
 
+/* Hero Dark Overlay Scrim - Uniform 100% Full Viewport Overlay */
+section.mextreo-hero rs-layer[id*="layer-0"] {
+  width: 100vw !important;
+  height: 100% !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  background-color: rgba(18, 17, 16, 0.45) !important;
+}
+
 header.mextreo-header-area.mha-inner:not(.nav-fixed) {
   position: absolute;
   top: 0;
