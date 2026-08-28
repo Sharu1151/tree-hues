@@ -91,17 +91,18 @@ function setREVStartSize(e){
 										enable:true,
 										style:"persephone",
 										left: {
-											container:"layergrid",
-											h_align:"right",
-											v_align:"bottom",
-											h_offset:123,
-											v_offset:396
+											container:"slider",
+											h_align:"left",
+											v_align:"center",
+											h_offset:35,
+											v_offset:0
 										},
 										right: {
-											container:"layergrid",
-											v_align:"bottom",
-											h_offset:122,
-											v_offset:345
+											container:"slider",
+											h_align:"right",
+											v_align:"center",
+											h_offset:35,
+											v_offset:0
 										}
 									}
 								},

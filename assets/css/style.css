@@ -8595,4 +8595,128 @@ html, body {
   border-radius: 10px;
 }
 
+/* =========================================================
+   HERO SECTION LUXURY SOCIAL BAR & NAVIGATION ARROWS
+   ========================================================= */
+
+/* Left Side Fixed Social Bar */
+.hero-left-social-strip {
+  position: absolute;
+  left: 45px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.hero-social-line {
+  width: 1px;
+  height: 55px;
+  background: linear-gradient(to bottom, rgba(220, 188, 149, 0), #dcbc95);
+  margin-bottom: 6px;
+}
+
+.hero-social-icon-link {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(18, 17, 16, 0.55);
+  border: 1px solid rgba(220, 188, 149, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+}
+
+.hero-social-icon-link:hover {
+  background: #dcbc95;
+  color: #121110 !important;
+  border-color: #dcbc95;
+  transform: scale(1.15) translateX(3px);
+  box-shadow: 0 8px 24px rgba(220, 188, 149, 0.45);
+}
+
+.hero-social-icon-link svg {
+  width: 14px;
+  height: 14px;
+  fill: currentColor;
+}
+
+@media (max-width: 1199px) {
+  .hero-left-social-strip {
+    left: 20px;
+  }
+}
+
+@media (max-width: 991px) {
+  .hero-left-social-strip {
+    display: none !important;
+  }
+}
+
+/* Luxury Slider Navigation Arrows (Persephone Custom Styling) */
+.persephone.tparrows {
+  width: 54px !important;
+  height: 54px !important;
+  border-radius: 50% !important;
+  background: rgba(18, 17, 16, 0.6) !important;
+  border: 1.5px solid rgba(220, 188, 149, 0.6) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  transition: all 0.35s ease !important;
+  cursor: pointer !important;
+  z-index: 100 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.persephone.tparrows:hover {
+  background: #dcbc95 !important;
+  border-color: #dcbc95 !important;
+  box-shadow: 0 0 25px rgba(220, 188, 149, 0.5) !important;
+  transform: scale(1.12) !important;
+}
+
+.persephone.tparrows:before {
+  font-family: "Font Awesome 5 Free", "FontAwesome", sans-serif !important;
+  font-weight: 900 !important;
+  font-size: 18px !important;
+  color: #ffffff !important;
+  line-height: 1 !important;
+  text-align: center !important;
+  display: block !important;
+  transition: color 0.3s ease !important;
+}
+
+.persephone.tparrows:hover:before {
+  color: #121110 !important;
+}
+
+.persephone.tp-leftarrow:before {
+  content: "\f053" !important; /* FontAwesome angle-left icon */
+}
+
+.persephone.tp-rightarrow:before {
+  content: "\f054" !important; /* FontAwesome angle-right icon */
+}
+
+@media (max-width: 767px) {
+  .persephone.tparrows {
+    width: 42px !important;
+    height: 42px !important;
+  }
+  .persephone.tparrows:before {
+    font-size: 14px !important;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
