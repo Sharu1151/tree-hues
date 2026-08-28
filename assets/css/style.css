@@ -8680,7 +8680,7 @@ html, body {
   }
 }
 
-/* Luxury Slider Navigation Arrows (Persephone Custom Styling) */
+/* Luxury Slider Navigation Arrows (Persephone Custom Styling - Ultra Smooth & Non-Shaking) */
 .persephone.tparrows {
   width: 54px !important;
   height: 54px !important;
@@ -8689,19 +8689,20 @@ html, body {
   border: 1.5px solid rgba(220, 188, 149, 0.6) !important;
   backdrop-filter: blur(8px) !important;
   -webkit-backdrop-filter: blur(8px) !important;
-  transition: all 0.35s ease !important;
+  transition: background-color 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease !important;
   cursor: pointer !important;
   z-index: 100 !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
+  -webkit-backface-visibility: hidden !important;
+  backface-visibility: hidden !important;
 }
 
 .persephone.tparrows:hover {
   background: #dcbc95 !important;
   border-color: #dcbc95 !important;
-  box-shadow: 0 0 25px rgba(220, 188, 149, 0.5) !important;
-  transform: scale(1.12) !important;
+  box-shadow: 0 0 25px rgba(220, 188, 149, 0.6), 0 8px 24px rgba(0, 0, 0, 0.3) !important;
 }
 
 .persephone.tparrows:before {
@@ -8712,11 +8713,14 @@ html, body {
   line-height: 1 !important;
   text-align: center !important;
   display: block !important;
-  transition: color 0.3s ease !important;
+  transition: transform 0.3s ease, color 0.3s ease !important;
+  -webkit-backface-visibility: hidden !important;
+  backface-visibility: hidden !important;
 }
 
 .persephone.tparrows:hover:before {
   color: #121110 !important;
+  transform: scale(1.18) !important;
 }
 
 .persephone.tp-leftarrow:before {
