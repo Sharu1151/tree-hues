@@ -8605,6 +8605,81 @@ html, body {
   display: none !important;
 }
 
+/* Hero Bottom-Right Floating Social Bar */
+.hero-bottom-right-socials {
+  position: absolute;
+  right: 40px;
+  bottom: 35px;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(18, 17, 16, 0.55);
+  border: 1px solid rgba(220, 188, 149, 0.35);
+  padding: 8px 18px;
+  border-radius: 40px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.hero-bottom-right-socials .socials-label {
+  font-family: 'Gotham Narrow', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  color: #dcbc95;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.hero-bottom-right-socials .socials-dash {
+  width: 20px;
+  height: 1px;
+  background: rgba(220, 188, 149, 0.5);
+  margin-right: 2px;
+}
+
+.hero-social-link {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  transition: all 0.35s ease;
+  text-decoration: none;
+}
+
+.hero-social-link:hover {
+  background: #dcbc95;
+  color: #121110 !important;
+  border-color: #dcbc95;
+  transform: translateY(-3px) scale(1.1);
+  box-shadow: 0 6px 18px rgba(220, 188, 149, 0.4);
+}
+
+.hero-social-link svg {
+  width: 13px;
+  height: 13px;
+  fill: currentColor;
+}
+
+@media (max-width: 991px) {
+  .hero-bottom-right-socials {
+    right: 20px;
+    bottom: 20px;
+    padding: 6px 14px;
+  }
+  .hero-bottom-right-socials .socials-label,
+  .hero-bottom-right-socials .socials-dash {
+    display: none;
+  }
+}
+
 /* Luxury Slider Navigation Arrows (Persephone Custom Styling) */
 .persephone.tparrows {
   width: 54px !important;
