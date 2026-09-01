@@ -19,19 +19,17 @@
     ## RTL Switch
 
 */
-/*Animation js*/
+/*Animation js - High Performance & Snappy*/
 AOS.init({
-    offset:     120,
+    offset:     60,
     delay:      0,
-    easing:     'ease',
-    duration:   5000,
+    easing:     'ease-out-cubic',
+    duration:   800,
     disable:    false,
-    once:       false,
-    mirror:     false, 
- 
+    once:       true,
+    mirror:     false,
     startEvent: 'DOMContentLoaded'
- 
-  });
+});
   
 (function($) {
   "use strict"; 
@@ -71,18 +69,36 @@ setTimeout(function() {
 })();
 //**================== End Active Navigation ====================*//
 
-//**================= Sticky =====================**//
+//**================= Sticky Nav (High Performance Throttled) =====================**//
+var isHeaderFixed = false;
+var scrollTicking = false;
 
-$(window).on('scroll', function() {
-  if ($('body').hasClass('mobile-menu-active')) return;
-  if ($(window).scrollTop() > 50) {
-      $('.mextreo-header-area').addClass('nav-fixed');
-      $('.scroll-to-target').addClass('open');
-  } else {
-      $('.mextreo-header-area').removeClass('nav-fixed');
-      $('.scroll-to-target').removeClass('open');
+window.addEventListener('scroll', function() {
+  if (document.body.classList.contains('mobile-menu-active')) return;
+  if (!scrollTicking) {
+    window.requestAnimationFrame(function() {
+      var scrollY = window.pageYOffset || document.documentElement.scrollTop;
+      var $header = $('.mextreo-header-area');
+      var $scrollToTop = $('.scroll-to-target');
+
+      if (scrollY > 50) {
+        if (!isHeaderFixed) {
+          $header.addClass('nav-fixed');
+          $scrollToTop.addClass('open');
+          isHeaderFixed = true;
+        }
+      } else {
+        if (isHeaderFixed) {
+          $header.removeClass('nav-fixed');
+          $scrollToTop.removeClass('open');
+          isHeaderFixed = false;
+        }
+      }
+      scrollTicking = false;
+    });
+    scrollTicking = true;
   }
-});
+}, { passive: true });
 
 
 
@@ -468,22 +484,7 @@ $(document).ready(function() {
     }
   });
 
-  // Lenis Smooth Scroll Initialization
-  if (typeof Lenis !== 'undefined') {
-    const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      smoothWheel: true,
-      smoothTouch: false
-    });
 
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-  }
 
   // Custom Animated Luxury Mouse Cursor
   if (window.innerWidth >= 992) {
