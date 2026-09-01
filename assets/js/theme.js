@@ -143,16 +143,27 @@ $(function() {
 
 
     /*---------------------
-    smooth scroll
+    Smooth scroll for in-page tabs, chips and anchor links
     --------------------- */
-    $('.smoothscroll').on('click', function(e) {
-      e.preventDefault();
-      var target = this.hash;
+    $('a.service-chip-link, .smoothscroll, a[href^="#"]:not([href="#"]):not([href="#!"]):not([data-toggle]):not([data-bs-toggle])').on('click', function(e) {
+      var targetHash = this.hash;
+      if (!targetHash) return;
+      var $target = $(targetHash);
+      if ($target.length) {
+        e.preventDefault();
+        var headerHeight = $('.mextreo-header-area').outerHeight() || 80;
+        var offsetTop = $target.offset().top - headerHeight - 20;
+        if (offsetTop < 0) offsetTop = 0;
+        
+        $('html, body').stop().animate({
+          scrollTop: offsetTop
+        }, 650);
 
-      $('html, body').stop().animate({
-          'scrollTop': $(target).offset().top - 80
-      }, 1200);
-  });
+        if (history.pushState) {
+          history.pushState(null, null, targetHash);
+        }
+      }
+    });
 
 
   /*---------------------

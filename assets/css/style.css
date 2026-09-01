@@ -3911,6 +3911,16 @@ section.mextreo-hero.inner {
   line-height: 1.4;
 }
 
+/* Service Section Anchor Offsets (Prevents Sticky Header Overlap) */
+.service-section-interior,
+.service-section-architecture,
+.service-section-theatre,
+.service-section-process,
+.service-section-craftsmanship,
+.service-section-commitment {
+  scroll-margin-top: 100px;
+}
+
 /* Section 2: Service 01 - Interior Design & Build (Warm Travertine Stone #f8f5ee) */
 .service-section-interior {
   padding: 85px 0;
