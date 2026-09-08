@@ -445,7 +445,7 @@ header.mextreo-header-area.mha-inner:not(.nav-fixed) .main-menu-btn-icon:after {
 section.tree-hues-values-section {
   position: relative;
   padding: 70px 0 60px;
-  background-image: url('../img/about/values-parallax-bg.jpg');
+  background-image: url('../img/projects/windmills/showcase/windmills-library-joinery-02.webp');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -3611,24 +3611,24 @@ section.mextreo-hero.inner .hero-inner-img img.hero-inner-2 {
 
 /* Specific Page Cinematic Backgrounds */
 .tree-hues-service-hero {
-  background-image: url('../img/portfolio/vdb_willow_farm.jpg');
+  background-image: url('../img/projects/vajram/gallery/vajram-dslr-25.webp');
 }
 
 .tree-hues-project-hero {
-  background-image: url('../img/portfolio/shriram_sahana.jpg');
+  background-image: url('../img/projects/araku/showcase/araku-counter-01.webp');
 }
 
 .tree-hues-pdetails-hero {
-  background-image: url('../img/portfolio/independent_house.jpg');
+  background-image: url('../img/projects/after-the-rain/showcase/atr-theatre-starlight-05.webp');
 }
 
 .tree-hues-about-hero,
 section.mextreo-hero.inner {
-  background-image: url('../img/about/values-parallax-bg.jpg');
+  background-image: url('../img/projects/araku/showcase/araku-dining-vaults-02.webp');
 }
 
 .tree-hues-contact-hero {
-  background-image: url('../img/hero/contact_studio.jpg');
+  background-image: url('../img/projects/vajram/showcase/vajram-foyer-living-02.webp');
 }
 
 /* Typography on Cinematic Hero */
@@ -4622,7 +4622,7 @@ section.work-success.dark .ws-content {
       line-height: 280px;
       font-family: "Chronicle Display";
       font-weight: 600;
-      background: url(../img/about/success-y-bg.jpg);
+      background: url(../img/projects/vajram/showcase/vajram-mandapam-pooja-06.webp);
       background-size: cover;
       background-position: 100% 62px;
       -webkit-text-fill-color: transparent;
@@ -5786,7 +5786,7 @@ section.error {
 /*===============CommingSoon Page Style===================*/
 section.commingsoon {
   position: relative;
-  background-image: url(../img/commingsoon.jpg);
+  background-image: url(../img/projects/v2-poorvi-enclave/showcase/v2-living-dining-01.webp);
   padding: 100px 0px; }
   section.commingsoon::before {
     position: absolute;
