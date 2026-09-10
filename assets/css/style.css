@@ -4519,23 +4519,135 @@ section.mextreo-about {
   overflow: hidden;
   z-index: 0; }
   section.mextreo-about .about-bg {
-    width: 110%;
-    position: absolute;
-    left: -30%;
-    top: -15%;
-    z-index: -1;
-    opacity: 0.85; }
+    display: none; }
   section.mextreo-about .m-about-img {
     position: relative;
     z-index: 1; }
     section.mextreo-about .m-about-img img {
       width: 100%;
       height: auto;
-      border-radius: 12px;
+      border-radius: 14px;
       box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08); }
   section.mextreo-about .m-about-content {
-    position: relative;
-    padding-left: 15px; }
+    position: relative; }
+
+/* =========================================================
+   TREE HUES MODERN DUAL MEDIA SHOWCASE (Alternating Left/Right)
+   ========================================================= */
+.tree-hues-dual-media {
+  position: relative;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.tree-hues-dual-media .primary-media-frame {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(220, 188, 149, 0.35);
+  background: #141312;
+}
+
+.tree-hues-dual-media .primary-media-frame img {
+  width: 100%;
+  height: 380px;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.tree-hues-dual-media:hover .primary-media-frame img {
+  transform: scale(1.05);
+}
+
+.tree-hues-dual-media .accent-media-frame {
+  position: absolute;
+  width: 52%;
+  max-width: 220px;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.22);
+  border: 3.5px solid #ffffff;
+  background: #141312;
+  z-index: 2;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.tree-hues-dual-media:hover .accent-media-frame {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 42px rgba(0, 0, 0, 0.28);
+}
+
+.tree-hues-dual-media .accent-media-frame img {
+  width: 100%;
+  height: 135px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Media Left: Accent positioned at bottom-right */
+.tree-hues-dual-media.media-left .accent-media-frame {
+  bottom: 0px;
+  right: -10px;
+}
+
+/* Media Right: Accent positioned at bottom-left */
+.tree-hues-dual-media.media-right .accent-media-frame {
+  bottom: 0px;
+  left: -10px;
+}
+
+.tree-hues-dual-media .accent-glow-badge {
+  position: absolute;
+  bottom: 7px;
+  left: 7px;
+  right: 7px;
+  background: rgba(18, 17, 16, 0.88);
+  backdrop-filter: blur(8px);
+  color: #dcbc95;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  padding: 4px 6px;
+  border-radius: 6px;
+  text-align: center;
+  border: 1px solid rgba(220, 188, 149, 0.35);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 991px) {
+  .tree-hues-dual-media .primary-media-frame img {
+    height: 320px;
+  }
+  .tree-hues-dual-media.media-left .accent-media-frame {
+    bottom: -5px;
+    right: 5px;
+  }
+  .tree-hues-dual-media.media-right .accent-media-frame {
+    bottom: -5px;
+    left: 5px;
+  }
+}
+
+@media (max-width: 575px) {
+  .tree-hues-dual-media .primary-media-frame img {
+    height: 270px;
+  }
+  .tree-hues-dual-media .accent-media-frame {
+    width: 48%;
+    max-width: 160px;
+  }
+  .tree-hues-dual-media .accent-media-frame img {
+    height: 95px;
+  }
+  .tree-hues-dual-media .accent-glow-badge {
+    font-size: 8px;
+    padding: 3px 4px;
+  }
+}
     section.mextreo-about .m-about-content h2.ab-tittle {
       position: absolute;
       font-family: 'Montserrat', sans-serif;
@@ -4618,10 +4730,7 @@ section.work-success {
   background: #ffffff; /* Pure Crisp Luxury White */
   overflow: hidden; }
   section.work-success .success-bg {
-    position: absolute;
-    top: -3%;
-    right: -42%;
-    z-index: 0; }
+    display: none; }
   section.work-success .success-img {
     position: relative;
     margin-top: 0; }
