@@ -1,0 +1,59 @@
+# robots.txt for Tree Hues Bharat Pvt. Ltd. (https://www.tree-hues.com)
+# Enterprise Crawling & Indexing Directives
+
+User-agent: *
+Allow: /
+Allow: /assets/
+Disallow: /*.json$
+Disallow: /*.lock$
+Disallow: /node_modules/
+
+# Explicit permissions for major web and image search crawlers
+User-agent: Googlebot
+Allow: /
+Allow: /assets/
+
+User-agent: Googlebot-Image
+Allow: /assets/
+
+User-agent: Bingbot
+Allow: /
+Allow: /assets/
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+# Generative Engine Optimization (GEO) & AI Crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# Canonical Host & Sitemap Directives
+Host: https://www.tree-hues.com
+Sitemap: https://www.tree-hues.com/sitemap.xml

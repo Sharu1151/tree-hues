@@ -1,0 +1,32 @@
+{
+  "name": "Tree Hues Bharat Pvt. Ltd.",
+  "short_name": "Tree Hues",
+  "description": "Turnkey Interior Design, Architecture & Dolby Atmos Home Theatre Studio in Bangalore",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#0e0d0c",
+  "theme_color": "#0b1a17",
+  "icons": [
+    {
+      "src": "/assets/img/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/img/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/img/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/img/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- 1. Homepage -->
+  <url>
+    <loc>https://www.tree-hues.com/</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.tree-hues.com/assets/img/projects/vajram/showcase/vajram-living-hero-01.webp</image:loc>
+      <image:title>Tree Hues - Turnkey Interior Design &amp; Architecture Studio Bangalore</image:title>
+      <image:caption>Modern luxury duplex villa interiors and architectural execution by Tree Hues Bharat Pvt. Ltd.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.tree-hues.com/assets/img/logo.png</image:loc>
+      <image:title>Tree Hues Official Brand Logo</image:title>
+    </image:image>
+  </url>
+
+  <!-- 2. About Us Page -->
+  <url>
+    <loc>https://www.tree-hues.com/about-us.html</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.tree-hues.com/assets/img/projects/vajram/showcase/vajram-living-hero-01.webp</image:loc>
+      <image:title>About Tree Hues Architectural Philosophy</image:title>
+      <image:caption>Crafted spaces blending timeless character with progressive modern design.</image:caption>
+    </image:image>
+  </url>
+
+  <!-- 3. Services Page -->
+  <url>
+    <loc>https://www.tree-hues.com/service.html</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.tree-hues.com/assets/img/projects/vajram/showcase/vajram-living-hero-01.webp</image:loc>
+      <image:title>Turnkey Interior Design &amp; Architecture Services Bangalore</image:title>
+      <image:caption>Residential interiors, civil execution, timber joinery, and private Dolby Atmos cinema engineering.</image:caption>
+    </image:image>
+  </url>
+
+  <!-- 4. Projects Portfolio Page -->
+  <url>
+    <loc>https://www.tree-hues.com/project.html</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.tree-hues.com/assets/img/projects/vajram/showcase/vajram-foyer-living-02.webp</image:loc>
+      <image:title>Vajram Essenza Luxury Villa Project</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.tree-hues.com/assets/img/projects/windmills/showcase/windmills-courtyard-living-01.webp</image:loc>
+      <image:title>Windmills of Your Mind Villa 64</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.tree-hues.com/assets/img/projects/after-the-rain/showcase/atr-theatre-starlight-05.webp</image:loc>
+      <image:title>After The Rain Dolby Atmos Home Cinema</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.tree-hues.com/assets/img/projects/araku/showcase/araku-counter-01.webp</image:loc>
+      <image:title>Araku Coffee Commercial Flagship Store</image:title>
+    </image:image>
+  </url>
+
+  <!-- 5. Curated Gallery Page -->
+  <url>
+    <loc>https://www.tree-hues.com/gallery.html</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://www.tree-hues.com/assets/img/projects/vajram/showcase/vajram-living-hero-01.webp</image:loc>
+      <image:title>Curated Architectural Photography Showcase</image:title>
+    </image:image>
+  </url>
+
+  <!-- 6. Contact Page -->
+  <url>
+    <loc>https://www.tree-hues.com/contact.html</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- 7. Deep-Linked Flagship Project: Vajram Residence -->
+  <url>
+    <loc>https://www.tree-hues.com/project-details.html?id=vajram-residence</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.tree-hues.com/assets/img/projects/vajram/showcase/vajram-living-hero-01.webp</image:loc>
+      <image:title>Vajram Essenza Modern Contemporary Villa Living Room</image:title>
+    </image:image>
+  </url>
+
+  <!-- 8. Deep-Linked Flagship Project: Windmills Villa 64 -->
+  <url>
+    <loc>https://www.tree-hues.com/project-details.html?id=windmills-villa-64</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.tree-hues.com/assets/img/projects/windmills/showcase/windmills-courtyard-living-01.webp</image:loc>
+      <image:title>Windmills of Your Mind Villa 64 Earth-Modern Interior</image:title>
+    </image:image>
+  </url>
+
+  <!-- 9. Deep-Linked Flagship Project: After The Rain Cinema -->
+  <url>
+    <loc>https://www.tree-hues.com/project-details.html?id=after-the-rain-theatre</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.tree-hues.com/assets/img/projects/after-the-rain/showcase/atr-theatre-starlight-05.webp</image:loc>
+      <image:title>After The Rain Private Dolby Atmos Cinema Room</image:title>
+    </image:image>
+  </url>
+
+  <!-- 10. Deep-Linked Flagship Project: Araku Coffee Flagship -->
+  <url>
+    <loc>https://www.tree-hues.com/project-details.html?id=araku-coffee-flagship</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.tree-hues.com/assets/img/projects/araku/showcase/araku-counter-01.webp</image:loc>
+      <image:title>Araku Coffee Commercial Flagship Interior Design</image:title>
+    </image:image>
+  </url>
+
+  <!-- 11. Deep-Linked Flagship Project: V2 Poorvi Enclave -->
+  <url>
+    <loc>https://www.tree-hues.com/project-details.html?id=v2-poorvi-enclave</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.tree-hues.com/assets/img/projects/v2-poorvi-enclave/showcase/v2-living-dining-01.webp</image:loc>
+      <image:title>V2 Poorvi Enclave Contemporary Luxury Residence</image:title>
+    </image:image>
+  </url>
+
+  <!-- 12. Deep-Linked Flagship Project: Mirabilis Residence -->
+  <url>
+    <loc>https://www.tree-hues.com/project-details.html?id=mirabilis-residence</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.tree-hues.com/assets/img/projects/mirabilis/showcase/mirabilis-living-01.webp</image:loc>
+      <image:title>Mirabilis Warm Minimalist Residence</image:title>
+    </image:image>
+  </url>
+
+</urlset>

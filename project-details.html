@@ -6,6 +6,103 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title id="pageTitle">Project Details | Tree Hues Bharat Pvt. Ltd.</title>
 	
+	<!-- Google Fonts Preconnect (Performance / Core Web Vitals) -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+	<!-- SEO & Search Engine Meta Tags -->
+	<meta name="description" id="pageDescription"
+		content="Explore detailed architectural and interior design case studies by Tree Hues Bharat Pvt. Ltd. Bangalore. Featuring luxury villa interiors, material specifications, and turnkey civil execution.">
+	<meta name="keywords"
+		content="Tree Hues project details, luxury villa case study, interior design Bangalore, architectural specifications, material curation">
+	<meta name="author" content="Tree Hues Bharat Pvt. Ltd.">
+	<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+	<link rel="canonical" id="pageCanonical" href="https://www.tree-hues.com/project-details.html">
+
+	<!-- Local Geo SEO Meta Tags -->
+	<meta name="geo.region" content="IN-KA">
+	<meta name="geo.placename" content="Bangalore">
+	<meta name="geo.position" content="12.9698;77.7499">
+	<meta name="ICBM" content="12.9698, 77.7499">
+
+	<!-- OpenGraph / WhatsApp Preview Cards -->
+	<meta property="og:type" content="article">
+	<meta property="og:site_name" content="Tree Hues Bharat Pvt. Ltd.">
+	<meta property="og:locale" content="en_IN">
+	<meta property="og:url" id="ogUrl" content="https://www.tree-hues.com/project-details.html">
+	<meta property="og:title" id="ogTitle" content="Project Architectural Showcase | Tree Hues">
+	<meta property="og:description" id="ogDesc"
+		content="Explore detailed architectural and interior design case studies by Tree Hues Bharat Pvt. Ltd. Bangalore.">
+	<meta property="og:image" id="ogImage" content="https://www.tree-hues.com/assets/img/projects/vajram/showcase/vajram-living-hero-01.webp">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="630">
+
+	<!-- Twitter / X Card Meta Tags -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@treehues">
+	<meta name="twitter:title" id="twTitle" content="Project Architectural Showcase | Tree Hues">
+	<meta name="twitter:description" id="twDesc"
+		content="Explore detailed architectural and interior design case studies by Tree Hues Bharat Pvt. Ltd. Bangalore.">
+	<meta name="twitter:image" id="twImage" content="https://www.tree-hues.com/assets/img/projects/vajram/showcase/vajram-living-hero-01.webp">
+
+	<!-- Mobile PWA & Theme Color -->
+	<meta name="theme-color" content="#0b1a17">
+	<meta name="msapplication-TileColor" content="#0b1a17">
+	<link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+	<link rel="apple-touch-icon" href="assets/img/favicon.png">
+	<link rel="manifest" href="site.webmanifest">
+
+	<!-- Verification Placeholders -->
+	<meta name="google-site-verification" content="GOOGLE_SEARCH_CONSOLE_VERIFICATION_TOKEN">
+	<meta name="msvalidate.01" content="BING_WEBMASTER_VERIFICATION_TOKEN">
+
+	<!-- Schema.org Structured Data (JSON-LD) -->
+	<script id="projectJsonLd" type="application/ld+json">
+	[
+	  {
+	    "@context": "https://schema.org",
+	    "@type": "CreativeWork",
+	    "name": "Tree Hues Landmark Architecture & Interior Project",
+	    "author": {
+	      "@type": "Organization",
+	      "name": "Tree Hues Bharat Pvt. Ltd.",
+	      "url": "https://www.tree-hues.com/"
+	    },
+	    "provider": {
+	      "@type": "LocalBusiness",
+	      "name": "Tree Hues Bharat Pvt. Ltd.",
+	      "url": "https://www.tree-hues.com/"
+	    },
+	    "description": "Architectural interior and spatial design case study by Tree Hues Bharat Pvt. Ltd."
+	  },
+	  {
+	    "@context": "https://schema.org",
+	    "@type": "BreadcrumbList",
+	    "itemListElement": [
+	      {
+	        "@type": "ListItem",
+	        "position": 1,
+	        "name": "Home",
+	        "item": "https://www.tree-hues.com/"
+	      },
+	      {
+	        "@type": "ListItem",
+	        "position": 2,
+	        "name": "Projects",
+	        "item": "https://www.tree-hues.com/project.html"
+	      },
+	      {
+	        "@type": "ListItem",
+	        "position": 3,
+	        "name": "Project Details",
+	        "item": "https://www.tree-hues.com/project-details.html"
+	      }
+	    ]
+	  }
+	]
+	</script>
+
 	<!-- Fonts -->
 	<link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800&amp;display=swap" rel="stylesheet">
@@ -23,10 +120,6 @@
 	<link rel="stylesheet" href="assets/css/aos.css">
 	<link rel="stylesheet" href="assets/css/animate.min.css">
 	<link rel="stylesheet" href="assets/css/style.css">
-
-	<!-- Favicon -->
-	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-	<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
 </head>
 
 <body>
@@ -680,6 +773,91 @@
 			// Setup Prev / Next Links
 			document.getElementById('prevProjectLink').href = 'project-details.html?id=' + project.prev;
 			document.getElementById('nextProjectLink').href = 'project-details.html?id=' + project.next;
+
+			// Dynamically Update SEO & OpenGraph Meta Tags
+			var canonicalUrl = 'https://www.tree-hues.com/project-details.html?id=' + project.id;
+			var fullImgUrl = window.location.origin + '/' + project.masterImg;
+			
+			var metaDesc = document.getElementById('pageDescription');
+			if (metaDesc) metaDesc.setAttribute('content', project.title + ' - ' + project.summary + ' Architectural and interior project in ' + project.location + ' executed by Tree Hues Bharat Pvt. Ltd.');
+			
+			var linkCanonical = document.getElementById('pageCanonical');
+			if (linkCanonical) linkCanonical.setAttribute('href', canonicalUrl);
+
+			var ogUrl = document.getElementById('ogUrl');
+			if (ogUrl) ogUrl.setAttribute('content', canonicalUrl);
+
+			var ogTitle = document.getElementById('ogTitle');
+			if (ogTitle) ogTitle.setAttribute('content', project.title + ' | Tree Hues Architecture');
+
+			var ogDesc = document.getElementById('ogDesc');
+			if (ogDesc) ogDesc.setAttribute('content', project.summary);
+
+			var ogImage = document.getElementById('ogImage');
+			if (ogImage) ogImage.setAttribute('content', fullImgUrl);
+
+			var twTitle = document.getElementById('twTitle');
+			if (twTitle) twTitle.setAttribute('content', project.title + ' | Tree Hues Architecture');
+
+			var twDesc = document.getElementById('twDesc');
+			if (twDesc) twDesc.setAttribute('content', project.summary);
+
+			var twImage = document.getElementById('twImage');
+			if (twImage) twImage.setAttribute('content', fullImgUrl);
+
+			// Hydrate JSON-LD Structured Data
+			var jsonLdScript = document.getElementById('projectJsonLd');
+			if (jsonLdScript) {
+				var schemaData = [
+					{
+						"@context": "https://schema.org",
+						"@type": "CreativeWork",
+						"name": project.title,
+						"headline": project.title,
+						"description": project.summary,
+						"image": fullImgUrl,
+						"author": {
+							"@type": "Organization",
+							"name": "Tree Hues Bharat Pvt. Ltd.",
+							"url": "https://www.tree-hues.com/"
+						},
+						"provider": {
+							"@type": "LocalBusiness",
+							"name": "Tree Hues Bharat Pvt. Ltd.",
+							"url": "https://www.tree-hues.com/"
+						},
+						"locationCreated": {
+							"@type": "Place",
+							"name": project.location
+						}
+					},
+					{
+						"@context": "https://schema.org",
+						"@type": "BreadcrumbList",
+						"itemListElement": [
+							{
+								"@type": "ListItem",
+								"position": 1,
+								"name": "Home",
+								"item": "https://www.tree-hues.com/"
+							},
+							{
+								"@type": "ListItem",
+								"position": 2,
+								"name": "Projects",
+								"item": "https://www.tree-hues.com/project.html"
+							},
+							{
+								"@type": "ListItem",
+								"position": 3,
+								"name": project.breadcrumb || project.title,
+								"item": canonicalUrl
+							}
+						]
+					}
+				];
+				jsonLdScript.textContent = JSON.stringify(schemaData, null, 2);
+			}
 		});
 	</script>
 </body>

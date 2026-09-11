@@ -1,0 +1,87 @@
+# ==============================================================================
+# Tree Hues Bharat Pvt. Ltd. - Production Apache Configuration
+# ==============================================================================
+
+# 1. Enable Rewrite Engine & Canonical HTTPS Redirection
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Redirect HTTP to HTTPS
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # Canonical: Redirect non-www to www (matches canonical URLs throughout site)
+  RewriteCond %{HTTP_HOST} ^tree-hues\.com [NC]
+  RewriteRule ^(.*)$ https://www.tree-hues.com/$1 [L,R=301]
+
+  # Clean Asset Routing: Serve root favicon requests transparently from assets/img/
+  RewriteRule ^favicon\.ico$ assets/img/favicon.ico [L]
+  RewriteRule ^favicon\.png$ assets/img/favicon.png [L]
+</IfModule>
+
+# 2. GZIP / Deflate Compression for Speed (Core Web Vitals Optimization)
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/plain
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/xml
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE application/xml
+  AddOutputFilterByType DEFLATE application/xhtml+xml
+  AddOutputFilterByType DEFLATE application/rss+xml
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/x-javascript
+  AddOutputFilterByType DEFLATE application/json
+  AddOutputFilterByType DEFLATE application/ld+json
+  AddOutputFilterByType DEFLATE image/svg+xml
+  AddOutputFilterByType DEFLATE font/opentype
+  AddOutputFilterByType DEFLATE font/ttf
+  AddOutputFilterByType DEFLATE font/woff
+  AddOutputFilterByType DEFLATE font/woff2
+</IfModule>
+
+# 3. Leverage Browser Caching (Cache-Control & Expires)
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 1 month"
+
+  # HTML documents - fresh for crawling
+  ExpiresByType text/html "access plus 1 hour"
+
+  # Data & XML
+  ExpiresByType text/xml "access plus 1 hour"
+  ExpiresByType application/xml "access plus 1 hour"
+  ExpiresByType application/json "access plus 1 hour"
+  ExpiresByType application/ld+json "access plus 1 hour"
+
+  # Images & Icons
+  ExpiresByType image/jpg "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+
+  # CSS and JavaScript
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType application/x-javascript "access plus 1 month"
+
+  # Web Fonts
+  ExpiresByType font/ttf "access plus 1 year"
+  ExpiresByType font/woff "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType application/font-woff "access plus 1 year"
+</IfModule>
+
+# 4. Security & SEO Protection Headers
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set X-XSS-Protection "1; mode=block"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# 5. Custom 404 Error Page
+ErrorDocument 404 /404.html
