@@ -5,6 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; frame-src 'self' https://maps.google.com https://www.google.com; connect-src 'self' https:;">
 	<title>Tree Hues | Luxury Interior Design, Architecture &amp; Home Theatre Studio Bangalore</title>
 
 	<!-- Google Fonts Preconnect (Performance / Core Web Vitals) -->
@@ -344,6 +345,16 @@
 									<li><a href="project.html">Projects</a></li>
 									<li><a href="gallery.html">Gallery</a></li>
 									<li><a href="contact.html">Contact Us</a></li>
+									<li class="nav-search-item">
+										<form class="nav-search-form" action="project-details.html" method="GET" role="search">
+											<div class="nav-search-box">
+												<input id="site-search" type="text" name="search" class="luxury-input nav-search-input" placeholder="Search projects…" autocomplete="off" aria-label="Search projects">
+												<button type="submit" class="nav-search-btn" aria-label="Submit Search">
+													<i class="fas fa-search"></i>
+												</button>
+											</div>
+										</form>
+									</li>
 									<li class="mobile-drawer-footer">
 										<div class="mdf-contact">
 											<a href="tel:+919686211977">+91 96862 11977</a>
@@ -393,7 +404,7 @@
 							alt="Vajram Essenza">
 					</div>
 					<div class="ssrp-text">
-						<a href="project-details.html?id=vajram-residence">Vajram Essenza - Luxury Residence</a>
+						<a href="vajram-residence.html">Vajram Essenza - Luxury Residence</a>
 						<span class="date-meta"><i class="fa fa-building" aria-hidden="true"></i>Modern
 							Contemporary</span>
 					</div>
@@ -403,7 +414,7 @@
 						<img src="assets/img/projects/araku/showcase/araku-counter-01.webp" alt="Araku Coffee">
 					</div>
 					<div class="ssrp-text">
-						<a href="project-details.html?id=araku-coffee-flagship">Araku Coffee | Ashok Nagar,
+						<a href="araku-coffee-flagship.html">Araku Coffee | Ashok Nagar,
 							Bangalore</a>
 						<span class="date-meta"><i class="fa fa-coffee" aria-hidden="true"></i>Commercial &
 							Institutional</span>
@@ -415,7 +426,7 @@
 							alt="After The Rain">
 					</div>
 					<div class="ssrp-text">
-						<a href="project-details.html?id=after-the-rain-theatre">After The Rain - Villa 87-89,
+						<a href="after-the-rain-theatre.html">After The Rain - Villa 87-89,
 							Bangalore</a>
 						<span class="date-meta"><i class="fa fa-film" aria-hidden="true"></i>Home Theatre
 							Projects</span>
@@ -972,14 +983,14 @@
 				<div class="col-md-6 col-12 editorial-col-left">
 					<!-- Project 01: Windmills of your Mind -->
 					<div class="editorial-project-card" data-aos="fade-up" data-aos-duration="1500">
-						<a href="project-details.html?id=windmills-villa-64" class="epc-img-wrapper">
+						<a href="windmills-villa-64.html" class="epc-img-wrapper">
 							<img src="assets/img/projects/windmills/showcase/windmills-courtyard-living-01.webp"
 								alt="Windmills of your Mind">
 							<span class="epc-num">01</span>
 						</a>
 						<div class="epc-caption">
 							<div class="epc-row-top">
-								<h3 class="epc-title"><a href="project-details.html?id=windmills-villa-64">Windmills of
+								<h3 class="epc-title"><a href="windmills-villa-64.html">Windmills of
 										your Mind</a></h3>
 								<span class="epc-cat">RESIDENTIAL</span>
 							</div>
@@ -991,14 +1002,14 @@
 
 					<!-- Project 03: Vajram Essenza -->
 					<div class="editorial-project-card" data-aos="fade-up" data-aos-duration="1500">
-						<a href="project-details.html?id=vajram-residence" class="epc-img-wrapper">
+						<a href="vajram-residence.html" class="epc-img-wrapper">
 							<img src="assets/img/projects/vajram/showcase/vajram-foyer-living-02.webp"
 								alt="Vajram Essenza: Modern Contemporary Bedroom Suite">
 							<span class="epc-num">03</span>
 						</a>
 						<div class="epc-caption">
 							<div class="epc-row-top">
-								<h3 class="epc-title"><a href="project-details.html?id=vajram-residence">Vajram
+								<h3 class="epc-title"><a href="vajram-residence.html">Vajram
 										Essenza</a></h3>
 								<span class="epc-cat">RESIDENTIAL &amp; DUPLEX</span>
 							</div>
@@ -1010,14 +1021,14 @@
 
 					<!-- Project 05: V2 Poorvi Enclave -->
 					<div class="editorial-project-card" data-aos="fade-up" data-aos-duration="1500">
-						<a href="project-details.html?id=v2-poorvi-enclave" class="epc-img-wrapper">
+						<a href="v2-poorvi-enclave.html" class="epc-img-wrapper">
 							<img src="assets/img/projects/v2-poorvi-enclave/gallery/v2-poorvi-53.webp"
 								alt="V2 Poorvi Enclave: Grand Hall &amp; Parquet Architecture">
 							<span class="epc-num">05</span>
 						</a>
 						<div class="epc-caption">
 							<div class="epc-row-top">
-								<h3 class="epc-title"><a href="project-details.html?id=v2-poorvi-enclave">V2 Poorvi
+								<h3 class="epc-title"><a href="v2-poorvi-enclave.html">V2 Poorvi
 										Enclave</a></h3>
 								<span class="epc-cat">RESIDENTIAL INTERIORS</span>
 							</div>
@@ -1032,13 +1043,13 @@
 				<div class="col-md-6 col-12 editorial-col-right">
 					<!-- Project 02: Araku Coffee -->
 					<div class="editorial-project-card" data-aos="fade-up" data-aos-duration="1500">
-						<a href="project-details.html?id=araku-coffee-flagship" class="epc-img-wrapper">
+						<a href="araku-coffee-flagship.html" class="epc-img-wrapper">
 							<img src="assets/img/projects/araku/showcase/araku-counter-01.webp" alt="Araku Coffee">
 							<span class="epc-num">02</span>
 						</a>
 						<div class="epc-caption">
 							<div class="epc-row-top">
-								<h3 class="epc-title"><a href="project-details.html?id=araku-coffee-flagship">Araku
+								<h3 class="epc-title"><a href="araku-coffee-flagship.html">Araku
 										Coffee</a></h3>
 								<span class="epc-cat">COMMERCIAL &amp; INSTITUTIONAL</span>
 							</div>
@@ -1050,14 +1061,14 @@
 
 					<!-- Project 04: After The Rain -->
 					<div class="editorial-project-card" data-aos="fade-up" data-aos-duration="1500">
-						<a href="project-details.html?id=after-the-rain-theatre" class="epc-img-wrapper">
+						<a href="after-the-rain-theatre.html" class="epc-img-wrapper">
 							<img src="assets/img/projects/after-the-rain/showcase/atr-theatre-starlight-05.webp"
 								alt="After The Rain">
 							<span class="epc-num">04</span>
 						</a>
 						<div class="epc-caption">
 							<div class="epc-row-top">
-								<h3 class="epc-title"><a href="project-details.html?id=after-the-rain-theatre">After The
+								<h3 class="epc-title"><a href="after-the-rain-theatre.html">After The
 										Rain</a></h3>
 								<span class="epc-cat">HOME THEATRE</span>
 							</div>
@@ -1069,14 +1080,14 @@
 
 					<!-- Project 06: Mirabilis Residence -->
 					<div class="editorial-project-card" data-aos="fade-up" data-aos-duration="1500">
-						<a href="project-details.html?id=mirabilis-residence" class="epc-img-wrapper">
+						<a href="mirabilis-residence.html" class="epc-img-wrapper">
 							<img src="assets/img/projects/mirabilis/showcase/mirabilis-living-01.webp"
 								alt="Mirabilis: Warm Minimalist Residence">
 							<span class="epc-num">06</span>
 						</a>
 						<div class="epc-caption">
 							<div class="epc-row-top">
-								<h3 class="epc-title"><a href="project-details.html?id=mirabilis-residence">Mirabilis
+								<h3 class="epc-title"><a href="mirabilis-residence.html">Mirabilis
 										Residence</a></h3>
 								<span class="epc-cat">RESIDENTIAL &amp; MINIMALIST</span>
 							</div>

@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; frame-src 'self' https://maps.google.com https://www.google.com; connect-src 'self' https:;">
 	<title id="pageTitle">Project Details | Tree Hues Bharat Pvt. Ltd.</title>
 	
 	<!-- Google Fonts Preconnect (Performance / Core Web Vitals) -->
@@ -199,6 +200,16 @@
 									<li class="active"><a href="project.html" class="active">Projects</a></li>
 									<li><a href="gallery.html">Gallery</a></li>
 									<li><a href="contact.html">Contact Us</a></li>
+									<li class="nav-search-item">
+										<form class="nav-search-form" action="project-details.html" method="GET" role="search">
+											<div class="nav-search-box">
+												<input id="site-search" type="text" name="search" class="luxury-input nav-search-input" placeholder="Search projects…" autocomplete="off" aria-label="Search projects">
+												<button type="submit" class="nav-search-btn" aria-label="Submit Search">
+													<i class="fas fa-search"></i>
+												</button>
+											</div>
+										</form>
+									</li>
 									<li class="mobile-drawer-footer">
 										<div class="mdf-contact">
 											<a href="tel:+919686211977">+91 96862 11977</a>
@@ -243,6 +254,17 @@
 	<section class="tree-hues-pdetails-body">
 		<div class="container">
 			
+			<!-- Search Fallback / Unknown Term Notice Banner -->
+			<div id="searchNoticeBanner" class="search-notice-banner" style="display: none;">
+				<div class="search-notice-content">
+					<div class="d-flex align-items-center">
+						<i class="fas fa-info-circle search-notice-icon me-2"></i>
+						<span>No exact project found for "<strong id="searchNoticeQuery"></strong>". Presenting our featured residence below.</span>
+					</div>
+					<button type="button" class="search-notice-close" onclick="document.getElementById('searchNoticeBanner').style.display='none';" aria-label="Close Notice">&times;</button>
+				</div>
+			</div>
+
 			<!-- Master Showcase Image -->
 			<div class="pdetails-master-visual-card" data-aos="fade-up" data-aos-duration="1200">
 				<div class="master-img-wrapper">
@@ -684,27 +706,73 @@
 			}
 		};
 
-		// Alias mappings to ensure legacy URLs gracefully display authentic projects
-		var projectAliases = {
-			'vdb-willow-farm': 'vajram-residence',
-			'shriram-sahana': 'v2-poorvi-enclave',
-			'independent-bungalow': 'windmills-villa-64',
-			'modular-kitchen-suite': 'araku-coffee-flagship',
-			'prestige-white-meadows': 'windmills-villa-64'
-		};
+		// Whitelist of strictly valid project IDs
+		var validProjectIds = (typeof TreeHuesSearch !== 'undefined' && TreeHuesSearch.validProjectIds) ? TreeHuesSearch.validProjectIds : [
+			'vajram-residence',
+			'v2-poorvi-enclave',
+			'after-the-rain-theatre',
+			'araku-coffee-flagship',
+			'windmills-villa-64',
+			'mirabilis-residence'
+		];
 
-		// Parse URL Query Params
+		// Parse URL Query Params safely
 		function getQueryParam(param) {
-			var urlParams = new URLSearchParams(window.location.search);
-			return urlParams.get(param);
+			try {
+				var urlParams = new URLSearchParams(window.location.search);
+				return urlParams.get(param);
+			} catch(e) {
+				return null;
+			}
 		}
 
 		document.addEventListener('DOMContentLoaded', function() {
-			var projectId = getQueryParam('id') || getQueryParam('project') || 'vajram-residence';
-			if (projectAliases[projectId]) {
-				projectId = projectAliases[projectId];
+			var rawSearchQuery = getQueryParam('search') || getQueryParam('q');
+			var rawIdQuery = getQueryParam('id') || getQueryParam('project');
+			var rawQuery = rawSearchQuery || rawIdQuery || 'vajram-residence';
+
+			// Populate any search inputs on the page with current query
+			var searchInputs = document.querySelectorAll('.nav-search-input');
+			if (searchInputs && rawSearchQuery) {
+				searchInputs.forEach(function(el) {
+					el.value = rawSearchQuery;
+				});
 			}
+
+			// Resolve Project ID using Whitelist & Normalization
+			var resolvedId = (typeof TreeHuesSearch !== 'undefined' && TreeHuesSearch.resolveProjectId)
+				? TreeHuesSearch.resolveProjectId(rawQuery, projectsData)
+				: null;
+			var isUnknownSearch = false;
+
+			if (!resolvedId) {
+				// Query did not match any whitelisted ID or alias
+				if (rawSearchQuery || (rawIdQuery && validProjectIds.indexOf(rawIdQuery) === -1)) {
+					isUnknownSearch = true;
+					console.warn('[Tree Hues Search] Unknown query or no matching project found for:', rawQuery);
+				}
+				resolvedId = 'vajram-residence'; // Safe default
+			}
+
+			var projectId = resolvedId;
 			var project = projectsData[projectId] || projectsData['vajram-residence'];
+
+			// If URL was a search query or alias, update the address bar cleanly to canonical ?id=...
+			if (window.history && window.history.replaceState && (rawSearchQuery || (rawIdQuery && rawIdQuery !== projectId))) {
+				window.history.replaceState(null, '', 'project-details.html?id=' + encodeURIComponent(projectId));
+			}
+
+			// Display user-friendly notification if an unknown query was searched
+			var noticeBanner = document.getElementById('searchNoticeBanner');
+			var noticeQuery = document.getElementById('searchNoticeQuery');
+			if (noticeBanner && noticeQuery) {
+				if (isUnknownSearch) {
+					noticeQuery.textContent = rawQuery; // textContent sanitization prevents XSS
+					noticeBanner.style.display = 'block';
+				} else {
+					noticeBanner.style.display = 'none';
+				}
+			}
 
 			// Update DOM Elements
 			document.title = project.title + " | Tree Hues";
@@ -771,8 +839,8 @@
 			}
 
 			// Setup Prev / Next Links
-			document.getElementById('prevProjectLink').href = 'project-details.html?id=' + project.prev;
-			document.getElementById('nextProjectLink').href = 'project-details.html?id=' + project.next;
+			document.getElementById('prevProjectLink').href = project.prev + '.html';
+			document.getElementById('nextProjectLink').href = project.next + '.html';
 
 			// Dynamically Update SEO & OpenGraph Meta Tags
 			var canonicalUrl = 'https://www.tree-hues.com/project-details.html?id=' + project.id;

@@ -53,15 +53,173 @@ setTimeout(function() {
     }, 400);
   }
 }, 3500);
+//**================== Tree Hues Project Search & URL Sanitiser ====================*//
+window.TreeHuesSearch = (function() {
+  // Whitelist of strictly valid and existing project IDs
+  var validProjectIds = [
+    'vajram-residence',
+    'v2-poorvi-enclave',
+    'after-the-rain-theatre',
+    'araku-coffee-flagship',
+    'windmills-villa-64',
+    'mirabilis-residence'
+  ];
+
+  // Comprehensive alias mappings: handles brand queries, space-separated and hyphenated names, and project keywords
+  var projectAliases = {
+    // Brand & General searches -> Vajram Essenza flagship residence
+    'tree': 'vajram-residence',
+    'tree-hues': 'vajram-residence',
+    'treehues': 'vajram-residence',
+    'tree-hue': 'vajram-residence',
+
+    // Vajram Essenza
+    'vajram': 'vajram-residence',
+    'vajram-residence': 'vajram-residence',
+    'vajram-essenza': 'vajram-residence',
+    'essenza': 'vajram-residence',
+    'bhavya': 'vajram-residence',
+    'akshat': 'vajram-residence',
+    'thanisandra': 'vajram-residence',
+
+    // V2 Poorvi Enclave
+    'v2': 'v2-poorvi-enclave',
+    'v2-poorvi': 'v2-poorvi-enclave',
+    'poorvi': 'v2-poorvi-enclave',
+    'poorvi-enclave': 'v2-poorvi-enclave',
+    'arpita': 'v2-poorvi-enclave',
+    'nithish': 'v2-poorvi-enclave',
+
+    // After The Rain Cinema
+    'after-the-rain': 'after-the-rain-theatre',
+    'after-rain': 'after-the-rain-theatre',
+    'theatre': 'after-the-rain-theatre',
+    'theater': 'after-the-rain-theatre',
+    'cinema': 'after-the-rain-theatre',
+    'home-theatre': 'after-the-rain-theatre',
+    'home-theater': 'after-the-rain-theatre',
+    'atmos': 'after-the-rain-theatre',
+    'dolby': 'after-the-rain-theatre',
+    'dolby-atmos': 'after-the-rain-theatre',
+    'yelahanka': 'after-the-rain-theatre',
+    'rao': 'after-the-rain-theatre',
+
+    // Araku Coffee Flagship
+    'araku': 'araku-coffee-flagship',
+    'araku-coffee': 'araku-coffee-flagship',
+    'coffee': 'araku-coffee-flagship',
+    'bamboo': 'araku-coffee-flagship',
+    'ashok-nagar': 'araku-coffee-flagship',
+
+    // Windmills of Your Mind Villa 64
+    'windmills': 'windmills-villa-64',
+    'windmills-villa': 'windmills-villa-64',
+    'villa-64': 'windmills-villa-64',
+    'kulkarni': 'windmills-villa-64',
+    'whitefield': 'windmills-villa-64',
+    'teak': 'windmills-villa-64',
+
+    // Mirabilis Residence
+    'mirabilis': 'mirabilis-residence',
+    'amruth': 'mirabilis-residence',
+    'kalpitha': 'mirabilis-residence',
+
+    // Legacy URLs
+    'vdb-willow-farm': 'vajram-residence',
+    'shriram-sahana': 'v2-poorvi-enclave',
+    'independent-bungalow': 'windmills-villa-64',
+    'modular-kitchen-suite': 'araku-coffee-flagship',
+    'prestige-white-meadows': 'windmills-villa-64'
+  };
+
+  function normalizeQuery(str) {
+    if (!str || typeof str !== 'string') return '';
+    return str
+      .toLowerCase()
+      .trim()
+      .replace(/[\s_+]+/g, '-')       // Convert spaces, underscores, pluses to hyphens
+      .replace(/[^a-z0-9-]/g, '')     // Sanitize: strip out HTML tags, script injection, special characters
+      .replace(/-+/g, '-')            // Collapse multiple hyphens
+      .replace(/^-|-$/g, '');         // Trim leading/trailing hyphens
+  }
+
+  function resolveProjectId(query, projectsData) {
+    var normalized = normalizeQuery(query);
+    if (!normalized) return null;
+
+    // 1. Direct whitelist match
+    if (validProjectIds.indexOf(normalized) !== -1) {
+      return normalized;
+    }
+
+    // 2. Alias mapping match
+    if (projectAliases[normalized]) {
+      return projectAliases[normalized];
+    }
+
+    // 3. Substring / keyword match against projectsData if available
+    if (projectsData && typeof projectsData === 'object') {
+      for (var id in projectsData) {
+        if (Object.prototype.hasOwnProperty.call(projectsData, id)) {
+          var p = projectsData[id];
+          var normId = normalizeQuery(p.id);
+          var normTitle = normalizeQuery(p.title);
+          var normClient = normalizeQuery(p.client);
+          var normLoc = normalizeQuery(p.location);
+
+          if (normId.indexOf(normalized) !== -1 || normalized.indexOf(normId) !== -1) {
+            return id;
+          }
+          if (normTitle.indexOf(normalized) !== -1) {
+            return id;
+          }
+          if (normClient.indexOf(normalized) !== -1 || normLoc.indexOf(normalized) !== -1) {
+            return id;
+          }
+        }
+      }
+    }
+
+    return null;
+  }
+
+  return {
+    validProjectIds: validProjectIds,
+    projectAliases: projectAliases,
+    normalizeQuery: normalizeQuery,
+    resolveProjectId: resolveProjectId
+  };
+})();
+
+// Attach Global Search Form Submission Handler with Safe URL Encoding
+$(document).on('submit', '.nav-search-form', function(e) {
+  e.preventDefault();
+  var input = $(this).find('input[name="search"]');
+  var query = (input.val() || '').trim();
+  if (query) {
+    if (window.TreeHuesSearch && window.TreeHuesSearch.resolveProjectId) {
+      var resolved = window.TreeHuesSearch.resolveProjectId(query);
+      if (resolved) {
+        window.location.href = resolved + '.html';
+        return;
+      }
+    }
+    window.location.href = 'project-details.html?search=' + encodeURIComponent(query);
+  }
+});
+
 //**================== Auto-Highlight Active Navigation Tab ====================*//
 (function highlightActiveNav() {
   var path = window.location.pathname.split("/").pop() || "index.html";
   if (path === "") path = "index.html";
-  $('#main-menu > li:not(.mobile-drawer-brand):not(.nav-quote-cta):not(.mobile-drawer-footer)').removeClass('active');
-  $('#main-menu > li:not(.mobile-drawer-brand):not(.nav-quote-cta):not(.mobile-drawer-footer) > a').removeClass('active current');
-  $('#main-menu > li:not(.mobile-drawer-brand):not(.nav-quote-cta):not(.mobile-drawer-footer) > a').each(function() {
+  var baseName = path.replace('.html', '');
+  var isDedicatedProjectPage = window.TreeHuesSearch && window.TreeHuesSearch.validProjectIds && window.TreeHuesSearch.validProjectIds.indexOf(baseName) !== -1;
+
+  $('#main-menu > li:not(.mobile-drawer-brand):not(.nav-quote-cta):not(.mobile-drawer-footer):not(.nav-search-item)').removeClass('active');
+  $('#main-menu > li:not(.mobile-drawer-brand):not(.nav-quote-cta):not(.mobile-drawer-footer):not(.nav-search-item) > a').removeClass('active current');
+  $('#main-menu > li:not(.mobile-drawer-brand):not(.nav-quote-cta):not(.mobile-drawer-footer):not(.nav-search-item) > a').each(function() {
     var href = $(this).attr('href');
-    if (href === path || (path === "index.html" && href === "index.html")) {
+    if (href === path || (path === "index.html" && href === "index.html") || (isDedicatedProjectPage && href === "project.html")) {
       $(this).parent().addClass('active');
       $(this).addClass('active');
     }

@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; frame-src 'self' https://maps.google.com https://www.google.com; connect-src 'self' https:;">
 	<title>Curated Portfolio | Luxury Villas, Commercial &amp; Home Theatres | Tree Hues Bangalore</title>
 
 	<!-- Google Fonts Preconnect (Performance / Core Web Vitals) -->
@@ -70,37 +71,37 @@
 	          "@type": "ListItem",
 	          "position": 1,
 	          "name": "Vajram Essenza: Modern Contemporary Villa",
-	          "url": "https://www.tree-hues.com/project-details.html?id=vajram-residence"
+	          "url": "https://www.tree-hues.com/vajram-residence.html"
 	        },
 	        {
 	          "@type": "ListItem",
 	          "position": 2,
 	          "name": "Windmills of Your Mind: Earth-Modern Villa 64",
-	          "url": "https://www.tree-hues.com/project-details.html?id=windmills-villa-64"
+	          "url": "https://www.tree-hues.com/windmills-villa-64.html"
 	        },
 	        {
 	          "@type": "ListItem",
 	          "position": 3,
 	          "name": "After The Rain: 9.4.4 Dolby Atmos Home Cinema",
-	          "url": "https://www.tree-hues.com/project-details.html?id=after-the-rain-theatre"
+	          "url": "https://www.tree-hues.com/after-the-rain-theatre.html"
 	        },
 	        {
 	          "@type": "ListItem",
 	          "position": 4,
 	          "name": "Araku Coffee: Commercial Flagship Store",
-	          "url": "https://www.tree-hues.com/project-details.html?id=araku-coffee-flagship"
+	          "url": "https://www.tree-hues.com/araku-coffee-flagship.html"
 	        },
 	        {
 	          "@type": "ListItem",
 	          "position": 5,
 	          "name": "V2 Poorvi Enclave: Contemporary Luxury Residence",
-	          "url": "https://www.tree-hues.com/project-details.html?id=v2-poorvi-enclave"
+	          "url": "https://www.tree-hues.com/v2-poorvi-enclave.html"
 	        },
 	        {
 	          "@type": "ListItem",
 	          "position": 6,
 	          "name": "Mirabilis: Warm Minimalist Residence",
-	          "url": "https://www.tree-hues.com/project-details.html?id=mirabilis-residence"
+	          "url": "https://www.tree-hues.com/mirabilis-residence.html"
 	        }
 	      ]
 	    }
@@ -253,6 +254,16 @@
 									<li class="active"><a href="project.html" class="active">Projects</a></li>
 									<li><a href="gallery.html">Gallery</a></li>
 									<li><a href="contact.html">Contact Us</a></li>
+									<li class="nav-search-item">
+										<form class="nav-search-form" action="project-details.html" method="GET" role="search">
+											<div class="nav-search-box">
+												<input id="site-search" type="text" name="search" class="luxury-input nav-search-input" placeholder="Search projects…" autocomplete="off" aria-label="Search projects">
+												<button type="submit" class="nav-search-btn" aria-label="Submit Search">
+													<i class="fas fa-search"></i>
+												</button>
+											</div>
+										</form>
+									</li>
 									<li class="mobile-drawer-footer">
 										<div class="mdf-contact">
 											<a href="tel:+919686211977">+91 96862 11977</a>
@@ -300,7 +311,7 @@
 						<img src="assets/img/projects/vajram/showcase/vajram-dining-lounge-07.webp" alt="Vajram Essenza">
 					</div>
 					<div class="ssrp-text">
-						<a href="project-details.html?id=vajram-residence">Vajram Essenza - Luxury Residence</a>
+						<a href="vajram-residence.html">Vajram Essenza - Luxury Residence</a>
 						<span class="date-meta"><i class="fa fa-building" aria-hidden="true"></i>Modern Contemporary</span>
 					</div>
 				</div>
@@ -309,7 +320,7 @@
 						<img src="assets/img/projects/araku/showcase/araku-counter-01.webp" alt="Araku Coffee">
 					</div>
 					<div class="ssrp-text">
-						<a href="project-details.html?id=araku-coffee-flagship">Araku Coffee | Ashok Nagar, Bangalore</a>
+						<a href="araku-coffee-flagship.html">Araku Coffee | Ashok Nagar, Bangalore</a>
 						<span class="date-meta"><i class="fa fa-coffee" aria-hidden="true"></i>Commercial & Institutional</span>
 					</div>
 				</div>
@@ -318,7 +329,7 @@
 						<img src="assets/img/projects/after-the-rain/showcase/atr-theatre-starlight-05.webp" alt="After The Rain">
 					</div>
 					<div class="ssrp-text">
-						<a href="project-details.html?id=after-the-rain-theatre">After The Rain - Villa 87-89, Bangalore</a>
+						<a href="after-the-rain-theatre.html">After The Rain - Villa 87-89, Bangalore</a>
 						<span class="date-meta"><i class="fa fa-film" aria-hidden="true"></i>Home Theatre Projects</span>
 					</div>
 				</div>
@@ -413,7 +424,7 @@
 				
 				<!-- Project 1: Vajram Essenza: Modern Contemporary Villa -->
 				<div class="col-lg-6 col-md-6 project-grid-item" data-category="villas modular independent" data-aos="fade-up" data-aos-duration="1200">
-					<a href="project-details.html?id=vajram-residence" class="big-project-card-link">
+					<a href="vajram-residence.html" class="big-project-card-link">
 						<div class="big-project-card">
 							<img src="assets/img/projects/vajram/showcase/vajram-foyer-living-02.webp" alt="Vajram Essenza: Modern Contemporary Bedroom Suite" class="project-card-bg-img">
 							<div class="project-card-gradient">
@@ -433,7 +444,7 @@
 
 				<!-- Project 2: Windmills of Your Mind - Villa 64 -->
 				<div class="col-lg-6 col-md-6 project-grid-item" data-category="villas independent" data-aos="fade-up" data-aos-duration="1400">
-					<a href="project-details.html?id=windmills-villa-64" class="big-project-card-link">
+					<a href="windmills-villa-64.html" class="big-project-card-link">
 						<div class="big-project-card">
 							<img src="assets/img/projects/windmills/showcase/windmills-courtyard-living-01.webp" alt="Windmills of Your Mind - Villa 64" class="project-card-bg-img">
 							<div class="project-card-gradient">
@@ -453,7 +464,7 @@
 
 				<!-- Project 3: After The Rain Private Cinema -->
 				<div class="col-lg-6 col-md-6 project-grid-item" data-category="theatre villas" data-aos="fade-up" data-aos-duration="1200">
-					<a href="project-details.html?id=after-the-rain-theatre" class="big-project-card-link">
+					<a href="after-the-rain-theatre.html" class="big-project-card-link">
 						<div class="big-project-card">
 							<img src="assets/img/projects/after-the-rain/showcase/atr-theatre-starlight-05.webp" alt="After The Rain - 9.4.4 Dolby Atmos Home Cinema" class="project-card-bg-img">
 							<div class="project-card-gradient">
@@ -473,7 +484,7 @@
 
 				<!-- Project 4: Araku Coffee Flagship -->
 				<div class="col-lg-6 col-md-6 project-grid-item" data-category="modular independent" data-aos="fade-up" data-aos-duration="1400">
-					<a href="project-details.html?id=araku-coffee-flagship" class="big-project-card-link">
+					<a href="araku-coffee-flagship.html" class="big-project-card-link">
 						<div class="big-project-card">
 							<img src="assets/img/projects/araku/showcase/araku-counter-01.webp" alt="Araku Coffee Flagship Store" class="project-card-bg-img">
 							<div class="project-card-gradient">
@@ -493,7 +504,7 @@
 
 				<!-- Project 5: V2 Poorvi Enclave: Contemporary Luxury Residence -->
 				<div class="col-lg-6 col-md-6 project-grid-item" data-category="apartments modular" data-aos="fade-up" data-aos-duration="1200">
-					<a href="project-details.html?id=v2-poorvi-enclave" class="big-project-card-link">
+					<a href="v2-poorvi-enclave.html" class="big-project-card-link">
 						<div class="big-project-card">
 							<img src="assets/img/projects/v2-poorvi-enclave/showcase/v2-living-dining-01.webp" alt="V2 Poorvi Enclave: Contemporary Luxury Residence" class="project-card-bg-img">
 							<div class="project-card-gradient">
@@ -513,7 +524,7 @@
 
 				<!-- Project 6: Mirabilis: Warm Minimalist Residence -->
 				<div class="col-lg-6 col-md-6 project-grid-item" data-category="apartments" data-aos="fade-up" data-aos-duration="1400">
-					<a href="project-details.html?id=mirabilis-residence" class="big-project-card-link">
+					<a href="mirabilis-residence.html" class="big-project-card-link">
 						<div class="big-project-card">
 							<img src="assets/img/projects/mirabilis/showcase/mirabilis-living-01.webp" alt="Mirabilis: Warm Minimalist Residence" class="project-card-bg-img">
 							<div class="project-card-gradient">
